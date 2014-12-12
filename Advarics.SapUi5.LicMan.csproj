@@ -77,11 +77,6 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\Styles\bootstrap-theme.css.map" />
-    <Content Include="Content\Styles\bootstrap.css.map" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -1064,11 +1059,6 @@
     <Content Include="Scripts\vendor\sap\resources\sap\ui\ux3\VisibleItemCountMode.type" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
     <None Include="Scripts\_references.js" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Content\Styles\bootstrap-theme.css" />
-    <Content Include="Content\Styles\bootstrap-theme.min.css" />
-    <Content Include="Content\Styles\bootstrap.css" />
-    <Content Include="Content\Styles\bootstrap.min.css" />
     <Content Include="index.html" />
     <Content Include="Scripts\vendor\sap\js\dynamic-mode-check.js" />
     <Content Include="Scripts\vendor\sap\js\utils.js" />
