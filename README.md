@@ -24,8 +24,10 @@ For more complex columns you can pass a template and other properties like sorti
 a factory for such cases.
 
 
-The whole 'logic' of this demo is located in *advarics/app.js*:
-    
+The whole 'logic' of this demo is located in *advarics/app.js*.
+
+The steps are:    
+
     - get JSON data
     - create a new model filled with this data
     - create a new table based on this model
