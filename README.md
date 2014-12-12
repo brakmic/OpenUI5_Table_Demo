@@ -6,14 +6,15 @@ I'm still experimenting with it, so expect some rough edges. However, there are 
 helper modules for easier creation of tables & columns. Also, I used the wonderful <a href="http://www.json-generator.com/" target="_blank">JSON generator</a> to create 1000 example entries to fill the table widget.
 
 Inside the Scripts directory you'll find *advarics/controls* and *advarics/models*. There are the helper methods located.
-Instead of using raw
+
+So, instead of using raw
 <pre><code>table.addColumn({
     label: [....],
     template: [...],
     sortProperty: [...],
     <i>[...] etc.</i>
     })
-</code></pre> you can write
+</code></pre> you can simply write
 <pre>
 <code>
     controls.getColumn('ID', 'id');
