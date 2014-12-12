@@ -1,6 +1,6 @@
 # SAPUI5 / OpenUI5 Demo
 
-This is a very simple demo based on the open-sourced version of SAP's UI5 MVC Framework: <a href="https://sap.github.io/openui5/">OpenUI5</a>
+This is a very simple demo based on the open-sourced version of SAP's UI5 MVC Framework: <a href="https://sap.github.io/openui5/" target="_blank">OpenUI5</a>
 
 I'm still experimenting with it, so expect some rough edges. However, there are a few
 helper modules for easier creation of tables & columns. Also, I used the wonderful <a href="http://www.json-generator.com/" target="_blank">JSON generator</a> to create 1000 example entries to fill the table widget.
