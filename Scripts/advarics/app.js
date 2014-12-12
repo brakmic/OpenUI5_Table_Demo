@@ -10,19 +10,19 @@
             table = controls.getTable('Customers');
 
         var columns = {
-            id: controls.getColumn('ID', 'id'),
             company: controls.getColumn('Company', 'Company'),
+            active: controls.getColumn('Active', 'Active', new sap.ui.commons.CheckBox().bindProperty("checked", "Active")),
+            url: controls.getColumn('Homepage', 'Url', new sap.ui.commons.Link().bindProperty("text", "Company").bindProperty("href", "Url")),
+            picture: controls.getColumn('Picture', 'Picture', new sap.ui.commons.Image().bindProperty("src", "Picture")),
+            gender: controls.getColumn('Gender', 'Gender', new sap.ui.commons.ComboBox({items: [
+		                                                                                new sap.ui.core.ListItem({text: "female"}),
+		                                                                                new sap.ui.core.ListItem({text: "male"})
+                                                                                            ]}).bindProperty("value","Gender")),
             customerCity: controls.getColumn('City', 'CustomerCity'),
             customerFirstName: controls.getColumn('First Name', 'CustomerFirstName'),
             customerLastName: controls.getColumn('Last Name', 'CustomerLastName'),
             customerHotel: controls.getColumn('Hotel', 'CustomerHotel'),
             paymentTypes: controls.getColumn('Payment Types', 'PaymentTypes'),
-            scanCodes: controls.getColumn('Scan Codes', 'ScanCodes'),
-            receiptType: controls.getColumn('Receipt Type', 'ReceiptType'),
-            receiptNo: controls.getColumn('Receipt No.', 'ReceiptNo'),
-            receiptId: controls.getColumn('Receipt ID', 'ReceiptId'),
-            cashDeskNo: controls.getColumn('Cashdesk No.', 'CashDeskNo'),
-            timestamp: controls.getColumn('Timestamp', 'Timestamp'),
             receiptDate: controls.getColumn('Receipt Date', 'ReceiptDate')
         };
 
@@ -32,7 +32,7 @@
 
         table.setModel(model);
         table.bindRows('/modelData');
-        table.sort(table.getColumns()[1]);
+        table.sort(table.getColumns()[0]);
         table.placeAt('app');
     };
 

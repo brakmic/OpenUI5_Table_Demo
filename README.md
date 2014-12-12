@@ -32,7 +32,7 @@ The steps are:
     - create a new table based on the model
     - initialize new table widget hooked on a certain DIV in index.html
 
-<img src="http://n68.imgup.net/table_demo0d36.png" />
+<img src="http://c70.imgup.net/table_demo1301.png" />
 
 I recommend following sites regarding development of SAPUI5/OpenUI5 web apps:
 
