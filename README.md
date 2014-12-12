@@ -23,8 +23,7 @@ So, instead of using raw
 For more complex columns you can pass a template and other properties like sorting, filtering etc. Currently, you have to explicitely create template objects. In future relases of this demo I'll provide 
 a factory for such cases.
 
-
-The whole 'logic' of this demo is located in *advarics/app.js*.
+The 'logic' of this demo is located in *advarics/app.js*.
 
 The steps are:    
 
