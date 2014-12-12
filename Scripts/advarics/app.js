@@ -7,13 +7,14 @@
     app.init = function () {
         var data = models.getData(),
             model = models.getModel(data),
-            table = controls.getTable();
+            table = controls.getTable('Customers');
 
         var columns = {
             id: controls.getColumn('ID', 'id'),
             company: controls.getColumn('Company', 'Company'),
-            customerCity: controls.getColumn('First Name', 'CustomerFirstName'),
-            customerFirstName: controls.getColumn('Last Name', 'CustomerLastName'),
+            customerCity: controls.getColumn('City', 'CustomerCity'),
+            customerFirstName: controls.getColumn('First Name', 'CustomerFirstName'),
+            customerLastName: controls.getColumn('Last Name', 'CustomerLastName'),
             customerHotel: controls.getColumn('Hotel', 'CustomerHotel'),
             paymentTypes: controls.getColumn('Payment Types', 'PaymentTypes'),
             scanCodes: controls.getColumn('Scan Codes', 'ScanCodes'),
@@ -31,7 +32,7 @@
 
         table.setModel(model);
         table.bindRows('/modelData');
-        table.sort(table.getColumns()[0]);
+        table.sort(table.getColumns()[1]);
         table.placeAt('app');
     };
 

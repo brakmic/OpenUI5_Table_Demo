@@ -16,7 +16,7 @@
 
     function getTable(title, visibleRowCount, firstVisibleRow, selectionMode) {
         return new sap.ui.table.Table({
-            title: title || "Customers",
+            title: title || "NonName Table",
             visibleRowCount: visibleRowCount || 20,
             firstVisibleRow: firstVisibleRow || 1,
             selectionMode: selectionMode || sap.ui.table.SelectionMode.Single,
