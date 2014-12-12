@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd" >
+
+	<name>AnalyticalColumn</name>
+	<author>SAP SE</author>
+	
+	<developmentState state="experimental" since="1.21">The AnalyticalColumn will be productized soon. Some attributes will be added to Column.</developmentState>
+	<documentation>This column addes additional properties to the tabl ecolumn which are needed for the analytical binding and table</documentation>
+
+	<baseType>sap.ui.table/Column</baseType>
+	<properties>
+		<property group="Misc" name="leadingProperty" type="sap.ui.core/string">
+			<documentation>Defines the primary model property which is used inside the Column. In case of the analytical extension this means the property which is grouped by for dimensions or the property which is summed for measures.</documentation>
+		</property>
+		<property group="Misc" name="summed" type="sap.ui.core/boolean" defaultValue="false">
+			<documentation>If defined a sum for this column is calculated</documentation>
+		</property>
+		<property group="Misc" name="inResult" type="sap.ui.core/boolean" defaultValue="false">
+			<documentation>Specifies that the dimension referred to by the column shall be included in the granularity of the data result. It allows a finer distinction between a visible/grouped/(included)inResult column.</documentation>
+		</property>
+		<property group="Appearance" name="showIfGrouped" type="sap.ui.core/boolean" defaultValue="false">
+			<documentation>Specifies whether the column is displayed within the table even if it is grouped or not. A grouped column has the same value for every rows within the group.</documentation>
+		</property>
+		<property group="Behavior" name="groupHeaderFormatter" type="any">
+			<documentation>If the column is grouped, this formatter is used to format the value in the group header</documentation>
+		</property>
+	</properties>
+</control>

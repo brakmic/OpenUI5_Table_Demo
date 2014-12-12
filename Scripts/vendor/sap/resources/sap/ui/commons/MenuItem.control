@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd" >
+
+	<name>MenuItem</name>
+	<author>SAP SE</author>
+	<documentation>Smallest unit in the menu hierarchy. An item can be a direct part of a menu bar, of a menu, or of a sub menu.								
+	</documentation>
+	<baseType>sap.ui.unified/MenuItem</baseType>
+	<deprecation since="1.21.0">Please use the control sap.ui.unified.MenuItem of the library sap.ui.unified instead.</deprecation>
+
+</control>

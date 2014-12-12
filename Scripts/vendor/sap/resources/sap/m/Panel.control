@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd" >
+
+	<name>Panel</name>
+	<author>SAP SE</author>
+	<documentation>The Panel control is a container for controls with a solid background and a header text.</documentation>
+	<since>1.16</since>
+	<baseType>sap.ui.core/Control</baseType>
+	<properties>
+		<property group="Appearance" name="visible" type="sap.ui.core/boolean" defaultValue="true">
+			<documentation>Is the control visible</documentation>
+		</property>
+		<property group="Data" name="headerText" type="string">
+			<documentation>Sets the header text</documentation>
+		</property>
+		<property group="Appearance" name="width" type="sap.ui.core/CSSSize" defaultValue="100%">
+			<documentation>The Panel width</documentation>
+		</property>
+		<property group="Appearance" name="height" type="sap.ui.core/CSSSize" defaultValue="auto">
+			<documentation>The Panel height</documentation>
+		</property>
+		<property group="Appearance" name="expandable" type="sap.ui.core/boolean" defaultValue="false" since="1.22">
+			<documentation>Is the control expandable</documentation>
+		</property>
+		<property group="Appearance" name="expanded" type="sap.ui.core/boolean" defaultValue="false" since="1.22">
+			<documentation>If expandable, this property indicates is the state is expanded or not. If expanded, then infoToolbar (if available) and content is rendered; if expanded is false, then only the headerText/headerToolbar is rendered.</documentation>
+		</property>
+	</properties>
+	<events>
+		<event name="expand" since="1.22">
+			<documentation>Indicates that the panel will expand or collapse</documentation>
+			<parameters>
+				<parameter name="expand" type="sap.ui.core/boolean">
+					<documentation>If the panel will expand, this is true. If the panel will collapse, this is false.</documentation>
+				</parameter>
+			</parameters>
+		</event>
+	</events>
+	<aggregations default="content">
+		<aggregation cardinality="0..n" name="content" type="sap.ui.core/Control">
+			<documentation>Content for the Panel</documentation>
+		</aggregation>
+		<aggregation cardinality="0..1" name="headerToolbar" type="Toolbar" since="1.16">
+			<documentation>Header can be used as a Toolbar to add extra controls for user interactions.
+Note: This aggregation overwrites &quot;headerText&quot; property.</documentation>
+		</aggregation>
+		<aggregation cardinality="0..1" name="infoToolbar" type="Toolbar" since="1.16">
+			<documentation>InfoBar is placed below the header and can be used to show extra information to the user.</documentation>
+		</aggregation>
+	</aggregations>
+</control>

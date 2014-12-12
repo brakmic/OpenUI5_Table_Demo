@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd" >
+
+	<name>MultiInput</name>
+	<author>SAP SE</author>
+	<documentation>MultiInput provides functionality to add / remove / enter tokens</documentation>
+
+	<baseType>sap.m/Input</baseType>
+	<events>
+		<event name="tokenChange">
+			<documentation>fired when the tokens aggregation changed (add / remove token)</documentation>
+		</event>
+	</events>
+	<aggregations>
+		<aggregation cardinality="0..n" name="tokens" type="Token">
+			<documentation>the currently displayed tokens</documentation>
+		</aggregation>
+		<aggregation cardinality="0..1" name="tokenizer" type="sap.m/Tokenizer" visibility="hidden">
+			<documentation>the tokenizer which displays the tokens</documentation>
+		</aggregation>
+	</aggregations>
+</control>

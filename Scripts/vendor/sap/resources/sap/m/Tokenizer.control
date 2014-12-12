@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd" >
+
+	<name>Tokenizer</name>
+	<documentation>Tokenizer displays multiple tokens</documentation>
+
+	<baseType>sap.ui.core/Control</baseType>
+	<properties>
+		<property group="Misc" name="editable" type="sap.ui.core/boolean" defaultValue="true">
+			<documentation>true if tokens shall be editable otherwise false</documentation>
+		</property>
+		<property group="Dimension" name="width" type="sap.ui.core/CSSSize">
+			<documentation>Defines the width of the Tokenizer.</documentation>
+		</property>
+		<property group="Appearance" name="visible" type="sap.ui.core/boolean" defaultValue="true">
+			<documentation>Determines whether the tokenizer is visible.</documentation>
+		</property>
+	</properties>
+	<events>
+		<event name="tokenChange">
+			<documentation>fired when the tokens aggregation changed (add / remove token)</documentation>
+		</event>
+	</events>
+	<aggregations default="tokens">
+		<aggregation cardinality="0..n" name="tokens" type="sap.m/Token">
+			<documentation>the currently displayed tokens</documentation>
+		</aggregation>
+	</aggregations>
+</control>

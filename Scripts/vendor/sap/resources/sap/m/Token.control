@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd" >
+
+	<name>Token</name>
+	<author>SAP SE</author>
+	<documentation>renders a token containing text and an optional delete icon</documentation>
+
+	<baseType>sap.ui.core/Control</baseType>
+	<properties>
+		<property group="Misc" name="selected" type="sap.ui.core/boolean" defaultValue="false">
+			<documentation>current selection status of token</documentation>
+		</property>
+		<property group="Misc" name="key" type="sap.ui.core/string" defaultValue='""'>
+			<documentation>token's identifier key</documentation>
+		</property>
+		<property group="Misc" name="text" type="sap.ui.core/string" defaultValue='""'>
+			<documentation>token's display text</documentation>
+		</property>
+		<property group="Misc" name="editable" type="sap.ui.core/boolean" defaultValue="true">
+			<documentation>if true, token displays delete icon and fires events accordingly</documentation>
+		</property>
+		<property group="Appearance" type="sap.ui.core/boolean" name="visible" defaultValue="true">
+			<documentation>Determines whether the token is visible.</documentation>
+		</property>
+	</properties>
+	<events>
+		<event name="delete">
+			<documentation>Fired if the user click the token's delete button.</documentation>
+		</event>
+		<event name="press">
+			<documentation>Event is fired when the user clicks on the control.</documentation>
+		</event>
+		<event name="select">
+			<documentation>Event is fired when the user selects a token (could be a keyboard navigation, could be a press)</documentation>
+		</event>
+	</events>
+	<aggregations>
+		<aggregation cardinality="0..1" name="deleteIcon" type="sap.ui.core/Icon" visibility="hidden">
+			<documentation>The delete icon.</documentation>
+		</aggregation>
+	</aggregations>
+</control>

@@ -1,0 +1,1 @@
+function isDynamicInstallation() { return false; }

@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd" >
+
+	<name>IconTabHeader</name>
+	<author>SAP SE</author>
+	<documentation>This control display a number of iconTabFilters and Separators. If the available horizontal space is exceeded, it will allow for scrolling horziontally to show all items.</documentation>
+
+	<baseType>sap.ui.core/Control</baseType>
+	<properties>
+		<property group="Misc" name="showSelection" type="boolean" defaultValue="true">
+			<documentation>Defines whether the current selection should be visualized.</documentation>
+			<deprecation since="1.15.0">Regarding to changes of this control this property is not needed anymore.</deprecation>
+		</property>
+		<property group="Data" name="selectedKey" type="sap.ui.core/string" since="1.15.0">
+			<documentation>Key of the selected item.
+
+If the key has no corresponding aggregated item, no changes will apply.
+If duplicate keys exists the first item matching the key is used.</documentation>
+		</property>
+		<property group="Behavior" name="visible" type="sap.ui.core/boolean" defaultValue="true" since="1.15.0">
+			<documentation>Invisible controls are not rendered.</documentation>
+		</property>
+	</properties>
+	<aggregations>
+		<aggregation cardinality="0..n" name="items" type="sap.m/IconTab">
+			<documentation>The items displayed in the IconTabBar</documentation>
+		</aggregation>
+	</aggregations>
+	<events>
+		<event name="select">
+			<documentation>This event will be fired when an item is selected.</documentation>
+			<parameters>
+				<parameter name="item" type="sap.m/IconTabFilter" since="1.15.0">
+					<documentation>The selected item.</documentation>
+				</parameter>
+				<parameter name="key" type="string" since="1.15.0">
+					<documentation>The key of the selected item.</documentation>
+				</parameter>
+			</parameters>
+		</event>
+	</events>
+</control>

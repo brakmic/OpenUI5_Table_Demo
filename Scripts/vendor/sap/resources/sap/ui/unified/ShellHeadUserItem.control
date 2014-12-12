@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd" >
+	<name>ShellHeadUserItem</name>
+	<author>SAP SE</author>
+	<since>1.22.0</since>
+	<documentation>User Header Action Item of the Shell.</documentation>
+	<baseType>sap.ui.core/Element</baseType>
+	<properties>
+		<property name="username" type="string" defaultValue="" group="Appearance">
+			<documentation>The name of the user.</documentation>
+		</property>	
+		<property group="Appearance" name="image" type="sap.ui.core/URI">
+			<documentation>An image of the user, normally an URI to a image but also an icon from the sap.ui.core.IconPool is possible.</documentation>
+		</property>
+	</properties>
+	<events>
+		<event name="press">
+			<documentation>Event is fired when the user presses the button.</documentation>
+		</event>
+	</events>
+</control>

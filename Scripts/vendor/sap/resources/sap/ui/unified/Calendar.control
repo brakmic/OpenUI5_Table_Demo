@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd" >
+	<since>1.22.0</since>
+
+	<name>Calendar</name>
+	<documentation>Basic Calendar. 
+This calendar ist used for DatePickers</documentation>
+
+	<baseType>sap.ui.core/Control</baseType>
+	<properties>
+		<property group="Misc" name="intervalSelection" type="sap.ui.core/boolean" defaultValue="false">
+			<documentation>If set, interval selection is allowed</documentation>
+		</property>
+		<property group="Misc" type="sap.ui.core/boolean" name="singleSelection" defaultValue="true">
+			<documentation>If set, only a single date or interval, if intervalSelection is enabled, can be selected</documentation>
+		</property>
+	</properties>
+	<events>
+		<event name="select">
+			<documentation>Date selection changed</documentation>
+		</event>
+		<event name="cancel">
+			<documentation>Date selection was cancelled</documentation>
+		</event>
+	</events>
+	<aggregations>
+		<aggregation cardinality="0..n" name="selectedDates" type="DateRange">
+			<documentation>Date Ranges for selected dates of the DatePicker</documentation>
+		</aggregation>
+		<aggregation cardinality="0..n" name="specialDates" type="DateTypeRange" since="1.24.0">
+			<documentation>Date Range with type to visualize special days in the Calendar.
+If one day is assigned to more than one Type, only the first one will be used.</documentation>
+		</aggregation>
+	</aggregations>
+	<methods>
+		<method name="focusDate" type="sap.ui.core/void">
+			<documentation>Sets the focused date of the calendar.</documentation>
+			<parameters>
+				<parameter name="date" type="sap.ui.core/object">
+					<documentation>JavaScript date object for focused date.</documentation>
+				</parameter>
+			</parameters>
+		</method>
+	</methods>
+</control>

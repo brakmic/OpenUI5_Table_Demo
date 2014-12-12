@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd" >
+	<since>1.24.0</since>
+
+	<name>DateTypeRange</name>
+	<documentation>Date range with calendar day type information. Used to visualize special days in the Calendar.</documentation>
+
+	<baseType>DateRange</baseType>
+	<properties>
+		<property group="Appearance" name="type" type="CalendarDayType">
+			<documentation>Type of the dayte range.</documentation>
+		</property>
+	</properties>
+</control>

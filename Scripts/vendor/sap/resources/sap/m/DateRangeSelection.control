@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd" >
+
+	<name>DateRangeSelection</name>
+	<documentation>This is a date range selection control. It internal uses the sap.ui.unified.Calendar. So the sap.ui.unified library should be loaded from applications using this control.</documentation>
+
+	<baseType>sap.m/DatePicker</baseType>
+	<properties>
+		<property group="Misc" name="delimiter" type="sap.ui.core/string" defaultValue="-">
+			<documentation>Delimiter of starting and ending date. Default value is &quot;-&quot;.
+If no delimiter is given the one defined for the used locale is used.</documentation>
+		</property>
+		<property group="Data" name="secondDateValue" type="object">
+			<documentation>Ending date of the range.</documentation>
+		</property>
+		<property group="Misc" name="from" type="object">
+			<documentation>Starting date of the range.</documentation>
+			<deprecation since="1.22">Former property for starting date - since next release will be not supported. Use dateValue instead.</deprecation>
+		</property>
+		<property group="Misc" name="to" type="object">
+			<documentation>Ending date of the range.</documentation>
+			<deprecation since="1.22">Former property for ending date - since next release will be not supported. Use secondDateValue instead.</deprecation>
+		</property>
+	</properties>
+	<events>
+		<event name="change">
+			<documentation>Event thrown in case of change of date range.</documentation>
+			<parameters>
+				<parameter name="from" type="object">
+					<documentation>Current starting date after change.</documentation>
+				</parameter>
+				<parameter name="to" type="object">
+					<documentation>Current ending date after change.</documentation>
+				</parameter>
+			</parameters>
+		</event>
+	</events>
+</control>

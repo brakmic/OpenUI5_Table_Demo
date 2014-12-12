@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd" >
+
+	<name>MenuItemBase</name>
+	<author>SAP SE</author>
+	<documentation>Bla Bla</documentation>
+	<baseType>sap.ui.unified/MenuItemBase</baseType>
+	
+	<targetConfigurations>
+		<targetConfiguration name="JavaScriptAPI">
+			<property name="sap.ui.generate">false</property>
+		</targetConfiguration>
+		<targetConfiguration name="JavaAPI">
+			<property name="sap.ui.generate">false</property>
+		</targetConfiguration>
+	</targetConfigurations>
+
+</control>

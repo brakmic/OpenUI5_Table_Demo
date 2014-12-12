@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd" >
+	<name>ComboBoxBase</name>
+	<author>SAP SE</author>
+	<since>1.22.0</since>
+	<documentation>An abstract class for ComboBoxes.</documentation>
+	<abstract/>
+	<baseType>sap.m/InputBase</baseType>
+	<properties>
+		<property group="Dimension" name="maxWidth" type="sap.ui.core/CSSSize" defaultValue="100%">
+			<documentation>Defines the maximum width of the text field. This value can be provided in %, em, px… and all CSS units.</documentation>
+		</property>
+	</properties>
+	<aggregations default="items">
+		<aggregation cardinality="0..n" name="items" type="sap.ui.core/Item" bindable="bindable">
+			<documentation>Aggregation of items to be displayed.</documentation>
+		</aggregation>
+		<aggregation cardinality="0..1" name="picker" type="sap.ui.core/Control" visibility="hidden">
+			<documentation>Internal aggregation to hold the inner picker pop-up.</documentation>
+		</aggregation>
+	</aggregations>
+	<methods>
+		<method name="isOpen" type="sap.ui.core/boolean">
+			<documentation>Whether the control's picker pop-up is open. It returns true when the control's picker pop-up is currently open, this includes opening and closing animations.</documentation>
+		</method>
+		<method name="close" type="sap.m/ComboBoxBase">
+			<documentation>Closes the control's picker pop-up.</documentation>
+		</method>
+		<method name="getItemByKey" type="sap.ui.core/Item">
+			<documentation>Retrieves the item with the given key from the aggregation named items.
+If duplicate keys exist the first item matching the key is returned.</documentation>
+			<parameters>
+				<parameter name="key" type="sap.ui.core/string">
+					<documentation>An item key that identifies the item to retrieve.</documentation>
+				</parameter>
+			</parameters>
+		</method>
+		<method name="getFirstItem" type="sap.ui.core/Item">
+			<documentation>Retrieves the first item from the aggregation named items.</documentation>
+		</method>
+		<method name="getLastItem" type="sap.ui.core/Item">
+			<documentation>Retrieves the last item from the aggregation named items.</documentation>
+		</method>
+		<method name="getItemAt" type="sap.ui.core/Item">
+			<documentation>Retrieves the item from the aggregation named items the given 0-based index.</documentation>
+			<parameters>
+				<parameter name="index" type="sap.ui.core/int">
+					<documentation>Index of the item to return.</documentation>
+				</parameter>
+			</parameters>
+		</method>
+		<method name="getEnabledItems" type="sap.ui.core/Item[]">
+			<documentation>Retrieves enabled items from the aggregation named items.</documentation>
+		</method>
+	</methods>
+</control>
