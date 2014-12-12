@@ -34,7 +34,7 @@ The steps are:
 
 <img src="http://c70.imgup.net/table_demo1301.png" />
 
-I recommend following sites regarding development of SAPUI5/OpenUI5 web apps:
+I recommend following sites:
 
 <a href="https://sapui5.netweaver.ondemand.com/sdk/#content/Controls/index.html">SAPUI5 SDK Controls</a>
 
