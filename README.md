@@ -42,7 +42,9 @@ I recommend following sites regarding development of SAPUI5/OpenUI5 web apps:
 
 <a href="https://sap.github.io/openui5/getstarted.html" target="_blank">GetStarted Page</a> from OpenUI5 Team Github Page
 
+<a href="https://sapui5.netweaver.ondemand.com/sdk/test-resources/sap/ui/table/demokit/Table.html">SAPUI5 Table Widget</a>
 
+<br />
 **Created at**
 
 <a href="http://www.advarics.net" target="_blank">advarics GmbH</a>, Branch Office - Bochum, Germany
