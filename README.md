@@ -21,7 +21,7 @@ Instead of using raw
 </pre> This will create a column of type 'text', map it to the property 'id' of you model and set its title to 'ID'.
 For more complex columns you can pass the appropriate template and other properties like sorting, filtering etc.
 
-Currently, you have to explicitely create a proper template if you need it. In future relases of this demo I'll provide 
+Currently, you have to explicitely create template objects. In future relases of this demo I'll provide 
 a factory for such cases.
 
 The whole 'logic' of this demo is located in *advarics/app.js*:
