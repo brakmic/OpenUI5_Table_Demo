@@ -31,6 +31,8 @@ The whole 'logic' of this demo is located in *advarics/app.js*:
     - create a new table based on this model
     - initialize new table widget hooked on a certain DIV in index.html
 
+<img src="http://s73.imgup.net/table_demod1e8.png" />
+
 I recommend following sites regarding development of SAPUI5/OpenUI5 web apps:
 
 <a href="https://sapui5.netweaver.ondemand.com/sdk/#content/Controls/index.html">SAPUI5 SDK Controls</a>
