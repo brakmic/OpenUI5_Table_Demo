@@ -48,11 +48,11 @@ These sites helped me a lot to create this demo:
 
 <a href="https://sapui5.netweaver.ondemand.com/sdk/#content/Controls/index.html">SAPUI5 SDK Controls</a>
 
-<a href="http://www.nabisoft.com/tutorials/sapui5/" target="_blank">Nabisoft SAPUI5 Tutorials</a>
+Nabisoft's <a href="http://www.nabisoft.com/tutorials/sapui5/" target="_blank">SAPUI5 Tutorials</a>
 
-<a href="https://sap.github.io/openui5/getstarted.html" target="_blank">GetStarted Page</a> from OpenUI5 Team Github Page
+<a href="https://sap.github.io/openui5/getstarted.html" target="_blank">Get Started</a> from OpenUI5 Team Github Page
 
-SAP UI5 <a href="https://sapui5.netweaver.ondemand.com/sdk/test-resources/sap/ui/table/demokit/Table.html" target="_blank">Table Widget</a> Documentation
+SAP UI5 <a href="https://sapui5.netweaver.ondemand.com/sdk/test-resources/sap/ui/table/demokit/Table.html" target="_blank">Table</a> & <a href="https://openui5.hana.ondemand.com/#test-resources/sap/ui/ux3/demokit/Shell.html" target="_blank">Shell</a> Documentation
 
 <br />
 **Created at**
