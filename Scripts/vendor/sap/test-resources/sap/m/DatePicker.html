@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<title>DatePicker - sap.m</title>
+		<link rel="shortcut icon" type="image/x-icon" href="images/controls/sap.m.DatePicker.gif">
+
+		<script src="../../../resources/sap-ui-core.js"
+			type="text/javascript"
+			id="sap-ui-bootstrap"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_bluecrystal">
+		</script>
+
+		<script type="text/javascript">
+
+		var app = new sap.m.App("myApp");
+
+		function createFooter(){
+			return new sap.m.Bar({
+				contentMiddle: [new sap.m.Button({
+					text: "DatePicker",
+					press: function(){
+						app.to("page1");
+					}
+				})]
+			});
+		};
+
+		var iEvent = 0;
+
+		function handleChange(oEvent){
+			var oDP = oEvent.oSource;
+			var oInput = sap.ui.getCore().byId("I1");
+			var sValue = oEvent.getParameter("value");
+			iEvent++;
+			oInput.setValue("Change - Event " + iEvent + ": DatePicker " + oDP.getId() + ":" + sValue);
+		};
+
+		var oModel = new sap.ui.model.json.JSONModel();
+		oModel.setData({
+			dateValue: new Date()
+		});
+		sap.ui.getCore().setModel(oModel);
+
+		var page1 = new sap.m.Page("page1", {
+			title:"Mobile DatePicker",
+			content : [
+				new sap.m.Label({text: "initial DatePicker", labelFor: "DP1"}),
+				new sap.m.DatePicker("DP1", { change: handleChange }),
+				new sap.m.Label({text: "DatePicker with given Value and Formatter", labelFor: "DP2"}),
+				new sap.m.DatePicker("DP2", { value: "2014-03-26", valueFormat: "yyyy-MM-dd", displayFormat: "long", change: handleChange }),
+				new sap.m.Label({text: "DatePicker with given DateValue and Formatter", labelFor: "DP3"}),
+				new sap.m.DatePicker("DP3", { dateValue: new Date("2014", "02", "26"), displayFormat: "short", change: handleChange }),
+				new sap.m.Label({text: "readonly DatePicker with given DateValue and Formatter", labelFor: "DP4"}),
+				new sap.m.DatePicker("DP4", { dateValue: new Date("2014", "02", "26"), displayFormat: "yyyy-MM-dd", editable: false, change: handleChange }),
+				new sap.m.Label({text: "DatePicker using DataBinding", labelFor: "DP5"}),
+				new sap.m.DatePicker("DP5", {
+					value: {
+						path: "/dateValue",
+						type: new sap.ui.model.type.Date({style: "medium"})},
+					change: handleChange }),
+				new sap.m.Input("I1", {value: "Content of events DatePicker", editable: false})
+			],
+			footer: createFooter()
+		});
+
+
+		app.addPage(page1);
+
+		app.placeAt("body");
+
+	</script>
+	<style>
+		body {
+			margin: 0;
+		}
+		.sapMPageScroll {
+			padding: 1rem;
+		}
+	</style>
+
+	</head>
+	<body id="body" class="sapUiBody">
+	</body>
+</html>
