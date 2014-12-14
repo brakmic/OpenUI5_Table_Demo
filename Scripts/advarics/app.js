@@ -1,15 +1,17 @@
 ﻿(function (global) {
 
     var app = global.app = global.app || {};
-    var controls = app.controls;
-    var models = app.models;
+    var controls = app.controls,
+        models = app.models,
+        config = app.config;
 
     app.init = function () {
-        var data = models.getData(),
+        var shell, columns,
+            data = models.getData(),
             model = models.getModel(data),
             table = controls.getTable('Customers');
 
-        var columns = {
+        columns = {
             company: controls.getColumn('Company', 'Company'),
             active: controls.getColumn('Active', 'Active', new sap.ui.commons.CheckBox().bindProperty("checked", "Active")),
             url: controls.getColumn('Homepage', 'Url', new sap.ui.commons.Link().bindProperty("text", "Company").bindProperty("href", "Url")),
@@ -33,7 +35,9 @@
         table.setModel(model);
         table.bindRows('/modelData');
         table.sort(table.getColumns()[0]);
-        table.placeAt('app');
+        config.shellConfig.content(table);
+        shell = controls.getShell(config.shellConfig);
+        shell.placeAt('app');
     };
 
     app.init();

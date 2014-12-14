@@ -5,6 +5,7 @@
 /// <reference path="advarics/models/advarics.models.js" />
 /// <reference path="bootstrap.js" />
 /// <reference path="npm.js" />
+/// <reference path="knockout-3.2.0.js" />
 /// <reference path="underscore.js" />
 /// <reference path="underscore.string.js" />
 /// <reference path="vendor/sap/js/dynamic-mode-check.js" />
