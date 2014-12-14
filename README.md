@@ -31,7 +31,7 @@ For easier handling of the many configuration options this demo uses the <a href
 
 Currently there are no separate XML-Views and no Controller logic because the demo comprises of a single table. In future I'll add more 'sophisticated' examples ;)
 
-<br/><br />
+<br />
 The app 'logic' is located in *app.js*.
 
 The steps are:    
