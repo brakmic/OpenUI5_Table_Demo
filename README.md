@@ -5,7 +5,7 @@ This is a web app based on the open-sourced version of SAP's UI5 MVC Framework: 
 A live demo is located <a href="http://brakmic.de/openui5/" target="_blank">here</a>.
 
 I'm still experimenting with it, so expect some rough edges. However, there are a few
-helper modules for easier creation of tables & columns. Also, I used the wonderful <a href="http://www.json-generator.com/" target="_blank">JSON generator</a> to create 1000 example entries to fill the table widget.
+helper modules for easier creation of tables & columns. Also, I used the wonderful <a href="http://www.json-generator.com/" target="_blank">JSON generator</a> to create example entries for the table widget.
 
 Inside the *Scripts/advarics* directory you'll find *controls*, *models* and *config*
 
