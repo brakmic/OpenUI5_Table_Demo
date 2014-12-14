@@ -9,7 +9,7 @@ helper modules for easier creation of tables & columns. Also, I used the wonderf
 
 Inside the *Scripts/advarics* directory you'll find *controls*, *models* and *config*
 
-There are the helper methods located.
+There you'll find helper methods for easier configuration of tables.
 
 So, instead of using raw
 <pre><code>table.addColumn({
