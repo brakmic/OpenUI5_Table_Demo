@@ -1,6 +1,6 @@
 # SAPUI5 / OpenUI5 Demo
 
-This is a very simple demo based on the open-sourced version of SAP's UI5 MVC Framework: <a href="https://sap.github.io/openui5/" target="_blank">OpenUI5</a>
+This is a web app based on the open-sourced version of SAP's UI5 MVC Framework: <a href="https://sap.github.io/openui5/" target="_blank">OpenUI5</a>
 
 A live demo is located <a href="http://brakmic.de/openui5/" target="_blank">here</a>.
 
