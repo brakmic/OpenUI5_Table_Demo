@@ -2157,3 +2157,5 @@
 /// <reference path="vendor/sap/test-resources/sap/ui/core/samples/components/products/details/view/details.view.js" />
 /// <reference path="vendor/sap/test-resources/sap/ui/core/samples/components/products/overview/view/products.controller.js" />
 /// <reference path="vendor/sap/test-resources/sap/ui/core/samples/components/products/supplier/view/supplier.controller.js" />
+/// <reference path="require.js" />
+/// <reference path="r.js" />

@@ -2,26 +2,30 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Shell & Table Demo</title>
-    
-<link href="Content/bootstrap.css" rel="stylesheet" />
-<link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="advarics web application" />
+    <meta name="keywords" content="advarics, application " />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+
+    <link href="content/kendo/kendo.common.min.css" rel="stylesheet" />
+    <link href="content/kendo/kendo.default.min.css" rel="stylesheet" />
+    <link href="content/kendo/kendo.dataviz.min.css" rel="stylesheet" />
+    <link href="content/kendo/kendo.dataviz.default.min.css" rel="stylesheet" />
+
 </head>
 <body class="sapUiBody">
-<div id="app"></div>
-
-<script src="Scripts/jquery-1.11.1.min.js"></script>
-<script src="Scripts/underscore-min.js"></script>
-<script src="Scripts/bootstrap.min.js"></script>
-<script src="Scripts/knockout-3.2.0.js"></script>
-    <script src="Scripts/vendor/sap/resources/sap/ui/thirdparty/jqueryui/jquery-ui-position.js"></script>
-<script id="sap-ui-bootstrap" 
-        src="Scripts/vendor/sap/resources/sap-ui-core-nojQuery.js" 
-        data-sap-ui-theme="sap_bluecrystal"
-        data-sap-ui-libs="sap.m,sap.ui.core,sap.ui.commons,sap.ui.table,sap.ui.ux3"></script>
-<script src="Scripts/advarics/config/advarics.config.js"></script>
-<script src="Scripts/advarics/models/advarics.models.js"></script>
-<script src="Scripts/advarics/controls/advarics.controls.js"></script>
-<script src="Scripts/advarics/app.js"></script>
-
+    <div id="app"></div>
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <!-- Needed when using external jQuery -->
+    <!--<script src="Scripts/vendor/sap/resources/sap/ui/thirdparty/jqueryui/jquery-ui-position.js"></script>-->
+    <!-- SAP OpenUI5 -->
+    <script id="sap-ui-bootstrap"
+            src="Scripts/vendor/sap/resources/sap-ui-core.js"
+            data-sap-ui-theme="sap_bluecrystal"
+            data-sap-ui-libs="sap.ui.core,sap.ui.commons,sap.ui.table,sap.ui.ux3"></script>
+    <script src="Scripts/require.js" data-main="Scripts/main"></script>
 </body>
 </html>

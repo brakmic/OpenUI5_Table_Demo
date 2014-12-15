@@ -1,17 +1,24 @@
-# SAPUI5 / OpenUI5 Demo
+# SAPUI5 / OpenUI5 Demo with Kendo UI
 
-This is a web app based on the open-sourced version of SAP's UI5 MVC Framework: <a href="https://sap.github.io/openui5/" target="_blank">OpenUI5</a>
+This is a web app based on the open-sourced version of SAP's MVC Framework <a href="https://sap.github.io/openui5/" target="_blank">OpenUI5</a> and <a href="http://www.telerik.com/kendo-ui">Kendo UI</a> from Telerik.
 
 A live demo is located <a href="http://brakmic.de/openui5/" target="_blank">here</a>.
 
-More detailed info, tutorials & videos on OpenUI5 you can find on <a href="https://openui5.zeef.com/harris.brakmic" target="_blank">this page</a>.
+More detailed info, tutorials & videos on OpenUI5 can be found <a href="https://openui5.zeef.com/harris.brakmic" target="_blank">here</a>.
 
 I'm still experimenting with it, so expect some rough edges. However, there are a few
-helper modules for easier creation of tables & columns. Also, I used the wonderful <a href="http://www.json-generator.com/" target="_blank">JSON generator</a> to create example entries for the table widget.
+helper modules for easier creation of tables & columns. To generate sample JSON-data for SAP Table I used <a href="http://www.json-generator.com/" target="_blank">JSON generator</a>.
 
-Inside the *Scripts/advarics* directory you'll find *controls*, *models* and *config*
+For Kendo UI Grid the public <a href="http://services.odata.org/V3/Northwind/Northwind.svc/" target="_blank">Northwind Service</a> was used.
 
-There you'll find helper methods for easier configuration of tables.
+<a href="http://requirejs.org/" target="_blank">RequireJS</a> is the module loader for all **advarics**-JavaScripts. 
+
+SAP's Scripts are loaded separately and before the
+RequireJS starts.
+
+The scripts are located in *Scripts/advarics* directory.
+
+There you'll find some helper methods for easier configuration of tables and other widgets.
 
 So, instead of using raw
 <pre><code>table.addColumn({
@@ -29,12 +36,14 @@ So, instead of using raw
 For more complex columns you can pass a template and other properties like sorting, filtering etc. Currently, you have to explicitely create template objects. In future relases of this demo I'll provide 
 a factory for such cases.
 
-For easier handling of the many configuration options this demo uses the <a href="http://knockoutjs.com/" target="_blank">Knockout.js</a> library.
+For easier handling of the many configuration options I use <a href="http://knockoutjs.com/" target="_blank">Knockout.js</a> and <a href="http://underscorejs.org/" target="_blank">Underscore.js</a> libraries.
 
-Currently there are no separate XML-Views and no Controller logic because the demo comprises of a single table. In future I'll add more 'sophisticated' examples ;)
+For crypto functionalities, like setting HTTP Auth-Headers, the <a href="https://code.google.com/p/crypto-js/" target="_blank">CryptoJS</a> library is available.
+
+Currently there are no separate XML-Views and no Controller logic because the demo comprises of a single Shell instance embedded widgets.
 
 <br />
-The app 'logic' is located in *app.js*.
+RequireJS starts the app in *advarics/app.js*
 
 The steps are:    
 
