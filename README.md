@@ -4,6 +4,8 @@ This is a web app based on the open-sourced version of SAP's UI5 MVC Framework: 
 
 A live demo is located <a href="http://brakmic.de/openui5/" target="_blank">here</a>.
 
+More detailed info, tutorials & videos on OpenUI5 you can find on <a href="https://openui5.zeef.com/harris.brakmic" target="_blank">this page</a>.
+
 I'm still experimenting with it, so expect some rough edges. However, there are a few
 helper modules for easier creation of tables & columns. Also, I used the wonderful <a href="http://www.json-generator.com/" target="_blank">JSON generator</a> to create example entries for the table widget.
 
