@@ -10,7 +10,7 @@
             data = models.getData(),
             model = models.getModel(data),
             table = controls.getTable('Customers');
-
+        
         columns = {
             company: controls.getColumn('Company', 'Company'),
             active: controls.getColumn('Active', 'Active', new sap.ui.commons.CheckBox().bindProperty("checked", "Active")),
