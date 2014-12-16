@@ -85,4 +85,4 @@ SAP UI5 <a href="https://sapui5.netweaver.ondemand.com/sdk/test-resources/sap/ui
 
 **License**
 
-MIT
+MIT (see LICENSE.md)
