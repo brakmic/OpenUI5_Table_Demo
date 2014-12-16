@@ -48,7 +48,7 @@ For easier handling of the many configuration options I use <a href="http://knoc
 
 For crypto functionalities, like setting HTTP Auth-Headers, the <a href="https://code.google.com/p/crypto-js/" target="_blank">CryptoJS</a> library is available.
 
-Currently there are no separate XML-Views and no Controller logic because the demo comprises of a single Shell instance embedded widgets.
+Currently there are no separate XML-Views and no Controller logic because the demo comprises of a single Shell instance with embedded widgets.
 
 <br />
 RequireJS starts the app in *advarics/app.js*
