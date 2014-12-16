@@ -6,6 +6,14 @@ A live demo is located <a href="http://brakmic.de/openui5/" target="_blank">here
 
 More detailed info, tutorials & videos on OpenUI5 can be found <a href="https://openui5.zeef.com/harris.brakmic" target="_blank">here</a>.
 
+Please note that Kendo Grid belongs to the "Professional" version of Kendo UI and therefore needs a proper license to be used.
+
+Therefore *I'm not providing the copyrighted scripts/styles to avoid violation of Telerik's license terms*.
+
+But there's a 30 day trial available: <a href="http://www.telerik.com/download/kendo-ui" target="_blank">Kendo UI Trial License</a>
+
+The Kendo-Scripts should go into *Scripts/vendor/kendo* directory and CSS-files into *Content/kendo*.
+
 I'm still experimenting with it, so expect some rough edges. However, there are a few
 helper modules for easier creation of tables & columns. To generate sample JSON-data for SAP Table I used <a href="http://www.json-generator.com/" target="_blank">JSON generator</a>.
 
