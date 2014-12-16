@@ -1,6 +1,6 @@
 # SAPUI5 / OpenUI5 Demo with Kendo UI
 
-This is a web app based on the open-sourced version of SAP's MVC Framework <a href="https://sap.github.io/openui5/" target="_blank">OpenUI5</a> and <a href="http://www.telerik.com/kendo-ui">Kendo UI</a> from Telerik.
+This is a web app based on SAP's MVC Framework <a href="https://sap.github.io/openui5/" target="_blank">OpenUI5</a> and <a href="http://www.telerik.com/kendo-ui">Kendo UI</a> from Telerik.
 
 A live demo is located <a href="http://brakmic.de/openui5/" target="_blank">here</a>.
 
