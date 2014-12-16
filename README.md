@@ -61,7 +61,12 @@ The steps are:
     - create a Shell and give it a Table as a content
     - put the Shell on a DIV named 'app' from index.html
 
+**SAP Shell**
+
 <img src="http://j20.imgup.net/table_demoa3a6.png" />
+
+**Kendo Grid**
+<img src="http://h02.imgup.net/sap_kendo18dc.png" />
 
 These sites helped me a lot to create this demo:
 
