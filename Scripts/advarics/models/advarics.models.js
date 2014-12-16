@@ -1,4 +1,5 @@
-﻿define(['underscore', 'advarics.config'], function (_, config) {
+﻿define(['underscore'],
+    function (_) {
     var Models = function(){};
 
     _.extend(Models.prototype, {

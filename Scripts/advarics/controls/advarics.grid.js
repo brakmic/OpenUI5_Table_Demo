@@ -1,7 +1,7 @@
 ﻿define(['underscore',
-        'knockout',
+        'k/kendo.all.min',
         'advarics.config'],
-    function (_, ko, config) {
+    function (_, kendo, config) {
         var Grid = function(){};
 
         sap.ui.core.Control.extend("advarics.controls.KendoGrid", {

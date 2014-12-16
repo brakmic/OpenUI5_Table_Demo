@@ -1,12 +1,10 @@
 ﻿define([ 
          'underscore',
-         'k/kendo.all.min',
-         'knockout',
          'advarics.config',
          'advarics.models',
          'advarics.controls'
          ],
-         function (_, kendo, ko, config, models, controls) {
+         function (_, config, models, controls) {
              var App = function () { };
 
              _.extend(App.prototype, {
@@ -16,8 +14,7 @@
                         data = models.getData(),
                         model = models.getModel(data),
                         table = controls.getTable('Customers');
-                        
-                        kendo ? console.log('Kendo version: ' + kendo.version) : console.log('kendo inactive');
+                       
                         //prepare columns
                         columns = {
                             company: controls.getColumn('Company', 'Company'),

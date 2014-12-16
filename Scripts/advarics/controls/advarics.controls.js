@@ -1,8 +1,7 @@
 ﻿define(['underscore',
-        'knockout',
         'advarics.config',
         'advarics.grid'],
-    function (_, ko, advaricsConfig, grid) {
+    function (_, advaricsConfig, grid) {
         var Controls = function () { };
 
         _.extend(Controls.prototype, {
