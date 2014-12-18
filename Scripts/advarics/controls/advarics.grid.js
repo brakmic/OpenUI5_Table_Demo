@@ -1,7 +1,9 @@
 ﻿define(['underscore',
+        'knockout',
         'k/kendo.grid.min',
         'advarics.config'],
-    function (_, kendo, config) {
+    function (_, ko, kendo, config) {
+        'use strict';
         var Grid = function(){};
 
         sap.ui.core.Control.extend("advarics.controls.KendoGrid", {
@@ -40,8 +42,12 @@
         });
 
         _.extend(Grid.prototype, {
-            create: function(config) {
-               return new advarics.controls.KendoGrid(config);
+            grid: ko.observable(null),
+            create: function (config) {
+                if (!this.grid()) {
+                    this.grid(new advarics.controls.KendoGrid(config));
+                }
+                return this.grid();
             }
         });
 

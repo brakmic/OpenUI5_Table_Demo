@@ -1,5 +1,6 @@
 ﻿define(['underscore'],
     function (_) {
+        'use strict';
     var Models = function(){};
 
     _.extend(Models.prototype, {

@@ -1,10 +1,13 @@
 ﻿define(['underscore',
+        'knockout',
         'advarics.config',
         'advarics.grid'],
-    function (_, advaricsConfig, grid) {
+    function (_, ko, advaricsConfig, grid) {
+        'use strict';
         var Controls = function () { };
 
         _.extend(Controls.prototype, {
+            
             //create a KendoUI Grid
             //more info: http://demos.telerik.com/kendo-ui/grid/index
             getKendoGrid: function (config) {
@@ -20,6 +23,7 @@
                 });
 
                 return new sap.ui.ux3.Shell(config.name() || 'advaricsShell', {
+                    hasGrid: ko.observable(false),
                     appTitle: config.appTitle() || 'advarics Shell',
                     appIcon: config.appIcon() || 'Content/images/advaricsLogo.png',
                     appIconTooltip: config.appIconTooltip() || 'advarics logo',
@@ -27,21 +31,23 @@
                     showSearchTool: config.showSearchTool(),
                     showInspectorTool: config.showInspectorTool(),
                     showFeederTool: config.showFeederTool(),
-                    worksetItems: [new sap.ui.ux3.NavigationItem("WI_home",
-                        {
-                            key: "wi_home",
-                            text: "Home"
-                        }),
-                        new sap.ui.ux3.NavigationItem("WI_Mgmt",
-                            {
-                                key: "wi_mgmt",
-                                text: "Management",
-                           }),
-                    new sap.ui.ux3.NavigationItem("WI_Doc",
-                        {
-                            key: "wi_doc",
-                            text: "Documentation"
-                        })],
+                    worksetItems: [
+                                    new sap.ui.ux3.NavigationItem("WI_home",
+                                    {
+                                        key: "wi_home",
+                                        text: "Home"
+                                    }),
+                                    new sap.ui.ux3.NavigationItem("WI_Mgmt",
+                                        {
+                                            key: "wi_mgmt",
+                                            text: "Management",
+                                       }),
+                                    new sap.ui.ux3.NavigationItem("WI_Doc",
+                                    {
+                                        key: "wi_doc",
+                                        text: "Documentation"
+                                    })
+                                  ],
                     paneBarItems: [
                                     new sap.ui.core.Item("PI_Date",
                                         {
@@ -61,12 +67,21 @@
                                             tooltip: "Create New Contact",
                                             icon: "Content/images/Contact_regular.png",
                                             iconHover: "Content/images/Contact_hover.png",
-                                            content: [new sap.ui.commons.TextView({ text: "Here could be a contact sheet." })],
-                                            buttons: [new sap.ui.commons.Button("cancelContactButton", {
-                                                text: "Cancel", press: function (oEvent) {
-                                                    sap.ui.getCore().byId("contactTool").close();
-                                                }
-                                            })]
+                                            content: [
+                                                        new sap.ui.commons.TextView(
+                                                            {
+                                                                text: "Here could be a contact sheet."
+                                                            })
+                                                     ],
+                                            buttons: [
+                                                        new sap.ui.commons.Button("cancelContactButton",
+                                                            {
+                                                                text: "Cancel", press: function (oEvent)
+                                                                {
+                                                                    sap.ui.getCore().byId("contactTool").close();
+                                                                }
+                                                            })
+                                            ]
                                         })
                     ],
                     headerItems: [
@@ -123,13 +138,19 @@
                         var oShell = oEvent.oSource;
                         switch (sId) {
                             case "WI_home":
-                                oShell.setContent(config.content());
+                                {
+                                    oShell.setContent(config.content());
+                                }
                                 break;
                             case "WI_Mgmt":
-                                oShell.setContent(grid.create(advaricsConfig.getManagementGridOptions()));
+                                {
+                                   oShell.setContent(grid.create(advaricsConfig.getManagementGridOptions()));
+                                }
                                 break;
                             case "WI_Doc":
-                                oShell.setContent(oDoc);
+                                {
+                                    oShell.setContent(oDoc);
+                                }
                                 break;
                             default:
                                 break;

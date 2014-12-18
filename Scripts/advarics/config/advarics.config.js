@@ -2,6 +2,7 @@
         'knockout',
         'base64'], //base64 is needed when accessing protected services (for example via Base-Auth etc.)
                 function (_, ko, B64) {
+                    'use strict';
                     var Config = function(){};
 
                     _.extend(Config.prototype, {
@@ -147,9 +148,6 @@
                                             }
                                             delete data["odata.metadata"];
                                             return [data];
-                                        },
-                                        total: function (data) {
-                                            return data["odata.count"];
                                         },
                                         total: function (data) {
                                             return data["odata.count"];

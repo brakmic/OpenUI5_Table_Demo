@@ -5,6 +5,7 @@
          'advarics.controls'
          ],
          function (_, config, models, controls) {
+             'use strict';
              var App = function () { };
 
              _.extend(App.prototype, {
