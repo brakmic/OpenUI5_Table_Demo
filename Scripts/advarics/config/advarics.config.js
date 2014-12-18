@@ -4,7 +4,8 @@
                 function (_, ko, B64) {
                     'use strict';
                     var Config = function (global) {
-                        //code taken from the article "console.log() in the wild" at http://blog.getify.com/console-log-in-the-wild/
+                        //code taken from the article "console.log() in the wild"
+                        //at http://blog.getify.com/console-log-in-the-wild/
                         var prod = global.location.href.match(/^http:\/\/(www\.)?brakmic.de/i) !== null,
                                           api = [
                                                     "log", "debug", "info",
