@@ -1,17 +1,23 @@
 ﻿define(['underscore',
         'knockout',
         'advarics.config',
-        'advarics.grid'],
-    function (_, ko, advaricsConfig, grid) {
+        'advarics.grid',
+        'advarics.editor'],
+    function (_, ko, advaricsConfig, grid, editor) {
         'use strict';
         var Controls = function () { };
 
         _.extend(Controls.prototype, {
             
-            //create a KendoUI Grid
-            //more info: http://demos.telerik.com/kendo-ui/grid/index
+            //create a KendoUI Grid widget
+            //info: http://demos.telerik.com/kendo-ui/grid/index
             getKendoGrid: function (config) {
                 return grid.create(config);
+            },
+            //create a KendoUI Editor widget
+            //info: http://demos.telerik.com/kendo-ui/editor/index
+            getKendoEditor: function(config){
+                return editor.create(config);
             },
             //create an SAP Shell
             //more info: https://sapui5.hana.ondemand.com/sdk/#test-resources/sap/ui/ux3/demokit/Shell.html
@@ -41,7 +47,12 @@
                                         {
                                             key: "wi_mgmt",
                                             text: "Management",
-                                       }),
+                                        }),
+                                    new sap.ui.ux3.NavigationItem("WI_Editor",
+                                        {
+                                            key: "wi_editor",
+                                            text: "Editor",
+                                        }),
                                     new sap.ui.ux3.NavigationItem("WI_Doc",
                                     {
                                         key: "wi_doc",
@@ -147,6 +158,11 @@
                             case "WI_Mgmt":
                                 {
                                    oShell.setContent(grid.create(advaricsConfig.getManagementGridOptions()));
+                                }
+                                break;
+                            case "WI_Editor":
+                                {
+                                    oShell.setContent(editor.create());
                                 }
                                 break;
                             case "WI_Doc":

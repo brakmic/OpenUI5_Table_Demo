@@ -16,7 +16,8 @@
         'ripemd160': 'vendor/cryptojs/rollups/ripemd160',
         'advarics.app': 'advarics',
         'advarics.controls': 'advarics/controls/advarics.controls',
-        'advarics.grid': 'advarics/controls/advarics.grid',
+        'advarics.grid':    'advarics/controls/advarics.grid',
+        'advarics.editor': 'advarics/controls/advarics.editor',
         'advarics.models': 'advarics/models/advarics.models',
         'advarics.config': 'advarics/config/advarics.config'
     },

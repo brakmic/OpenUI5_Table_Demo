@@ -21,7 +21,7 @@
             //render the grid control basics (Kendo Grid will be created in 'onAfterRendering' function)
             renderer: function (oRm, oControl) {
                 console.log('rendering...');
-                oRm.write("<div style='height:600px;width:900px;margin:18px;' ");
+                oRm.write("<div style=\"height:600px;width:900px;margin:18px;\" ");
                 oRm.writeControlData(oControl);
                 oRm.write(">");
                 oRm.renderControl(oControl._html);
@@ -34,7 +34,7 @@
                     $(document).ready(function () {
                         //call the kendoGrid-function to create the grid at the given HTML element
                         $('#' + id).kendoGrid(config.getManagementGridOptions());
-                        console.log('onAfterRendering: advarics.Kendo component with Id: ' + id + ' successfully initialized.');
+                        console.log('onAfterRendering: advarics.controls.KendoGrid, Id: ' + id + ', successfully initialized.');
                     });
                 }
             }
@@ -44,7 +44,7 @@
         _.extend(Grid.prototype, {
             grid: ko.observable(null),
             create: function (config) {
-                if (!this.grid()) {
+                if (this.grid() == null) {
                     this.grid(new advarics.controls.KendoGrid(config));
                 }
                 return this.grid();

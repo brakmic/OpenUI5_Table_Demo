@@ -284,6 +284,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <None Include="LICENSE.md" />
+    <Content Include="Scripts\advarics\controls\advarics.editor.js" />
     <Content Include="Scripts\advarics\controls\advarics.grid.js" />
     <Content Include="Scripts\advarics\models\advarics.models.js" />
     <Content Include="Scripts\bootstrap.js" />

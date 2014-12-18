@@ -2,7 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>advarics Demo</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- General -->
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<!-- IE settings -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <meta name="description" content="advarics web application" />
     <meta name="keywords" content="advarics, application " />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -11,6 +16,7 @@
     <link href="Content/kendo/kendo.default.min.css" rel="stylesheet" />
     <link href="Content/kendo/kendo.dataviz.min.css" rel="stylesheet" />
     <link href="Content/kendo/kendo.dataviz.default.min.css" rel="stylesheet" />
+
 </head>
 <body class="sapUiBody" role="application" oncontextmenu="return false;">
     <div id="app"></div>
@@ -21,7 +27,10 @@
     <script id="sap-ui-bootstrap"
             src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core.js"
             data-sap-ui-theme="sap_bluecrystal"
+            data-sap-ui-xx-test-mobile="true"
+            data-sap-ui-xx-bindingsyntax="complex"
             data-sap-ui-libs="sap.ui.core,sap.ui.commons,sap.ui.table,sap.ui.ux3"></script>
+
     <script src="Scripts/require.js" data-main="Scripts/main"></script>
 </body>
 </html>
