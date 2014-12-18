@@ -87,10 +87,12 @@
                     headerItems: [
                                     new sap.ui.commons.TextView(
                                         {
-                                            text: "HBR", tooltip: "U.Name"
+                                            text: "advarics GmbH",
+                                            tooltip: "U.Name"
                                         }),
                                         new sap.ui.commons.Button({
-                                            text: "Personalize", tooltip: "Personalize",
+                                            text: "Personalize",
+                                            tooltip: "Personalize",
                                             press: function (oEvent)
                                             {
                                                 alert("Just a demo!");
