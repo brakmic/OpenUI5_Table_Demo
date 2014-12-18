@@ -3,7 +3,39 @@
         'base64'], //base64 is needed when accessing protected services (for example via Base-Auth etc.)
                 function (_, ko, B64) {
                     'use strict';
-                    var Config = function(){};
+                    var Config = function (global) {
+                        //code taken from the article "console.log() in the wild" at http://blog.getify.com/console-log-in-the-wild/
+                        var prod = global.location.href.match(/^http:\/\/(www\.)?brakmic.de/i) !== null,
+                                          api = [
+                                                    "log", "debug", "info",
+                                                    "warn", "error", "assert",
+                                                    "dir", "dirxml", "trace",
+                                                    "group", "groupCollapsed",
+                                                    "groupEnd", "time", "timeEnd",
+                                                    "profile", "profileEnd",
+                                                    "count", "exception", "table"
+                                                ],
+                                                log, i, len;
+
+                        if (typeof global.console == "undefined" || !global.console) {
+                            try {
+                                global.console = {};
+                            } catch (err) { }
+                        }
+
+                        log = (!prod && typeof global.console.log != "undefined") ?
+                           global.console.log :
+                           function () { }
+                        ;
+
+                        for (i = 0, len = api.length; i < len; i++) {
+                            if (prod || typeof global.console[api[i]] == "undefined" ||
+                               !global.console[api[i]]) {
+                                try { global.console[api[i]] = log; } catch (err) { }
+                            }
+                        }
+                       console.log('Running on debug.'); //should only run in DEBUG
+                    };
 
                     _.extend(Config.prototype, {
                         //session data
@@ -209,5 +241,6 @@
                             };
                         }
                     });
-                    return new Config();
+
+                    return new Config(window);
 });
