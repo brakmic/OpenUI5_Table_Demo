@@ -68,6 +68,9 @@ The steps are:
 **Kendo Grid**
 <img src="http://h02.imgup.net/sap_kendo18dc.png" />
 
+**Kendo Editor**
+<img src="http://c13.imgup.net/editor3b10.png" />
+
 These sites helped me a lot to create this demo:
 
 <a href="https://sapui5.netweaver.ondemand.com/sdk/#content/Controls/index.html">SAPUI5 SDK Controls</a>
