@@ -60,7 +60,8 @@ The steps are:
     - create a new Table based on the model
     - create a Shell and give it a Table as a content
     - put the Shell on a DIV named 'app' from index.html
-    - when switching to other tabs (Management, Editor) the app will initialize the KendoUI components (Grid/Editor)
+    - when switching to other tabs (Management, Editor) the app will initialize 
+      the KendoUI components (Grid/Editor)
 
 **SAP Shell**
 
