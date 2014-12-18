@@ -66,7 +66,7 @@ The steps are:
 <img src="http://j20.imgup.net/table_demoa3a6.png" />
 
 **Kendo Grid**
-<img src="http://h02.imgup.net/sap_kendo18dc.png" />
+<img src="http://o06.imgup.net/grid883b.png" />
 
 **Kendo Editor**
 <img src="http://c13.imgup.net/editor3b10.png" />
