@@ -1,5 +1,5 @@
 ﻿define(['underscore',
-        'k/kendo.all.min',
+        'k/kendo.grid.min',
         'advarics.config'],
     function (_, kendo, config) {
         var Grid = function(){};
