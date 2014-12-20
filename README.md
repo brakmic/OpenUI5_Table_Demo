@@ -19,12 +19,18 @@ Mouse right click on project root<br/>
 Select "Publish"<br/>
 Select a path to your IIS Application directory (it can go over FTP, local path, WebDeploy etc.)<br/>
 Upload the files to the directory<br />
-
-**Important steps**<br />
-====> By default IIS is not declaring the uploaded directories as "Applications". One must manually 'convert' them to real IIS-Applications. <br />
-====> Therefore, open the **IIS Management Console** by typing *inetmgr.exe* in a DOS-console or selecting it from *Control Panel/Administrative Tools*<br />
-====> In IIS-Manager right click on the Application directory and choose "Convert to Application". <br />
 </code>
+
+**Important steps**
+
+By default IIS is not declaring the uploaded directories as "Applications".
+
+One must manually 'convert' them to real IIS-Applications.
+
+Therefore, open the **IIS Management Console** by typing *inetmgr.exe* in a DOS-console or selecting it from *Control Panel/Administrative Tools*
+
+In IIS-Manager right click on the Application directory and choose "Convert to Application".
+
 
 For **HapiJS** use:
 
