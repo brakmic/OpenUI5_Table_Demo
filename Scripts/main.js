@@ -19,7 +19,9 @@
         'advarics.grid':    'advarics/controls/advarics.grid',
         'advarics.editor': 'advarics/controls/advarics.editor',
         'advarics.models': 'advarics/models/advarics.models',
-        'advarics.config': 'advarics/config/advarics.config'
+        'advarics.config': 'advarics/config/advarics.config',
+        'sugar': 'sugar.min',
+        'advarix': 'advarics/lib/advarix'
     },
 
     'shim': {

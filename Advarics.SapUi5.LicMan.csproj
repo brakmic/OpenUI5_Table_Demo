@@ -297,6 +297,7 @@
     <Content Include="Scripts\advarics\config\advarics.config.js" />
     <Content Include="Content\kendo\images\kendoui.ttf" />
     <Content Include="Content\kendo\images\kendoui.woff" />
+    <Content Include="Scripts\advarics\lib\advarix.js" />
     <None Include="Scripts\jquery-1.11.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.11.1.js" />
     <Content Include="Scripts\jquery-1.11.1.min.js" />
@@ -311,6 +312,7 @@
     </Content>
     <Content Include="Scripts\r.js" />
     <Content Include="Scripts\require.js" />
+    <Content Include="Scripts\sugar.min.js" />
     <Content Include="Scripts\underscore.js" />
     <Content Include="Scripts\underscore-min.js" />
     <Content Include="Scripts\underscore-min.map">

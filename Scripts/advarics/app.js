@@ -2,9 +2,10 @@
          'underscore',
          'advarics.config',
          'advarics.models',
-         'advarics.controls'
+         'advarics.controls',
+         'advarix'
          ],
-         function (_, config, models, controls) {
+         function (_, config, models, controls, ax) {
              'use strict';
              var App = function () { };
 

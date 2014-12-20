@@ -12,6 +12,7 @@
 /// <reference path="advarics/models/advarics.models.js" />
 /// <reference path="advarics/controls/advarics.grid.js" />
 /// <reference path="advarics/controls/advarics.editor.js" />
+/// <reference path="advarics/lib/advarics.lib.js" />
 /// <reference path="vendor/sap/js/dynamic-mode-check.js" />
 /// <reference path="vendor/sap/js/utils.js" />
 /// <reference path="vendor/sap/resources/jquery-sap-dbg.js" />

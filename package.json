@@ -1,0 +1,32 @@
+{
+  "name": "advaricsOpenUI5Demo",
+  "version": "1.0.0",
+  "description": "advarics openui5 web app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brakmic/OpenUI5_Table_Demo.git"
+  },
+  "keywords": [
+    "openui5",
+    "advarics",
+    "web",
+    "app",
+    "demo"
+  ],
+  "author": "Harris Brakmic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brakmic/OpenUI5_Table_Demo/issues"
+  },
+  "homepage": "https://github.com/brakmic/OpenUI5_Table_Demo",
+  "dependencies": {
+    "good": "^5.1.0",
+    "good-console": "^3.1.2",
+    "hapi": "^8.0.0"
+  }
+}
