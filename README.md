@@ -14,12 +14,10 @@ Either publish the *Visual Studio project* to your IIS server, or run it via *np
 
 For **IIS** use:
 
-<code>
 Mouse right click on project root<br/>
 Select "Publish"<br/>
 Select a path to your IIS Application directory (it can go over FTP, local path, WebDeploy etc.)<br/>
 Upload the files to the directory<br />
-</code>
 
 **Important steps**
 
