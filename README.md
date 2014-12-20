@@ -92,9 +92,13 @@ a factory for such cases.
 
 For easier handling of the many configuration options I use <a href="http://knockoutjs.com/" target="_blank">Knockout.js</a> and <a href="http://underscorejs.org/" target="_blank">Underscore.js</a> libraries.
 
-:lock: For crypto functionalities, like setting HTTP Auth-Headers, the <a href="https://code.google.com/p/crypto-js/" target="_blank">CryptoJS</a> library is available.
+:lock:
 
-:trollface: Currently there are no separate *XML-Views* and no *Controller logic*.
+For crypto functionalities, like setting HTTP Auth-Headers, the <a href="https://code.google.com/p/crypto-js/" target="_blank">CryptoJS</a> library is available.
+
+:trollface:
+
+Currently there are no separate *XML-Views* and no *Controller logic*.
 
 <br />
 :airplane: **RequireJS** starts the app via *advarics/app.js*
