@@ -70,7 +70,7 @@ RequireJS starts.
 
 The scripts are located in *Scripts/advarics* directory.
 
-:wheelchair: **Helper methods**
+:wheelchair:
 
 *Scripts/advarics/advarics.controls.js* contains some helper methods for easier configuration of tables and other widgets.
 
