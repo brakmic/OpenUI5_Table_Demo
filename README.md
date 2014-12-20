@@ -99,7 +99,7 @@ For easier handling of the many configuration options I use <a href="http://knoc
 :trollface: Currently there are no separate *XML-Views* and no *Controller logic* because the demo comprises of a single Shell instance with embedded widgets.
 
 <br />
-RequireJS starts the app from *advarics/app.js*
+**RequireJS** starts the app via *advarics/app.js*
 
 :airplane: The steps are:
 
