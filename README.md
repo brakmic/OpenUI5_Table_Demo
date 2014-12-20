@@ -30,7 +30,7 @@ Therefore, open the **IIS Management Console** by typing *inetmgr.exe* in a DOS-
 In IIS-Manager right click on the Application directory and choose "Convert to Application".
 
 
-:bullettrain_side: For **HapiJS** use:
+:helicopter: For **HapiJS** use:
 
 <code>
 npm install
