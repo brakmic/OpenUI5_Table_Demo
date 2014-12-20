@@ -132,7 +132,7 @@ Nabisoft's <a href="http://www.nabisoft.com/tutorials/sapui5/" target="_blank">S
 SAP UI5 <a href="https://sapui5.netweaver.ondemand.com/sdk/test-resources/sap/ui/table/demokit/Table.html" target="_blank">Table</a> & <a href="https://openui5.hana.ondemand.com/#test-resources/sap/ui/ux3/demokit/Shell.html" target="_blank">Shell</a> Documentation
 
 <br />
-**Created at**
+:bulb: **Created at**
 
 <a href="http://www.advarics.net" target="_blank">advarics GmbH</a>, Branch Office - Bochum, Germany
 
