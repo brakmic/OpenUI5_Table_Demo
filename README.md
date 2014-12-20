@@ -6,7 +6,9 @@
 
 It can run under <a href="http://www.iis.net/" target="_blank">IIS</a> or <a href="http://hapijs.com/" target="_blank">HapiJS</a>.
 
+
 :books: More detailed info, tutorials & videos on OpenUI5 can be found <a href="https://openui5.zeef.com/harris.brakmic" target="_blank">here</a>.
+
 
 :taxi: **How to run it?**
 
