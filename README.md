@@ -6,6 +6,10 @@ A live demo is located <a href="http://brakmic.de/openui5/" target="_blank">here
 
 More detailed info, tutorials & videos on OpenUI5 can be found <a href="https://openui5.zeef.com/harris.brakmic" target="_blank">here</a>.
 
+**How to run it**
+
+Either publish the Visual Studio project to your IIS server, or run it via *npm start* from the console. 
+
 Please note that Kendo Grid belongs to the "Professional" version of Kendo UI and therefore needs a proper license to be used.
 
 Therefore *I'm not providing the copyrighted scripts/styles to avoid violation of Telerik's license terms*.
