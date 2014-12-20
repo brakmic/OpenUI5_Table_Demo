@@ -2,13 +2,13 @@
 
 This is a web app based on SAP's MVC Framework <a href="https://sap.github.io/openui5/" target="_blank">OpenUI5</a> and <a href="http://www.telerik.com/kendo-ui" target="_blank">Kendo UI</a> from Telerik.
 
-A live demo is located <a href="http://brakmic.de/openui5/" target="_blank">here</a>.
+:turtle: A live demo is located <a href="http://brakmic.de/openui5/" target="_blank">here</a>.
 
 It runs under <a href="http://www.iis.net/" target="_blank">IIS</a> or <a href="http://hapijs.com/" target="_blank">HapiJS</a>.
 
 More detailed info, tutorials & videos on OpenUI5 can be found <a href="https://openui5.zeef.com/harris.brakmic" target="_blank">here</a>.
 
-**How to run it?**
+:taxi: **How to run it?**
 
 Either publish the *Visual Studio project* to your IIS server, or run it via *npm start* from the console.
 
