@@ -12,14 +12,14 @@ More detailed info, tutorials & videos on OpenUI5 can be found <a href="https://
 
 Either publish the *Visual Studio project* to your IIS server, or run it via *npm start* from the console.
 
-For **IIS** use:
+:steam_locomotive: For **IIS** use:
 
 *Mouse right click on project root<br/>
 Select "Publish"<br/>
 Select a path to your IIS App-dir (it can go over FTP, local path, WebDeploy etc.)<br/>
 Upload the files to the directory<br />*
 
-:wheelchair: **Important steps after the upload to IIS**
+:vertical_traffic_light: **Important steps after the upload to IIS**
 
 By default IIS is not declaring the uploaded directories as "Applications".
 
@@ -30,7 +30,7 @@ Therefore, open the **IIS Management Console** by typing *inetmgr.exe* in a DOS-
 In IIS-Manager right click on the Application directory and choose "Convert to Application".
 
 
-For **HapiJS** use:
+:bullettrain_side: For **HapiJS** use:
 
 <code>
 npm install
