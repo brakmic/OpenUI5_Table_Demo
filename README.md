@@ -57,7 +57,7 @@ The Kendo-Scripts should go into *Scripts/vendor/kendo* directory and CSS-files 
 I'm still experimenting with it, so expect some rough edges. However, there are a few
 helper modules for easier creation of tables & columns.
 
-**External services**
+:bomb: **External services**
 
 To generate sample JSON-data for SAP Table I used <a href="http://www.json-generator.com/" target="_blank">JSON generator</a>.
 
@@ -101,7 +101,7 @@ Currently there are no separate XML-Views and no Controller logic because the de
 <br />
 RequireJS starts the app from *advarics/app.js*
 
-The steps are:    
+:airplane: The steps are:
 
     - get the JSON data
     - create a new Model filled with data
@@ -121,7 +121,7 @@ The steps are:
 **Kendo Editor**
 <img src="http://c13.imgup.net/editor3b10.png" />
 
-These sites helped me a lot to create this demo:
+:clap: These sites helped me a lot to create this demo:
 
 <a href="https://sapui5.netweaver.ondemand.com/sdk/#content/Controls/index.html">SAPUI5 SDK Controls</a>
 
