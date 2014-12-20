@@ -44,7 +44,7 @@ When running on **IIS** the server settings are located in *Web.config* in the r
 
 For **HapiJS** the configuration is located in  *Scripts/server.config.js*. Also the *server.js* startup script can be modified.
 
-:zap: **Important notice**
+:warning: **Important notice**
 
 Please note that Kendo Grid belongs to the "Professional" version of Kendo UI and therefore needs a proper license to be used.
 
