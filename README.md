@@ -10,7 +10,7 @@ It can run under <a href="http://www.iis.net/" target="_blank">IIS</a> or <a hre
 
 Either publish the *Visual Studio project* to your IIS server, or run it via *npm start* from the console.
 
-:steam_locomotive: For **IIS** use:
+:steam_locomotive: **IIS**
 
 *Mouse right click on project root<br/>
 Select "Publish"<br/>
@@ -28,7 +28,7 @@ Therefore, open the **IIS Management Console** by typing *inetmgr.exe* in a DOS-
 In IIS-Manager right click on the Application directory and choose "Convert to Application".
 
 
-:helicopter: For **HapiJS** use:
+:helicopter: **HapiJS**
 
 <code>
 npm install
@@ -42,7 +42,7 @@ When running on **IIS** the server settings are located in *Web.config* in the r
 
 For **HapiJS** the configuration is located in  *Scripts/server.config.js*. Also the *server.js* startup script can be modified.
 
-:warning: **Important notice**
+:warning:
 
 Please note that Kendo Grid belongs to the "Professional" version of Kendo UI and therefore needs a proper license to be used.
 
