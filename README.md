@@ -12,11 +12,30 @@ More detailed info, tutorials & videos on OpenUI5 can be found <a href="https://
 
 Either publish the *Visual Studio project* to your IIS server, or run it via *npm start* from the console.
 
-To run properly under NodeJS one must download the needed npm-packages via *npm install* first.
+For **IIS** use:
 
-When running under IIS you can adjust server setting via *Web.config* in the root directory.
+<code>
+Mouse right click on project root<br/>
+Select "Publish"<br/>
+Select a path to your IIS Application directory (it can go over FTP, local path, WebDeploy etc.)<br/>
+Upload the files to the directory<br />
 
-Under NodeJS (HapiJS) you can modify  *Scripts/server.config.js* or the *server.js* startup script.
+**Important steps**<br />
+====> By default IIS is not declaring the uploaded directories as "Applications". One must manually 'convert' them to real IIS-Applications. <br />
+====> Therefore, open the **IIS Management Console** by typing *inetmgr.exe* in a DOS-console or selecting it from *Control Panel/Administrative Tools*<br />
+====> In IIS-Manager right click on the Application directory and choose "Convert to Application". <br />
+</code>
+
+For **HapiJS** use:
+
+<code>
+npm install<br/>
+npm start
+</code>
+
+When running with **IIS** the server settings are located in *Web.config* in the root directory.
+
+For **HapiJS** the configuration is located in  *Scripts/server.config.js*. Also the *server.js* startup script can be modified.
 
 **Important notice**
 
