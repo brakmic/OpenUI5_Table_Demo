@@ -19,7 +19,7 @@ Select "Publish"<br/>
 Select a path to your IIS App-dir (it can go over FTP, local path, WebDeploy etc.)<br/>
 Upload the files to the directory<br />*
 
-:zap: **Important steps after the upload to IIS**
+:wheelchair: **Important steps after the upload to IIS**
 
 By default IIS is not declaring the uploaded directories as "Applications".
 
