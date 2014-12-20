@@ -99,9 +99,9 @@ For easier handling of the many configuration options I use <a href="http://knoc
 :trollface: Currently there are no separate *XML-Views* and no *Controller logic*.
 
 <br />
-**RequireJS** starts the app via *advarics/app.js*
+:airplane: **RequireJS** starts the app via *advarics/app.js*
 
-:airplane: The steps are:
+The steps are:
 
     - get the JSON data
     - create a new Model filled with data
