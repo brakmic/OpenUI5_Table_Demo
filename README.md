@@ -16,10 +16,10 @@ For **IIS** use:
 
 *Mouse right click on project root<br/>
 Select "Publish"<br/>
-Select a path to your IIS Application directory (it can go over FTP, local path, WebDeploy etc.)<br/>
+Select a path to your IIS App-dir (it can go over FTP, local path, WebDeploy etc.)<br/>
 Upload the files to the directory<br />*
 
-**Important steps**
+**Important steps after the upload to IIS**
 
 By default IIS is not declaring the uploaded directories as "Applications".
 
