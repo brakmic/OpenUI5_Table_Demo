@@ -63,7 +63,7 @@ For Kendo-Grid the public <a href="http://services.odata.org/V3/Northwind/Northw
 
 <a href="http://requirejs.org/" target="_blank">RequireJS</a> is the module loader for all **advarics**-JavaScripts. 
 
-:moneybag: **SAP-Scripts**
+:heavy_dollar_sign:
 
 SAP's Scripts are loaded separately and before the
 RequireJS starts.
