@@ -4,11 +4,21 @@ This is a web app based on SAP's MVC Framework <a href="https://sap.github.io/op
 
 A live demo is located <a href="http://brakmic.de/openui5/" target="_blank">here</a>.
 
+It runs under <a href="http://www.iis.net/" target="_blank">IIS</a> or <a href="http://hapijs.com/" target="_blank">HapiJS</a>.
+
 More detailed info, tutorials & videos on OpenUI5 can be found <a href="https://openui5.zeef.com/harris.brakmic" target="_blank">here</a>.
 
-**How to run it**
+**How to run it?**
 
-Either publish the Visual Studio project to your IIS server, or run it via *npm start* from the console. 
+Either publish the *Visual Studio project* to your IIS server, or run it via *npm start* from the console.
+
+To run properly under NodeJS one must download the needed npm-packages via *npm install* first.
+
+When running under IIS you can adjust server setting via *Web.config* in the root directory.
+
+Under NodeJS (HapiJS) you can modify  *Scripts/server.config.js* or the *server.js* startup script.
+
+**Important notice**
 
 Please note that Kendo Grid belongs to the "Professional" version of Kendo UI and therefore needs a proper license to be used.
 
@@ -19,18 +29,26 @@ But there's a 30 day trial available: <a href="http://www.telerik.com/download/k
 The Kendo-Scripts should go into *Scripts/vendor/kendo* directory and CSS-files into *Content/kendo*.
 
 I'm still experimenting with it, so expect some rough edges. However, there are a few
-helper modules for easier creation of tables & columns. To generate sample JSON-data for SAP Table I used <a href="http://www.json-generator.com/" target="_blank">JSON generator</a>.
+helper modules for easier creation of tables & columns.
+
+**External services**
+
+To generate sample JSON-data for SAP Table I used <a href="http://www.json-generator.com/" target="_blank">JSON generator</a>.
 
 For Kendo-Grid the public <a href="http://services.odata.org/V3/Northwind/Northwind.svc/" target="_blank">Northwind Service</a> was used.
 
 <a href="http://requirejs.org/" target="_blank">RequireJS</a> is the module loader for all **advarics**-JavaScripts. 
+
+**SAP-Scripts**
 
 SAP's Scripts are loaded separately and before the
 RequireJS starts.
 
 The scripts are located in *Scripts/advarics* directory.
 
-There you'll find some helper methods for easier configuration of tables and other widgets.
+**Helper methods**
+
+*Scripts/advarics/advarics.controls.js* contains some helper methods for easier configuration of tables and other widgets.
 
 So, instead of using raw
 <pre><code>table.addColumn({
@@ -55,7 +73,7 @@ For crypto functionalities, like setting HTTP Auth-Headers, the <a href="https:/
 Currently there are no separate XML-Views and no Controller logic because the demo comprises of a single Shell instance with embedded widgets.
 
 <br />
-RequireJS starts the app in *advarics/app.js*
+RequireJS starts the app from *advarics/app.js*
 
 The steps are:    
 
