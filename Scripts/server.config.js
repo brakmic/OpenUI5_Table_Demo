@@ -1,6 +1,4 @@
 //main config for SAPUI5 Demo App
-//it's just a complete copy of original settings from dev_config.js
-//with this file we avoid the usage of a module called "getconfig"
 module.exports = {
     root: "./Scripts",
     isDev: true,
