@@ -33,7 +33,10 @@ In IIS-Manager right click on the Application directory and choose "Convert to A
 For **HapiJS** use:
 
 <code>
-npm install<br/>
+npm install
+</code>
+
+<code>
 npm start
 </code>
 
