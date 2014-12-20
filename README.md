@@ -33,7 +33,7 @@ npm install<br/>
 npm start
 </code>
 
-When running with **IIS** the server settings are located in *Web.config* in the root directory.
+When running on **IIS** the server settings are located in *Web.config* in the root directory.
 
 For **HapiJS** the configuration is located in  *Scripts/server.config.js*. Also the *server.js* startup script can be modified.
 
