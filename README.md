@@ -4,7 +4,7 @@ This is a web app based on SAP's MVC Framework <a href="https://sap.github.io/op
 
 :turtle: A live demo is located <a href="http://brakmic.de/openui5/" target="_blank">here</a>.
 
-It runs under <a href="http://www.iis.net/" target="_blank">IIS</a> or <a href="http://hapijs.com/" target="_blank">HapiJS</a>.
+It can run under <a href="http://www.iis.net/" target="_blank">IIS</a> or <a href="http://hapijs.com/" target="_blank">HapiJS</a>.
 
 More detailed info, tutorials & videos on OpenUI5 can be found <a href="https://openui5.zeef.com/harris.brakmic" target="_blank">here</a>.
 
