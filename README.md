@@ -72,7 +72,7 @@ RequireJS starts.
 
 The scripts are located in *Scripts/advarics* directory.
 
-**Helper methods**
+:wheelchair: **Helper methods**
 
 *Scripts/advarics/advarics.controls.js* contains some helper methods for easier configuration of tables and other widgets.
 
@@ -94,9 +94,9 @@ a factory for such cases.
 
 For easier handling of the many configuration options I use <a href="http://knockoutjs.com/" target="_blank">Knockout.js</a> and <a href="http://underscorejs.org/" target="_blank">Underscore.js</a> libraries.
 
-For crypto functionalities, like setting HTTP Auth-Headers, the <a href="https://code.google.com/p/crypto-js/" target="_blank">CryptoJS</a> library is available.
+:lock: For crypto functionalities, like setting HTTP Auth-Headers, the <a href="https://code.google.com/p/crypto-js/" target="_blank">CryptoJS</a> library is available.
 
-Currently there are no separate XML-Views and no Controller logic because the demo comprises of a single Shell instance with embedded widgets.
+Currently there are no separate *XML-Views* and no *Controller logic* because the demo comprises of a single Shell instance with embedded widgets.
 
 <br />
 RequireJS starts the app from *advarics/app.js*
