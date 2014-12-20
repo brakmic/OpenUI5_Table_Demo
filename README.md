@@ -19,7 +19,7 @@ Select "Publish"<br/>
 Select a path to your IIS App-dir (it can go over FTP, local path, WebDeploy etc.)<br/>
 Upload the files to the directory<br />*
 
-**Important steps after the upload to IIS**
+:zap: **Important steps after the upload to IIS**
 
 By default IIS is not declaring the uploaded directories as "Applications".
 
@@ -44,7 +44,7 @@ When running on **IIS** the server settings are located in *Web.config* in the r
 
 For **HapiJS** the configuration is located in  *Scripts/server.config.js*. Also the *server.js* startup script can be modified.
 
-**Important notice**
+:zap: **Important notice**
 
 Please note that Kendo Grid belongs to the "Professional" version of Kendo UI and therefore needs a proper license to be used.
 
