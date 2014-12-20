@@ -121,7 +121,7 @@ The steps are:
 **Kendo Editor**
 <img src="http://c13.imgup.net/editor3b10.png" />
 
-:clap: These sites helped me a lot to create this demo:
+:top: Helpful sites:
 
 <a href="https://sapui5.netweaver.ondemand.com/sdk/#content/Controls/index.html">SAPUI5 SDK Controls</a>
 
@@ -136,6 +136,6 @@ SAP UI5 <a href="https://sapui5.netweaver.ondemand.com/sdk/test-resources/sap/ui
 
 <a href="http://www.advarics.net" target="_blank">advarics GmbH</a>, Branch Office - Bochum, Germany
 
-**License**
+:copyright: **License**
 
 **MIT** (see <a href="https://github.com/brakmic/OpenUI5_Table_Demo/blob/master/LICENSE.md">LICENSE.md</a>)
