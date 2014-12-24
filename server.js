@@ -55,7 +55,7 @@ server.route({
     path: '/UI/{param*}',
     handler: {
         directory: {
-            path: './UI',
+            path: './ui',
             listing: false
         }
     }
