@@ -52,10 +52,10 @@ server.route({
 
 server.route({
     method: 'GET',
-    path: '/Views/{param*}',
+    path: '/UI/{param*}',
     handler: {
         directory: {
-            path: './views',
+            path: './UI',
             listing: false
         }
     }
