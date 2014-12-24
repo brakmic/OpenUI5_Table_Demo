@@ -153,7 +153,7 @@ The app executes as follows:
 **Kendo Editor**
 <img src="http://c13.imgup.net/editor3b10.png" />
 
-**Alternative Version**
+**Master-Detail Version**
 
 <img src="http://m18.imgup.net/main_scree924a.png" />
 
