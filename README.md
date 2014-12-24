@@ -25,7 +25,7 @@ To start the alternative version use this call:
 
 The object *app* gets called by the <a href="http://www.requirejs.org" target="_blank">RequireJS</a> AMD-Loader after the OpenUI5-libs have been set up.
 
-To compare the two version, check the screenshots at the bottom of this page.
+To compare versions check the screenshots at the bottom.
 
 :steam_locomotive: **IIS**
 
