@@ -1,4 +1,8 @@
-﻿define(['underscore',
+﻿/**
+ * Utility module for creating components
+ * @module advarics.controls
+ */
+define(['underscore',
         'knockout',
         'advarics.config',
         'advarics.grid',

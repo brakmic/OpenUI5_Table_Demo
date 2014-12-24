@@ -18,19 +18,32 @@
     <link href="Content/kendo/kendo.dataviz.default.min.css" rel="stylesheet" />
 
 </head>
-<body class="sapUiBody" role="application" oncontextmenu="return false;">
-    <div id="app"></div>
+<body id="content" class="sapUiBody" role="application" oncontextmenu="return false;">
+    <!--<div id="app"></div>-->
     <!--<script src="Scripts/jquery-1.11.1.min.js"></script>-->
     <!-- Needed when using external jQuery -->
     <!--<script src="Scripts/vendor/sap/resources/sap/ui/thirdparty/jqueryui/jquery-ui-position.js"></script>-->
     <!-- SAP OpenUI5 -->
+    <!--src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core-dbg.js"-->
     <script id="sap-ui-bootstrap"
-            src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core.js"
+            src="Scripts/vendor/sap/resources/sap-ui-core.js"
             data-sap-ui-theme="sap_bluecrystal"
             data-sap-ui-xx-test-mobile="true"
             data-sap-ui-xx-bindingsyntax="complex"
-            data-sap-ui-libs="sap.ui.core,sap.ui.commons,sap.ui.table,sap.ui.ux3"></script>
+            data-sap-ui-resourceroots='{
+                "advarics": "./",
+                "advarics.views": "./UI",
+                "advarics.config": "./Config",
+                "advarics.settings": "./Scripts/advarics/config",
+                "advarics.util": "./Scripts/advarics/util",
+                "advarics.components": "./Scripts/advarics/components",
+                "advarics.components.apps": "./Scripts/advarics/components/apps",
+                "advarics.components.controllers": "./Scripts/advarics/components/controllers",
+                "advarics.components.routers": "./Scripts/advarics/components/routers"
+            }'
+            data-sap-ui-libs="sap.m,sap.ui.core,sap.ui.commons,sap.ui.table,sap.ui.ux3"></script>
 
     <script type="text/javascript" src="Scripts/require.js" data-main="Scripts/main"></script>
+
 </body>
 </html>

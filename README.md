@@ -10,6 +10,23 @@ It can run under <a href="http://www.iis.net/" target="_blank">IIS</a> or <a hre
 
 Either publish the *Visual Studio project* to your IIS server, or run it via *npm start* from the console.
 
+The project itself can either start as a Shell with a few embedded Kendo-Components 
+or as a Fiori-like WebApp that uses the "Northwind" OData-Service to show product data in a Master-Detail view.
+
+To start the Shell-Version, go to *Scripts/main.js* and set this function call:
+<code>
+    app.init();
+</code>
+
+To start the alternative version use this call:
+<code>
+    app.altInit();
+</code>
+
+The object *app* gets called by the <a href="http://www.requirejs.org" target="_blank">RequireJS</a> AMD-Loader after the OpenUI5-libs have been set up.
+
+To compare the two version, check the screenshots at the bottom of this page.
+
 :steam_locomotive: **IIS**
 
 *Mouse right click on project root<br/>
@@ -122,6 +139,10 @@ The steps are:
 
 **Kendo Editor**
 <img src="http://c13.imgup.net/editor3b10.png" />
+
+**Alternative Version**
+
+<img src="http://m18.imgup.net/main_scree924a.png" />
 
 **Helpful sites**
 

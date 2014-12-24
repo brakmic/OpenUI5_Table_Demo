@@ -1,10 +1,16 @@
-﻿define(['underscore',
+﻿/**
+ * Custom Editor component based on KendoUI Editor
+ * @module advarics.controls.editor
+ */
+define(['underscore',
         'knockout',
         'k/kendo.editor.min',
         'advarics.config'],
     function (_, ko, kendo, config) {
         'use strict';
         var Editor = function () { };
+
+        jQuery.sap.declare('advarics.controls.KendoEditor');
 
         sap.ui.core.Control.extend("advarics.controls.KendoEditor", {
             metadata: {

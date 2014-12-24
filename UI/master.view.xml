@@ -1,0 +1,47 @@
+<mvc:View
+	controllerName="advarics.components.controllers.Master"
+	displayBlock="true"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+    <Page
+		id="page"
+		title="{i18n>masterTitle}">
+        <subHeader>
+            <Bar id="searchBar">
+                <contentMiddle>
+                    <SearchField
+						id="searchField"
+						showRefreshButton="{device>/isNoTouch}"
+						search="onSearch"
+						tooltip="{i18n>masterSearchTooltip}"
+						width="100%">
+                    </SearchField>
+                </contentMiddle>
+            </Bar>
+        </subHeader>
+        <content>
+            <List
+				id="list"
+				items="{/Products}"
+                inset="false"
+				mode="{device>/listMode}"
+				noDataText="{i18n>masterListNoDataText}"
+				growing="true"
+                itemPress="onSelect"
+				growingScrollToLoad="true">
+                <items>
+                    <ObjectListItem
+						type="Active"
+						title="{Name}"
+						number="{
+							path: 'Price',
+							formatter: 'advarics.util.Formatter.currencyValue'
+						}"
+						numberUnit="EUR"
+                        iconInset="false">
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+    </Page>
+</mvc:View>

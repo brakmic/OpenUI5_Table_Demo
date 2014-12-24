@@ -1,0 +1,60 @@
+﻿<mvc:View
+        xmlns:layout="sap.ui.commons.layout"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        controllerName="advarics.components.controllers.Detail">
+    <Page showNavButton="{device>/isPhone}"
+		    navButtonPress="onNavBack"
+		    class="sapUiFioriObjectPage"
+		    title="{i18n>detailTitle}">
+        <ObjectHeader
+				title="{Name}"
+				number="{
+					path: 'Price',
+					formatter: 'advarics.util.Formatter.currencyValue'
+				}"
+				numberUnit="USD">
+            <attributes>
+                <ObjectAttribute text="{i18n>detailFromDate} {
+						path: 'ReleaseDate',
+						type: 'sap.ui.model.type.Date'
+						}" />
+                <ObjectAttribute text="{Description}" />
+            </attributes>
+            <firstStatus>
+                <ObjectStatus
+                    text="{
+							path: 'DiscontinuedDate',
+							formatter: 'advarics.util.Formatter.discontinuedStatusValue'
+						}"
+                    state="{
+							path: 'DiscontinuedDate',
+							formatter: 'advarics.util.Formatter.discontinuedStatusState'
+						}" />
+            </firstStatus>
+        </ObjectHeader>
+        <IconTabBar
+				select="onDetailSelect"
+				id="idIconTabBar">
+            <items>
+                <IconTabFilter
+                    key="supplier"
+                    text="{i18n>iconTabFilterSupplier}"
+                    icon="sap-icon://supplier">
+                    <content>
+                        <!--core:Fragment fragmentName="sap.ui.demo.tdg.view.SupplierAddressForm" type="XML" /-->
+                    </content>
+                </IconTabFilter>
+                <IconTabFilter
+                    key="category"
+                    text="{i18n>iconTabFilterCategory}"
+                    icon="sap-icon://hint">
+                    <content>
+                        <!--core:Fragment fragmentName="sap.ui.demo.tdg.view.CategoryInfoForm" type="XML" /-->
+                    </content>
+                </IconTabFilter>
+            </items>
+        </IconTabBar>
+    </Page>
+</mvc:View>

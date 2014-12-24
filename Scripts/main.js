@@ -20,7 +20,6 @@
         'advarics.editor': 'advarics/controls/advarics.editor',
         'advarics.models': 'advarics/models/advarics.models',
         'advarics.config': 'advarics/config/advarics.config',
-        'sugar': 'sugar.min',
         'advarix': 'advarics/lib/advarix'
     },
 
@@ -38,6 +37,7 @@
 });
 
 requirejs(['advarics/app'], function (app) {
-    console.log('Executing app.init()');
-    app.init();
+    console.log('Executing main.js');
+    //app.init();  /* this version shows a single shell with several embedded components (Kendo Grid, Kendo Editor etc.) */
+    app.altInit(); /* this version shows a Master-Detail demo by using the remote "Northwind" OData Service*/
 });

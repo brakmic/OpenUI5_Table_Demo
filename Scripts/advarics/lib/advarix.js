@@ -1,4 +1,8 @@
-﻿(function() {
+﻿/**
+ * advarix Library
+ * @module advarix
+ */
+(function () {
 
     /**
      * advarix library
@@ -52,6 +56,12 @@
                   element.removeChild(element.firstChild);
               }
           }
+      },
+
+      bind: function (fThis, f) {
+          return function () {
+              return f.apply(fThis, arguments);
+          };
       }
   };
 

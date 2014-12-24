@@ -1,4 +1,9 @@
-﻿define([ 
+﻿/**
+ * Bootstrap module for initializing OpenUI5 Application components
+ * @namespace advarics.app
+ * @module advarics.app
+ */
+define([
          'underscore',
          'advarics.config',
          'advarics.models',
@@ -47,7 +52,27 @@
                         shellConfig.content(table);
                         //create the shell
                         shell = controls.getShell(shellConfig);
-                        shell.placeAt('app');
+                        shell.placeAt('content');
+                 },
+                 altInit: function () {
+
+                     jQuery.sap.require('advarics.util.Formatter');
+                     jQuery.sap.require('advarics.settings.Globals');
+                     jQuery.sap.require('advarics.util.Logger');
+                     jQuery.sap.require('advarics.components.apps.App');
+
+                     console.log('app.altInit');
+                     var appCom = new advarics.components.apps.App();
+                     //var appCom = sap.ui.getCore().createComponent({
+                     //    name: "advarics.components.apps.App",
+                     //    id: "App"
+                     //});
+                     new sap.m.Shell('Shell', {
+                         title: 'Alternative Shell',
+                         app: new sap.ui.core.ComponentContainer({
+                             component: appCom
+                         })
+                     }).placeAt('content');
                  }
              });
 

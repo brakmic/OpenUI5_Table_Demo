@@ -1,0 +1,12 @@
+﻿{
+    "name": "advarics.components.apps.App",
+    "version": "0.0.1",
+    "description": "App component",
+    "keywords": [
+        "advarics",
+        "app",
+        "component" 
+    ],
+    "dependencies": {
+    }
+}

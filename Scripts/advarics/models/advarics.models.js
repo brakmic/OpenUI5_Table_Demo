@@ -1,20 +1,42 @@
-﻿define(['underscore'],
+﻿/**
+ * Models module
+ * @module advarics.models
+ */
+define(['underscore'],
     function (_) {
         'use strict';
+    /**
+     * @namespace
+     */
     var Models = function(){};
 
     _.extend(Models.prototype, {
-        getData: getDummyData,
-        getModel: function (data) {
-            var model = new sap.ui.model.json.JSONModel();
-            model.setData({ modelData: data });
-            return model;
-        }
+        /**
+         * Return dummy array data 
+         * @public
+         * @function getData
+         * @returns array
+         */
+        getData: _getDummyData,
+        /**
+         * Initialize an OpeUI5-model
+         * @public 
+         * @function getModel
+         * @param {array} data raw array data
+         * @returns OpenUI5-model instance
+         */
+        getModel: _getModel
     });
 
     return new Models();
 
-    function getDummyData(){
+    /**
+     * Generate some test data
+     * @function _getDummyData
+     * @returns array
+     * @ignore
+     */
+    function _getDummyData(){
         return      [
                             {
                                 "id": "fba28a4a-177d-444c-8901-3cf65232cfe8",
@@ -480,8 +502,14 @@
 
                         ]
     };
-
-    function getModel(data) {
+    /**
+     * Initialize an OpenUI5-Model
+     * @function _getModel
+     * @param {array} data raw array data
+     * @returns OpenUI5-model instance
+     * @ignore
+     */
+    function _getModel(data) {
         var model = new sap.ui.model.json.JSONModel();
         model.setData({ modelData: data });
         return model;

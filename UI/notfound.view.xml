@@ -1,0 +1,24 @@
+﻿<core:View
+        xmlns:layout="sap.ui.commons.layout"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        controllerName="advarics.components.controllers.NotFound"
+        xmlns:html="http://www.w3.org/1999/xhtml">
+    <html:style>
+        .text-warning {
+        color: red;
+        font-size: 24px;
+        }
+    </html:style>
+    <Page>
+        <Panel>
+            <content>
+                <!-- this is the general way of adding children: use the aggregation name -->
+                <Image src="Content/images/advaricsLogo.png"/>
+                <html:br/>
+                <Text class="text-warning" text="Product not found."/>
+            </content>
+        </Panel>
+    </Page>
+</core:View>

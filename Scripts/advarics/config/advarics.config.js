@@ -1,9 +1,15 @@
-﻿define(['underscore',
+﻿/**
+ * Configuration module
+ * @module advarics.config
+ */
+define(['underscore',
         'knockout',
         'base64'], //base64 is needed when accessing protected services (for example via Base-Auth etc.)
                 function (_, ko, B64) {
                     'use strict';
                     var Config = function (global) {
+
+
                         //code taken from the article "console.log() in the wild"
                         //at http://blog.getify.com/console-log-in-the-wild/
                         var prod = global.location.href.match(/^http:\/\/(www\.)?brakmic.de/i) !== null,
@@ -35,7 +41,7 @@
                                 try { global.console[api[i]] = log; } catch (err) { }
                             }
                         }
-                       console.log('Running on debug.'); //should only run in DEBUG
+                        console.log('Running on debug.'); //should only run in DEBUG
                     };
 
                     _.extend(Config.prototype, {

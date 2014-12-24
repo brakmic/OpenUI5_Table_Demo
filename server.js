@@ -19,6 +19,17 @@ server.route({
 
 server.route({
     method: 'GET',
+    path: '/Config/{param*}',
+    handler: {
+        directory: {
+            path: './config',
+            listing: false
+        }
+    }
+});
+
+server.route({
+    method: 'GET',
     path: '/Fonts/{param*}',
     handler:{
         directory: {
@@ -34,6 +45,17 @@ server.route({
     handler:{
         directory: {
             path: './scripts',
+            listing: false
+        }
+    }
+});
+
+server.route({
+    method: 'GET',
+    path: '/Views/{param*}',
+    handler: {
+        directory: {
+            path: './views',
             listing: false
         }
     }
