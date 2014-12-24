@@ -14,7 +14,7 @@
 					path: 'Price',
 					formatter: 'advarics.util.Formatter.currencyValue'
 				}"
-				numberUnit="USD">
+				numberUnit="EUR">
             <attributes>
                 <ObjectAttribute text="{i18n>detailFromDate} {
 						path: 'ReleaseDate',
