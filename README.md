@@ -115,20 +115,33 @@ For crypto functionalities, like setting HTTP Auth-Headers, the <a href="https:/
 
 :trollface:
 
-Currently there are no separate *XML-Views* and no *Controller logic*.
+The Shell-Version is just a container that holds the widgets and utilizes no explicit Controllers, Views or Models.
+
+The alternative, 'Master-Detail' version contains a complete MVC pattern with several Views, Controllers & Models.
 
 <br />
 :airplane: **RequireJS** starts the app via *advarics/app.js*
 
-The steps are:
+The app executes as follows:
+
+*Shell Version*
 
     - get the JSON data
     - create a new Model filled with data
     - create a new Table based on the model
     - create a Shell and give it a Table as a content
-    - put the Shell on a DIV named 'app' from index.html
+    - put the Shell on the BODY Element in index.html
     - when switching to other tabs (Management, Editor) the app will initialize 
       the KendoUI components (Grid/Editor)
+
+
+*Master-Detail Version*
+
+    - create the main component "App" which boots the whole stuff (OData, MVC, config etc.)
+    - insert the App into a component container
+    - hook the component container on the BODY Element in index.html
+    - watch for URL changes and/or clicks in the View and act accordingly
+
 
 **SAP Shell**
 
