@@ -5950,11 +5950,13 @@
     <Content Include="Scripts\vendor\sap\resources\sap\ui\ux3\ToolPopupRenderer.js" />
     <Content Include="Scripts\vendor\sap\resources\testsuite\testframe.html" />
     <None Include="Scripts\_references.js" />
-    <Content Include="UI\app.view.xml" />
-    <Content Include="UI\detail.view.xml" />
+    <Content Include="UI\fragments\category.fragment.xml" />
+    <Content Include="UI\fragments\supplier.fragment.xml" />
+    <Content Include="UI\views\app.view.xml" />
+    <Content Include="UI\views\detail.view.xml" />
     <Content Include="Scripts\advarics\components\controllers\Master.controller.js" />
-    <Content Include="UI\master.view.xml" />
-    <Content Include="UI\notfound.view.xml" />
+    <Content Include="UI\views\master.view.xml" />
+    <Content Include="UI\views\notfound.view.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

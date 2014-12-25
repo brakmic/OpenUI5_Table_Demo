@@ -43,7 +43,7 @@
                     text="{i18n>iconTabFilterSupplier}"
                     icon="sap-icon://supplier">
                     <content>
-                        <!--core:Fragment fragmentName="sap.ui.demo.tdg.view.SupplierAddressForm" type="XML" /-->
+                        <core:Fragment fragmentName="advarics.fragments.supplier" type="XML" />
                     </content>
                 </IconTabFilter>
                 <IconTabFilter
@@ -51,7 +51,7 @@
                     text="{i18n>iconTabFilterCategory}"
                     icon="sap-icon://hint">
                     <content>
-                        <!--core:Fragment fragmentName="sap.ui.demo.tdg.view.CategoryInfoForm" type="XML" /-->
+                        <core:Fragment fragmentName="advarics.fragments.category" type="XML" />
                     </content>
                 </IconTabFilter>
             </items>
