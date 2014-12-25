@@ -155,7 +155,7 @@ The app executes as follows:
 
 **Master-Detail Version**
 
-<img src="http://m18.imgup.net/main_scree924a.png" />
+<img src="http://s07.imgup.net/main_scree9bcc.png" />
 
 **Helpful sites**
 
