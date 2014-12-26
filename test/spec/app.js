@@ -19,7 +19,7 @@ define(['app'], function (app) {
         });
 
         //Assert
-        it('is not null', function () {
+        it('should be not null', function () {
             expect(app).not.toBeNull();
         });
 
@@ -54,7 +54,7 @@ define(['app'], function (app) {
             appCom.createContent();
         });
         //Assert
-        it('is not null', function () {
+        it('should be not null', function () {
             expect(appCom).not.toBeNull();
         });
 
