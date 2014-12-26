@@ -1,4 +1,4 @@
-                            :christmas_tree: **OpenUI5 + Kendo UI web app** :christmas_tree:
+:christmas_tree: **OpenUI5 + Kendo UI web app** :christmas_tree:
 
 *This web app is based on SAP's <a href="https://sap.github.io/openui5/" target="_blank">OpenUI5</a> and Telerik's <a href="http://www.telerik.com/kendo-ui" target="_blank">Kendo UI</a>.*
 
@@ -6,7 +6,7 @@ A live demo is located <a href="http://brakmic.de/openui5/" target="_blank">here
 
 It can run under <a href="http://www.iis.net/" target="_blank">IIS</a> or <a href="http://hapijs.com/" target="_blank">HapiJS</a>.
 
-                                        :taxi: **How to run it?**
+:taxi: **How to run it?**
 
 Either publish the *Visual Studio project* to your IIS server, or run it via *npm start* from the console.
 
@@ -27,7 +27,7 @@ The object *app* gets called by the <a href="http://www.requirejs.org" target="_
 
 To compare versions check the screenshots at the bottom.
 
-                                                    **IIS**
+**IIS**
 
 *Mouse right click on project root<br/>
 Select "Publish"<br/>
@@ -45,7 +45,7 @@ Therefore, open the **IIS Management Console** by typing *inetmgr.exe* in a DOS-
 In IIS-Manager right click on the Application directory and choose "Convert to Application".
 
 
-                                                    **HapiJS**
+**HapiJS**
 
 <code>
 npm install
@@ -59,7 +59,7 @@ When running on **IIS** the server settings are located in *Web.config* in the r
 
 For **HapiJS** the configuration is located in  *Scripts/server.config.js*. Also the *server.js* startup script can be modified.
 
-                                                    :warning:
+:warning:
 
 Please note that Kendo Grid belongs to the "Professional" version of Kendo UI and therefore needs a proper license to be used.
 
@@ -72,7 +72,7 @@ The Kendo-Scripts should go into *Scripts/vendor/kendo* directory and CSS-files 
 I'm still experimenting with it, so expect some rough edges. However, there are a few
 helper modules for easier creation of tables & columns.
 
-                                                **Testing**
+**Testing**
 
 <a href="http://jasmine.github.io/2.1/introduction.html" target="_blank">Jasmine 2.1.3</a> and <a href="http://tntim96.github.io/JSCover/" target="_blank">JSCover 1.0.15</a>. 
 
@@ -88,7 +88,7 @@ Jasmine can either be run directly or via JSCover.  I'd recommend JSCover becaus
 
 The batch file *tools/jscover-server.bat* starts a local web server on port 8080. You'll need <a href="https://www.java.com/en/download/" target="_blank">Java runtime</a> to execute *JSCover-all.jar* file located in the same directory.
 
-                                            **External services**
+**External services**
 
 To generate sample JSON-data for SAP Table I used <a href="http://www.json-generator.com/" target="_blank">JSON generator</a>.
 
@@ -96,7 +96,7 @@ For Kendo-Grid the public <a href="http://services.odata.org/V3/Northwind/Northw
 
 <a href="http://requirejs.org/" target="_blank">RequireJS</a> is the module loader for all **advarics**-JavaScripts. 
 
-                                            Helper methods
+Helper methods
 
 *Scripts/advarics/advarics.controls.js* contains some helper methods for easier configuration of tables and other widgets.
 
@@ -118,18 +118,18 @@ a factory for such cases.
 
 For easier handling of the many configuration options I use <a href="http://knockoutjs.com/" target="_blank">Knockout.js</a> and <a href="http://underscorejs.org/" target="_blank">Underscore.js</a> libraries.
 
-                                            Crypto functionalities
+Crypto functionalities
 
 For crypto functionalities, like setting HTTP Auth-Headers, the <a href="https://code.google.com/p/crypto-js/" target="_blank">CryptoJS</a> library is available.
 
-                                            To MVC or not to MVC?
+To MVC or not to MVC?
 
 The Shell-Version is just a container that holds the widgets and utilizes no explicit Controllers, Views or Models.
 
 The alternative, 'Master-Detail' version contains a complete MVC pattern with several Views, Controllers & Models.
 
 
-                                    *Load & execute order of JavaScripts*
+*Load & execute order of JavaScripts*
 
 SAP's Scripts are loaded separately and before the
 RequireJS starts.
