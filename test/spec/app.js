@@ -23,12 +23,12 @@ define(['app'], function (app) {
             expect(app).not.toBeNull();
         });
 
-        it('initializes the Shell only once', function () {
+        it('should initialize the Shell only once', function () {
             expect(app.init).toHaveBeenCalled();
             expect(app.init.calls.count(1));
         });
 
-        it('initializes Master-Detail only once', function () {
+        it('should initialize Master-Detail only once', function () {
             expect(app.altInit).toHaveBeenCalled();
             expect(app.altInit.calls.count(1));
         });
@@ -58,25 +58,25 @@ define(['app'], function (app) {
             expect(appCom).not.toBeNull();
         });
 
-        it('initializes the AppRouter only once', function () {
+        it('should initialize the AppRouter only once', function () {
             expect(appCom.init).toHaveBeenCalled();
             expect(appCom.init.calls.count(1));
             expect(appCom._router).not.toBeNull();
         });
 
-        it('initializes the i18n Model', function () {
+        it('should initialize the i18n Model', function () {
             expect(sap.ui.getCore().getModel('i18n')).not.toBeNull();
         });
 
-        it('initalizes the "Northwind"-OData-Model', function () {
+        it('should initialize the "Northwind"-OData-Model', function () {
             expect(sap.ui.getCore().getModel('northwind')).not.toBeNull();
         });
 
-        it('initializes the Device Model', function () {
+        it('should initialize the Device Model', function () {
             expect(sap.ui.getCore().getModel('device')).not.toBeNull();
         });
 
-        it('creates the initial page only once', function () {
+        it('should create the initial page only once', function () {
             expect(appCom.createContent).toHaveBeenCalled();
             expect(appCom.createContent.calls.count(1));
         });
