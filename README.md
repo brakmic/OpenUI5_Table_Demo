@@ -27,7 +27,7 @@ The object *app* gets called by the <a href="http://www.requirejs.org" target="_
 
 To compare versions check the screenshots at the bottom.
 
-**IIS**
+**Deploying to IIS**
 
 *Mouse right click on project root<br/>
 Select "Publish"<br/>
@@ -45,7 +45,7 @@ Therefore, open the **IIS Management Console** by typing *inetmgr.exe* in a DOS-
 In IIS-Manager right click on the Application directory and choose "Convert to Application".
 
 
-**HapiJS**
+**Initial setup & running with HapiJS**
 
 <code>
 npm install
@@ -55,7 +55,7 @@ npm install
 npm start
 </code>
 
-When running on **IIS** the server settings are located in *Web.config* in the root directory.
+When running on **IIS** the server settings are located in *Web.config* from the root directory.
 
 For **HapiJS** the configuration is located in  *Scripts/server.config.js*. Also the *server.js* startup script can be modified.
 
