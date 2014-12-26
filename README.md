@@ -72,7 +72,7 @@ The Kendo-Scripts should go into *Scripts/vendor/kendo* directory and CSS-files 
 I'm still experimenting with it, so expect some rough edges. However, there are a few
 helper modules for easier creation of tables & columns.
 
-**Testing**
+:anchor: **Testing**
 
 <a href="http://jasmine.github.io/2.1/introduction.html" target="_blank">Jasmine 2.1.3</a> and <a href="http://tntim96.github.io/JSCover/" target="_blank">JSCover 1.0.15</a>. 
 
