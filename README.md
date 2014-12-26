@@ -118,16 +118,15 @@ a factory for such cases.
 
 For easier handling of the many configuration options I use <a href="http://knockoutjs.com/" target="_blank">Knockout.js</a> and <a href="http://underscorejs.org/" target="_blank">Underscore.js</a> libraries.
 
-Crypto functionalities
+**Crypto functionalities**
 
 For crypto functionalities, like setting HTTP Auth-Headers, the <a href="https://code.google.com/p/crypto-js/" target="_blank">CryptoJS</a> library is available.
 
-To MVC or not to MVC?
+**To MVC or not to MVC?**
 
 The Shell-Version is just a container that holds the widgets and utilizes no explicit Controllers, Views or Models.
 
 The alternative, 'Master-Detail' version contains a complete MVC pattern with several Views, Controllers & Models.
-
 
 *Load & execute order of JavaScripts*
 
