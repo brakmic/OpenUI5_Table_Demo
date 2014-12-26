@@ -13,12 +13,12 @@ Either publish the *Visual Studio project* to your IIS server, or run it via *np
 The project itself can either start as a Shell with a few embedded Kendo-Components 
 or as a Fiori-like WebApp that uses the "Northwind" OData-Service to show product data in a Master-Detail view.
 
-To start the Shell-Version, go to *Scripts/main.js* and set this function call:
+To start the Shell-Version, go to *Scripts/main.js* and set this call:
 <code>
     app.init();
 </code>
 
-To start the alternative version use this call:
+To start the alternative version use this:
 <code>
     app.altInit();
 </code>
