@@ -133,8 +133,7 @@ The alternative, 'Master-Detail' version contains a complete MVC pattern with se
 SAP's Scripts are loaded separately and before the
 RequireJS starts.
 
-<br />
-:airplane: **RequireJS** starts the app via *advarics/app.js*
+RequireJS starts the app via *advarics/app.js*
 
 Depending on the version being active the app executes as follows:
 
