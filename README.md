@@ -128,7 +128,7 @@ The Shell-Version is just a container that holds the widgets and utilizes no exp
 
 The alternative, 'Master-Detail' version contains a complete MVC pattern with several Views, Controllers & Models.
 
-*Load & execute order of JavaScripts*
+**Load & execute order of JavaScripts**
 
 SAP's Scripts are loaded separately and before the
 RequireJS starts.
