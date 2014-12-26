@@ -2,10 +2,10 @@
     //script base
     baseUrl: 'Scripts/',
     paths: {
-        'bootstrap': 'bootstrap.min',
-        'knockout': 'knockout-3.2.0',
-        'underscore': 'underscore-min',
-        'underscore.string': 'underscore.string.min',
+        'bootstrap': 'vendor/bootstrap.min',
+        'knockout': 'vendor/knockout-3.2.0',
+        'underscore': 'vendor/underscore-min',
+        'underscore.string': 'vendor/underscore.string.min',
         'k': 'vendor/kendo',
         'base64': 'vendor/helpers/base64v1_0',
         'md5': 'vendor/cryptojs/rollups/md5',
@@ -32,12 +32,15 @@
         },
         base64: {
             'exports': 'B64'
+        },
+        jquery: {
+            'exports': 'jQuery'
         }
     }
 });
 
 requirejs(['advarics/app'], function (app) {
     console.log('Executing main.js');
-    //app.init();  /* this version shows a single shell with several embedded components (Kendo Grid, Kendo Editor etc.) */
-    app.altInit(); /* this version shows a Master-Detail demo by using the remote "Northwind" OData Service*/
+    app.init();  /* this version shows a single shell with several embedded components (Kendo Grid, Kendo Editor etc.) */
+    //app.altInit(); /* this version shows a Master-Detail demo by using the remote "Northwind" OData Service*/
 });

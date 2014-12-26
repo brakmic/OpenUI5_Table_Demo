@@ -4,6 +4,8 @@
  */
 jQuery.sap.declare('advarics.components.controllers.Detail');
 jQuery.sap.require('advarics.components.controllers.Base');
+'use strict';
+
 advarics.components.controllers.Base.extend("advarics.components.controllers.Detail", {
 
     /**

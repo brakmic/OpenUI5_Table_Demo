@@ -3,6 +3,7 @@
  * @namespace advarics.components.controllers.Base
  */
 jQuery.sap.declare('advarics.components.controllers.Base');
+'use strict';
 /**
  * @namespace advarics.components.controllers.Base
  */

@@ -6,8 +6,9 @@ define(['underscore',
         'knockout',
         'advarics.config',
         'advarics.grid',
-        'advarics.editor'],
-    function (_, ko, advaricsConfig, grid, editor) {
+        'advarics.editor',
+        'advarix'],
+    function (_, ko, advaricsConfig, grid, editor, ax) {
         'use strict';
         var Controls = function () { };
 
@@ -23,16 +24,36 @@ define(['underscore',
             getKendoEditor: function(config){
                 return editor.create(config);
             },
+            getRandomInt: function (max) {
+                var maxVal = max || 999;
+                console.log('getRandomInt');
+                return ax.Toolbelt.getRandom(max);
+            },
             //create an SAP Shell
             //more info: https://sapui5.hana.ondemand.com/sdk/#test-resources/sap/ui/ux3/demokit/Shell.html
             getShell: function (config) {
-                var oDoc = new sap.ui.core.HTML("Doc",{
+                var doc = "Doc_" + this.getRandomInt(),
+                    wi_home = "WI_home_" + this.getRandomInt(),
+                    wi_mgmt = "WI_Mgmt_" + this.getRandomInt(),
+                    wi_editor = "WI_Editor_" + this.getRandomInt(),
+                    wi_doc = "WI_Doc_" + this.getRandomInt(),
+                    pi_date = config.pi_date() || "PI_Date_" + this.getRandomInt(),
+                    pi_browser = config.pi_browser() || "PI_Browser_" + this.getRandomInt(),
+                    contact_tool = "contactTool_" + this.getRandomInt(),
+                    menu1 = "menu1_" + this.getRandomInt(),
+                    menu_item1 = "menu_item1_" + this.getRandomInt(),
+                    menu_item2 = "menu_item2" + this.getRandomInt(),
+                    menu_item3 = "menu_item3" + this.getRandomInt(),
+                    advaricsShellName = 'advaricsShell_' + this.getRandomInt(),
+                    cancelContactButtonName = "cancelContactButton_" + this.getRandomInt();
+
+                var oDoc = new sap.ui.core.HTML(doc, {
                     content: '<div style="padding-top: 2em;">'+
                     'Source code on <a href="https://github.com/brakmic/OpenUI5_Table_Demo" target="_blank">GitHub</a>' +
                     '</div>'
                 });
 
-                return new sap.ui.ux3.Shell(config.name() || 'advaricsShell', {
+                return new sap.ui.ux3.Shell(config.name() || advaricsShellName, {
                     hasGrid: ko.observable(false),
                     appTitle: config.appTitle() || 'advarics Shell',
                     appIcon: config.appIcon() || 'Content/images/advaricsLogo.png',
@@ -42,41 +63,41 @@ define(['underscore',
                     showInspectorTool: config.showInspectorTool(),
                     showFeederTool: config.showFeederTool(),
                     worksetItems: [
-                                    new sap.ui.ux3.NavigationItem("WI_home",
+                                    new sap.ui.ux3.NavigationItem(wi_home,
                                     {
-                                        key: "wi_home",
+                                        key: wi_home,
                                         text: "Home"
                                     }),
-                                    new sap.ui.ux3.NavigationItem("WI_Mgmt",
+                                    new sap.ui.ux3.NavigationItem(wi_mgmt,
                                         {
-                                            key: "wi_mgmt",
+                                            key: wi_mgmt,
                                             text: "Management",
                                         }),
-                                    new sap.ui.ux3.NavigationItem("WI_Editor",
+                                    new sap.ui.ux3.NavigationItem(wi_editor,
                                         {
-                                            key: "wi_editor",
+                                            key: wi_editor,
                                             text: "Editor",
                                         }),
-                                    new sap.ui.ux3.NavigationItem("WI_Doc",
+                                    new sap.ui.ux3.NavigationItem(wi_doc,
                                     {
-                                        key: "wi_doc",
+                                        key: wi_doc,
                                         text: "Documentation"
                                     })
                                   ],
                     paneBarItems: [
-                                    new sap.ui.core.Item("PI_Date",
+                                    new sap.ui.core.Item(pi_date,
                                         {
-                                            key: "pi_date",
+                                            key: pi_date,
                                             text: "date"
                                         }),
-                                    new sap.ui.core.Item("PI_Browser",
+                                    new sap.ui.core.Item(pi_browser,
                                         {
-                                            key: "pi_browser",
+                                            key: pi_browser,
                                             text: "browser"
                                         })],
                     content: config.content(),
                     toolPopups: [
-                                    new sap.ui.ux3.ToolPopup("contactTool",
+                                    new sap.ui.ux3.ToolPopup(contact_tool,
                                         {
                                             title: "New Contact",
                                             tooltip: "Create New Contact",
@@ -89,11 +110,11 @@ define(['underscore',
                                                             })
                                                      ],
                                             buttons: [
-                                                        new sap.ui.commons.Button("cancelContactButton",
+                                                        new sap.ui.commons.Button(cancelContactButtonName,
                                                             {
                                                                 text: "Cancel", press: function (oEvent)
                                                                 {
-                                                                    sap.ui.getCore().byId("contactTool").close();
+                                                                    sap.ui.getCore().byId(contact_tool).close();
                                                                 }
                                                             })
                                             ]
@@ -116,18 +137,18 @@ define(['underscore',
                                     new sap.ui.commons.MenuButton({
                                         text: "Help",
                                         tooltip: "Help Menu",
-                                        menu: new sap.ui.commons.Menu("menu1",
+                                        menu: new sap.ui.commons.Menu(menu1,
                                             {
                                                 items: [
-                                                    new sap.ui.commons.MenuItem("menuitem1",
+                                                    new sap.ui.commons.MenuItem(menu_item1,
                                                         {
                                                             text: "Help"
                                                         }),
-                                                    new sap.ui.commons.MenuItem("menuitem2",
+                                                    new sap.ui.commons.MenuItem(menu_item2,
                                                         {
                                                             text: "Report Incident"
                                                         }),
-                                                    new sap.ui.commons.MenuItem("menuitem3",
+                                                    new sap.ui.commons.MenuItem(menu_item3,
                                                         {
                                                             text: "About",
                                                             select: function (oEvent) {
@@ -154,22 +175,22 @@ define(['underscore',
                         var sId = oEvent.getParameter("id");
                         var oShell = oEvent.oSource;
                         switch (sId) {
-                            case "WI_home":
+                            case wi_home:
                                 {
                                     oShell.setContent(config.content());
                                 }
                                 break;
-                            case "WI_Mgmt":
+                            case wi_mgmt:
                                 {
                                    oShell.setContent(grid.create(advaricsConfig.getManagementGridOptions()));
                                 }
                                 break;
-                            case "WI_Editor":
+                            case wi_editor:
                                 {
                                     oShell.setContent(editor.create());
                                 }
                                 break;
-                            case "WI_Doc":
+                            case wi_doc:
                                 {
                                     oShell.setContent(oDoc);
                                 }

@@ -1,5 +1,7 @@
 ﻿jQuery.sap.declare('advarics.util.Logger');
 jQuery.sap.require('advarics.settings.Globals');
+'use strict';
+
 /**
  * Logging helper module
  * @module Logging

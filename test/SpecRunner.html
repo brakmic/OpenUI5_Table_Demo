@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner v2.1.3</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.1.3/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine-2.1.3/jasmine.css">
+
+   <script id="sap-ui-bootstrap"
+            src="../Scripts/vendor/sap/resources/sap-ui-core.js"
+            data-sap-ui-theme="sap_bluecrystal"
+            data-sap-ui-xx-test-mobile="true"
+            data-sap-ui-xx-bindingsyntax="complex"
+            data-sap-ui-resourceroots='{
+                "advarics": "../advarics",
+                "advarics.views": "../UI/views",
+                "advarics.fragments": "../UI/fragments",
+                "advarics.config": "../Config",
+                "advarics.settings": "../Scripts/advarics/config",
+                "advarics.util": "../Scripts/advarics/util",
+                "advarics.components": "../Scripts/advarics/components",
+                "advarics.components.apps": "../Scripts/advarics/components/apps",
+                "advarics.components.controllers": "../Scripts/advarics/components/controllers",
+                "advarics.components.routers": "../Scripts/advarics/components/routers"
+            }'
+            data-sap-ui-libs="sap.m,sap.ui.core,sap.ui.commons,sap.ui.table,sap.ui.ux3"></script>
+
+  <script src="../Scripts/vendor/require.js"></script>
+  <script src="lib/jasmine-2.1.3/jasmine.js"></script>
+  <script src="lib/jasmine-2.1.3/jasmine-html.js"></script>
+  <script src="lib/jasmine-2.1.3/boot.js"></script>
+
+</head>
+
+<body>
+    
+   
+
+    <script>
+        require({
+            baseUrl: '../Scripts/',
+            paths: {
+                'spec': '../test/spec',
+                'advarics': './advarics',
+                'jquery': 'vendor/jquery-1.11.1.min',
+                'bootstrap': 'vendor/bootstrap.min',
+                'knockout': 'vendor/knockout-3.2.0',
+                'underscore': 'vendor/underscore-min',
+                'underscore.string': 'vendor/underscore.string.min',
+                'k': 'vendor/kendo',
+                'base64': 'vendor/helpers/base64v1_0',
+                'md5': 'vendor/cryptojs/rollups/md5',
+                'sha1': 'vendor/cryptojs/rollups/sha1',
+                'sha256': 'vendor/cryptojs/rollups/sha256',
+                'sha512': 'vendor/cryptojs/rollups/sha512',
+                'sha3': 'vendor/cryptojs/rollups/sha3',
+                'ripemd160': 'vendor/cryptojs/rollups/ripemd160',
+                'app': './advarics/app',
+                'advarics.controls': 'advarics/controls/advarics.controls',
+                'advarics.grid': 'advarics/controls/advarics.grid',
+                'advarics.editor': 'advarics/controls/advarics.editor',
+                'advarics.models': 'advarics/models/advarics.models',
+                'advarics.config': 'advarics/config/advarics.config',
+                'advarix': 'advarics/lib/advarix'
+            },
+            'shim': {
+                underscore: {
+                    'exports': '_'
+                },
+                knockout: {
+                    'exports': 'ko'
+                },
+                base64: {
+                    'exports': 'B64'
+                }
+            }
+        }, ['spec/app'],
+        function () {
+            jasmine.getEnv().execute();
+        });
+    </script>
+</body>
+</html>

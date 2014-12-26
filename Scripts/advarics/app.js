@@ -67,7 +67,7 @@ define([
                      //    name: "advarics.components.apps.App",
                      //    id: "App"
                      //});
-                     new sap.m.Shell('Shell', {
+                     new sap.m.Shell('_Shell_' + ax.Toolbelt.getRandom(), {
                          title: 'Alternative Shell',
                          app: new sap.ui.core.ComponentContainer({
                              component: appCom

@@ -4,12 +4,12 @@
  */
 define(['underscore',
         'knockout',
-        'base64'], //base64 is needed when accessing protected services (for example via Base-Auth etc.)
-                function (_, ko, B64) {
+        'base64',
+        'advarix'], //base64 is needed when accessing protected services (for example via Base-Auth etc.)
+                function (_, ko, B64, ax) {
                     'use strict';
                     var Config = function (global) {
-
-
+                        
                         //code taken from the article "console.log() in the wild"
                         //at http://blog.getify.com/console-log-in-the-wild/
                         var prod = global.location.href.match(/^http:\/\/(www\.)?brakmic.de/i) !== null,
@@ -45,6 +45,7 @@ define(['underscore',
                     };
 
                     _.extend(Config.prototype, {
+                        
                         //session data
                         session: {
                             username: ko.observable('dummy'),
@@ -59,8 +60,10 @@ define(['underscore',
                         },
                         //SAP Shell configuration
                         getShellConfig: function () {
+                            var _pi_date = ko.observable('pi_date_' + ax.Toolbelt.getRandom());
+                            var _pi_browser = ko.observable('pi_browser_' + ax.Toolbelt.getRandom());
                             return {
-                                name: ko.observable('advaricsShell'),
+                                name: ko.observable('advaricsShell_' + ax.Toolbelt.getRandom()),
                                 appTitle: ko.observable('Shell'),
                                 appIcon: ko.observable('Content/images/advaricsLogo.png'),
                                 appIconTooltip: ko.observable('advarics logo'),
@@ -73,19 +76,20 @@ define(['underscore',
                                 content: ko.observable(''),
                                 toolPopups: ko.observableArray([]),
                                 headerItems: ko.observableArray([]),
+                                pi_date: _pi_date,
+                                pi_browser: _pi_browser,
                                 worksetItemSelected: ko.computed(function () {
                                     return function (oEvent) {
-                                        var sId = oEvent.getParameter("id");
+                                        var sId = oEvent.getParameter('id');
                                         var oShell = oEvent.oSource;
-
                                     }
                                 }),
                                 paneBarItemSelected: ko.computed(function () {
                                     return function (oEvent) {
-                                        var sKey = oEvent.getParameter("key");
+                                        var sKey = oEvent.getParameter('key');
                                         var oShell = oEvent.oSource;
                                         switch (sKey) {
-                                            case "pi_date":
+                                            case _pi_date():
                                                 var oDate = new Date();
                                                 oShell.setPaneContent(
                                                     new sap.ui.commons.TextView(
@@ -93,11 +97,11 @@ define(['underscore',
                                                         text: oDate.toLocaleString()
                                                     }), true);
                                                 break;
-                                            case "pi_browser":
+                                            case _pi_browser():
                                                 oShell.setPaneContent(
                                                     new sap.ui.commons.TextView(
                                                     {
-                                                        text: "You browser provides the following information:\n" +
+                                                        text: 'You browser provides the following information:\n' +
                                                             navigator.userAgent
                                                     }), true);
                                                 break;
@@ -105,20 +109,20 @@ define(['underscore',
                                                 break;
                                         }
                                     }
-                                }),
+                                }.bind(this)),
                                 logout: ko.computed(function () {
                                     return function () {
-                                        alert("Logout Button has been clicked.");
+                                        alert('Logout Button has been clicked.');
                                     }
                                 }),
                                 search: ko.computed(function () {
                                     return function (oEvent) {
-                                        alert("Search triggered: " + oEvent.getParameter("text"));
+                                        alert('Search triggered: ' + oEvent.getParameter('text'));
                                     }
                                 }),
                                 feedSubmit: ko.computed(function () {
                                     return function (oEvent) {
-                                        alert("Feed entry submitted: " + oEvent.getParameter("text"));
+                                        alert('Feed entry submitted: ' + oEvent.getParameter('text'));
                                     }
                                 }),
                                 paneClosed: ko.computed(function () {
@@ -133,7 +137,7 @@ define(['underscore',
                             var header;
                             if (this.session.username() &&
                                 this.session.password()) {
-                                header = "Basic " + B64.encode([this.session.username(), this.session.password()].join(":"));
+                                header = 'Basic ' + B64.encode([this.session.username(), this.session.password()].join(':'));
                             }
                             console.log('getAuthHeader', "HTTP-Auth " + header);
                             return header;

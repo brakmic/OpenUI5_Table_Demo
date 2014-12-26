@@ -323,8 +323,8 @@
     <Content Include="Scripts\advarics\models\advarics.models.js" />
     <Content Include="Scripts\advarics\util\Formatter.js" />
     <Content Include="Scripts\advarics\util\Logger.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\vendor\bootstrap.js" />
+    <Content Include="Scripts\vendor\bootstrap.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -335,23 +335,23 @@
     <Content Include="Content\kendo\images\kendoui.woff" />
     <Content Include="Scripts\advarics\lib\advarix.js" />
     <Content Include="Scripts\advarics\components\apps\App.json" />
-    <None Include="Scripts\jquery-1.11.1.intellisense.js" />
-    <Content Include="Scripts\jquery-1.11.1.js" />
-    <Content Include="Scripts\jquery-1.11.1.min.js" />
-    <Content Include="Scripts\knockout-3.2.0.debug.js" />
-    <Content Include="Scripts\knockout-3.2.0.js" />
+    <None Include="Scripts\vendor\jquery-1.11.1.intellisense.js" />
+    <Content Include="Scripts\vendor\jquery-1.11.1.js" />
+    <Content Include="Scripts\vendor\jquery-1.11.1.min.js" />
+    <Content Include="Scripts\vendor\knockout-3.2.0.debug.js" />
+    <Content Include="Scripts\vendor\knockout-3.2.0.js" />
     <Content Include="Scripts\main.js" />
-    <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\vendor\npm.js" />
     <None Include="Properties\PublishProfiles\Local IIS.pubxml" />
     <Content Include="README.md" />
-    <Content Include="Scripts\jquery-1.11.1.min.map">
+    <Content Include="Scripts\vendor\jquery-1.11.1.min.map">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Scripts\r.js" />
-    <Content Include="Scripts\require.js" />
-    <Content Include="Scripts\underscore.js" />
-    <Content Include="Scripts\underscore-min.js" />
-    <Content Include="Scripts\underscore-min.map">
+    <Content Include="Scripts\vendor\r.js" />
+    <Content Include="Scripts\vendor\require.js" />
+    <Content Include="Scripts\vendor\underscore.js" />
+    <Content Include="Scripts\vendor\underscore-min.js" />
+    <Content Include="Scripts\vendor\underscore-min.map">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\vendor\cryptojs\components\aes-min.js" />
@@ -2002,6 +2002,7 @@
     <Content Include="Scripts\vendor\sap\resources\sap\ui\ux3\ThingViewerHeaderType.type" />
     <Content Include="Scripts\vendor\sap\resources\sap\ui\ux3\ToolPopup.control" />
     <Content Include="Scripts\vendor\sap\resources\sap\ui\ux3\VisibleItemCountMode.type" />
+    <Content Include="tools\jscover-server.bat" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2013,8 +2014,8 @@
     <Content Include="packages.config" />
     <Content Include="Scripts\advarics\app.js" />
     <Content Include="Scripts\advarics\controls\advarics.controls.js" />
-    <Content Include="Scripts\underscore.string.js" />
-    <Content Include="Scripts\underscore.string.min.js" />
+    <Content Include="Scripts\vendor\underscore.string.js" />
+    <Content Include="Scripts\vendor\underscore.string.min.js" />
     <Content Include="index.html" />
     <Content Include="Scripts\vendor\sap\resources\jquery-sap-dbg.js" />
     <Content Include="Scripts\vendor\sap\resources\jquery-sap.js" />
@@ -5950,6 +5951,16 @@
     <Content Include="Scripts\vendor\sap\resources\sap\ui\ux3\ToolPopupRenderer.js" />
     <Content Include="Scripts\vendor\sap\resources\testsuite\testframe.html" />
     <None Include="Scripts\_references.js" />
+    <Content Include="test\lib\jasmine-2.1.3\boot.js" />
+    <Content Include="test\lib\jasmine-2.1.3\console.js" />
+    <Content Include="test\lib\jasmine-2.1.3\jasmine-html.js" />
+    <Content Include="test\lib\jasmine-2.1.3\jasmine.css" />
+    <Content Include="test\lib\jasmine-2.1.3\jasmine.js" />
+    <Content Include="test\lib\jasmine-2.1.3\jasmine_favicon.png" />
+    <Content Include="test\SpecRunner.html" />
+    <Content Include="test\spec\app.js" />
+    <Content Include="tools\JSCover-all.jar" />
+    <Content Include="tools\run-jscover-jasmine.js" />
     <Content Include="UI\fragments\category.fragment.xml" />
     <Content Include="UI\fragments\supplier.fragment.xml" />
     <Content Include="UI\views\app.view.xml" />

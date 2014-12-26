@@ -4,6 +4,8 @@
  * @namespace advarics.util.Formatter
  */
 jQuery.sap.declare('advarics.util.Formatter');
+'use strict';
+
 /**
  * @namespace Formatter
  */

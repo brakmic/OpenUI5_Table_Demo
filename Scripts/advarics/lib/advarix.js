@@ -2,8 +2,8 @@
  * advarix Library
  * @module advarix
  */
+jQuery.sap.declare('advarix');
 (function () {
-
     /**
      * advarix library
      * structure taken from: https://gist.github.com/blainsmith/da32eb0f0862e40cc201
@@ -62,6 +62,12 @@
           return function () {
               return f.apply(fThis, arguments);
           };
+      },
+
+      getRandom: function (max) {
+          var maxVal = max || 99999,
+              rand = Math.floor(Math.random() * maxVal);
+          return rand;
       }
   };
 

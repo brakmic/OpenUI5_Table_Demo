@@ -1,4 +1,6 @@
 ﻿jQuery.sap.declare('advarics.settings.Globals');
+'use strict';
+
 /**
  * This is a container for global settings
  * @namespace advarics.settings.Globals

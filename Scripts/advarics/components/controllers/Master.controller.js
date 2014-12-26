@@ -5,6 +5,8 @@
  */
 jQuery.sap.declare('advarics.components.controllers.Master');
 jQuery.sap.require('advarics.components.controllers.Base');
+'use strict';
+
 advarics.components.controllers.Base.extend('advarics.components.controllers.Master', {
     /**
     * Called when a controller is instantiated and its View controls (if available) are already created.

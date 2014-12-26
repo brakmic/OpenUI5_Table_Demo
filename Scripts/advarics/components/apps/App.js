@@ -3,6 +3,8 @@ jQuery.sap.require("sap.m.routing.RouteMatchedHandler");
 jQuery.sap.require("sap.ui.core.routing.HashChanger");
 jQuery.sap.require('advarics.components.routers.AppRouter');
 jQuery.sap.require('advarics.util.Logger');
+jQuery.sap.require('advarix');
+'use strict';
 /**
  * This is the main component that boots the whole application, registers data models and 
  * provides basic configuration.
@@ -10,7 +12,6 @@ jQuery.sap.require('advarics.util.Logger');
  * @name App
  */
 sap.ui.core.UIComponent.extend('advarics.components.apps.App', {
-
     metadata: {
         name: 'advarics GmbH WebApp',
         version: '1.0.0',
@@ -129,7 +130,7 @@ sap.ui.core.UIComponent.extend('advarics.components.apps.App', {
     createContent: function () {
         // create root view
         var oView = sap.ui.view({
-            id: 'app',
+            id: '_app_component_' + advarix.Toolbelt.getRandom(),
             viewName: 'advarics.views.app',
             type: sap.ui.core.mvc.ViewType.XML,
             viewData: { component: this }
@@ -148,7 +149,7 @@ sap.ui.core.UIComponent.extend('advarics.components.apps.App', {
         //create and set domain model to the component
         var sServiceUrl = mConfig.serviceConfig.serviceUrl;
         var jsonService = mConfig.serviceConfig.jsonServiceUrl;
-        advarics.util.Logger.write('App.createContent > Odata-URL: ' + sServiceUrl);
+        advarics.util.Logger.write('App.createContent > OData-URL: ' + sServiceUrl);
         //setup 'Northwind' OData-Service
         var dataModel = new sap.ui.model.odata.ODataModel(sServiceUrl);
         sap.ui.getCore().setModel(dataModel, 'northwind');

@@ -5,7 +5,7 @@
 jQuery.sap.declare('advarics.components.routers.AppRouter');
 jQuery.sap.require("sap.ui.core.routing.Router");
 jQuery.sap.require("sap.m.routing.RouteMatchedHandler");
-
+'use strict';
 
 /**
  * @namespace AppRouter

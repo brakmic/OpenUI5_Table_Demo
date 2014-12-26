@@ -5,6 +5,8 @@
  */
 jQuery.sap.declare('advarics.components.controllers.NotFound');
 jQuery.sap.require('advarics.components.controllers.Base');
+'use strict';
+
 advarics.components.controllers.Base.extend("advarics.components.controllers.NotFound", {
 
     /**
