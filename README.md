@@ -1,4 +1,4 @@
-:christmas_tree: **OpenUI5 + Kendo UI web app** :christmas_tree:
+<center>:christmas_tree: **OpenUI5 + Kendo UI web app** :christmas_tree:</center>
 
 *This web app is based on SAP's <a href="https://sap.github.io/openui5/" target="_blank">OpenUI5</a> and Telerik's <a href="http://www.telerik.com/kendo-ui" target="_blank">Kendo UI</a>.*
 
