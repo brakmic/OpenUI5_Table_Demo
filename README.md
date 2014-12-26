@@ -72,6 +72,22 @@ The Kendo-Scripts should go into *Scripts/vendor/kendo* directory and CSS-files 
 I'm still experimenting with it, so expect some rough edges. However, there are a few
 helper modules for easier creation of tables & columns.
 
+**Testing**
+
+<a href="http://jasmine.github.io/2.1/introduction.html" target="_blank">Jasmine 2.1.3</a> and <a href="http://tntim96.github.io/JSCover/" target="_blank">JSCover 1.0.15</a>. 
+
+Jasmine can either be run directly or via JSCover.  I'd recommend JSCover because it not only runs the tests but also generates important code coverage reports.
+
+*Jasmine tests*
+
+<img src="http://c57.imgup.net/jsvocer755a.png" />
+
+*Code coverage report*
+
+<img src="http://k64.imgup.net/jsvocer43a5.png" />
+
+The batch file *tools/jscover-server.bat* starts the local web server on port 8080. Also you'll need <a href="https://www.java.com/en/download/" target="_blank">Java runtime</a> to execute *JSCover-all.jar* file located in the same directory.
+
 :bomb: **External services**
 
 To generate sample JSON-data for SAP Table I used <a href="http://www.json-generator.com/" target="_blank">JSON generator</a>.
