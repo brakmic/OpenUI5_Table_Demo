@@ -86,7 +86,7 @@ Jasmine can either be run directly or via JSCover.  I'd recommend JSCover becaus
 
 <img src="http://k64.imgup.net/jsvocer43a5.png" />
 
-The batch file *tools/jscover-server.bat* starts the local web server on port 8080. Also you'll need <a href="https://www.java.com/en/download/" target="_blank">Java runtime</a> to execute *JSCover-all.jar* file located in the same directory.
+The batch file *tools/jscover-server.bat* starts a local web server on port 8080. You'll need <a href="https://www.java.com/en/download/" target="_blank">Java runtime</a> to execute *JSCover-all.jar* file located in the same directory.
 
 :bomb: **External services**
 
