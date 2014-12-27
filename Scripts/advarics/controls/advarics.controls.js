@@ -26,7 +26,6 @@ define(['underscore',
             },
             getRandomInt: function (max) {
                 var maxVal = max || 999;
-                console.log('getRandomInt');
                 return ax.Toolbelt.getRandom(max);
             },
             //create an SAP Shell

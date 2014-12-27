@@ -42,7 +42,7 @@ sap.ui.core.UIComponent.extend('advarics.components.apps.App', {
                 {
                     pattern: '',
                     name: 'main',
-                    view: 'Master',
+                    view: 'master',
                     viewPath: 'advarics.views',
                     viewType: 'XML',
                     targetAggregation: 'masterPages',
@@ -54,7 +54,7 @@ sap.ui.core.UIComponent.extend('advarics.components.apps.App', {
                         {
                             pattern: '{product}/:tab:',
                             name: 'product',
-                            view: 'Detail',
+                            view: 'detail',
                             viewPath: 'advarics.views',
                             viewType: 'XML',
                             callback: function () {
@@ -65,7 +65,7 @@ sap.ui.core.UIComponent.extend('advarics.components.apps.App', {
                 },
                 {
                     name: 'catchAllMaster',
-                    view: 'Master',
+                    view: 'master',
                     viewPath: 'advarics.views',
                     viewType: 'XML',
                     targetAggregation: 'masterPages',
@@ -77,7 +77,7 @@ sap.ui.core.UIComponent.extend('advarics.components.apps.App', {
                         {
                             pattern: ':all*:',
                             name: 'catchAllDetail',
-                            view: 'NotFound',
+                            view: 'notfound',
                             viewPath: 'advarics.views',
                             viewType: 'XML',
                             callback: function () {

@@ -1,50 +1,61 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-    <title>advarics Demo</title>
-    <!-- General -->
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-	<!-- IE settings -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8" />
+<title>OpenUI5 Demos</title>
+<!-- General -->
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<!-- IE settings -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta name="description" content="advarics web application" />
-    <meta name="keywords" content="advarics, application " />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="description" content="advarics web application" />
+<meta name="keywords" content="advarics, application " />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-    <link href="Content/kendo/kendo.common.min.css" rel="stylesheet" />
-    <link href="Content/kendo/kendo.default.min.css" rel="stylesheet" />
-    <link href="Content/kendo/kendo.dataviz.min.css" rel="stylesheet" />
+<link href="Content/kendo/kendo.common.min.css" rel="stylesheet" />
+<link href="Content/kendo/kendo.default.min.css" rel="stylesheet" />
+<link href="Content/kendo/kendo.dataviz.min.css" rel="stylesheet" />
     <link href="Content/kendo/kendo.dataviz.default.min.css" rel="stylesheet" />
+<link href="Content/openui5.css" rel="stylesheet" />
 
 </head>
-<body id="content" class="sapUiBody" role="application" oncontextmenu="return false;">
-    <!--<div id="app"></div>-->
-    <!--<script src="Scripts/jquery-1.11.1.min.js"></script>-->
-    <!-- Needed when using external jQuery -->
-    <!--<script src="Scripts/vendor/sap/resources/sap/ui/thirdparty/jqueryui/jquery-ui-position.js"></script>-->
-    <!-- SAP OpenUI5 -->
-    <!--src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core-dbg.js"-->
-    <script id="sap-ui-bootstrap"
-            src="Scripts/vendor/sap/resources/sap-ui-core.js"
-            data-sap-ui-theme="sap_bluecrystal"
-            data-sap-ui-xx-test-mobile="true"
-            data-sap-ui-xx-bindingsyntax="complex"
-            data-sap-ui-resourceroots='{
-                "advarics": "./",
-                "advarics.views": "./UI/views",
-                "advarics.fragments": "./UI/fragments",
-                "advarics.config": "./Config",
-                "advarics.settings": "./Scripts/advarics/config",
-                "advarics.util": "./Scripts/advarics/util",
-                "advarics.components": "./Scripts/advarics/components",
-                "advarics.components.apps": "./Scripts/advarics/components/apps",
-                "advarics.components.controllers": "./Scripts/advarics/components/controllers",
-                "advarics.components.routers": "./Scripts/advarics/components/routers"
-            }'
-            data-sap-ui-libs="sap.m,sap.ui.core,sap.ui.commons,sap.ui.table,sap.ui.ux3"></script>
+<body>
 
-    <script type="text/javascript" src="Scripts/vendor/require.js" data-main="Scripts/main"></script>
+<nav id="openui5-demo-nav">
+	<ul>
+		<li><a href="http://www.brakmic.de">Home</a></li>
+		<li><a href="#">OpenUI5 Demos</a>
+			<ul data-bind="foreach: menuItems">
+				<li><a href="#" data-bind="text: text, attr: { href: href }" target="_blank"></a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+<script src="Scripts/vendor/jquery-1.11.1.min.js"></script>
+<script src="Scripts/vendor/knockout-3.2.0.js"></script>
+<script src="Scripts/vendor/require.js"></script>
+<script type="text/javascript">
+        var viewModel = function () {};
+
+        window.advarics = window.advarics || {};
+        window.advarics.vm = viewModel;
+
+        function MenuItem(oMenuItem) {
+            var self = this;
+            self.text = ko.observable(oMenuItem.text);
+            self.href = ko.observable(oMenuItem.href);
+        }
+
+        viewModel.prototype.menuItems = ko.observableArray([]);
+
+        $(document).ready(function () {
+            var vm = new advarics.vm();
+            vm.menuItems.push(new MenuItem({ text: 'Shell & KendoUI', href: 'index-shell.html' }));
+            vm.menuItems.push(new MenuItem({ text: 'Master-Detail', href: 'index-md.html' }));
+            ko.applyBindings(vm);
+        });
+</script>
 
 </body>
 </html>

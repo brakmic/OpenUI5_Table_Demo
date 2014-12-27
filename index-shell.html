@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>advarics Demo</title>
+    <!-- General -->
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<!-- IE settings -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="description" content="advarics web application" />
+    <meta name="keywords" content="advarics, application " />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <link href="Content/kendo/kendo.common.min.css" rel="stylesheet" />
+    <link href="Content/kendo/kendo.default.min.css" rel="stylesheet" />
+    <link href="Content/kendo/kendo.dataviz.min.css" rel="stylesheet" />
+    <link href="Content/kendo/kendo.dataviz.default.min.css" rel="stylesheet" />
+
+</head>
+<body id="content" class="sapUiBody" role="application" oncontextmenu="return false;">
+    <!--<div id="app"></div>-->
+    <!--<script src="Scripts/jquery-1.11.1.min.js"></script>-->
+    <!-- Needed when using external jQuery -->
+    <!--<script src="Scripts/vendor/sap/resources/sap/ui/thirdparty/jqueryui/jquery-ui-position.js"></script>-->
+    <!-- SAP OpenUI5 -->
+    <!--src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core-dbg.js"-->
+    <script id="sap-ui-bootstrap"
+            src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core.js"
+            data-sap-ui-theme="sap_bluecrystal"
+            data-sap-ui-xx-test-mobile="true"
+            data-sap-ui-xx-bindingsyntax="complex"
+            data-sap-ui-resourceroots='{
+                "advarics": "./",
+                "advarics.views": "./UI/views",
+                "advarics.fragments": "./UI/fragments",
+                "advarics.config": "./Config",
+                "advarics.settings": "./Scripts/advarics/config",
+                "advarics.util": "./Scripts/advarics/util",
+                "advarics.components": "./Scripts/advarics/components",
+                "advarics.components.apps": "./Scripts/advarics/components/apps",
+                "advarics.components.controllers": "./Scripts/advarics/components/controllers",
+                "advarics.components.routers": "./Scripts/advarics/components/routers"
+            }'
+            data-sap-ui-libs="sap.m,sap.ui.core,sap.ui.commons,sap.ui.table,sap.ui.ux3"></script>
+
+    <script type="text/javascript" src="Scripts/vendor/require.js"></script>
+    <script src="Scripts/advarics/config/setup.js"></script>
+    <script src="Scripts/main-shell.js"></script>
+
+</body>
+</html>

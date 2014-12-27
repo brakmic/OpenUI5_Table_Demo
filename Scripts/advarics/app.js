@@ -62,10 +62,10 @@ define([
                         table.bindRows('/modelData');
                         table.sort(table.getColumns()[0]);
                         //get default SAP Shell config
-                        shellConfig = config.getShellConfig();
-                        shellConfig.content(table);
+                        shellConfig = config.getShellConfig(table);
                         //create the shell
                         shell = controls.getShell(shellConfig);
+                        
                         shell.placeAt('content');
                  },
                  altInit: function () {
@@ -75,7 +75,6 @@ define([
                      jQuery.sap.require('advarics.util.Logger');
                      jQuery.sap.require('advarics.components.apps.App');
 
-                     console.log('app.altInit');
                      var appCom = new advarics.components.apps.App();
                      //var appCom = sap.ui.getCore().createComponent({
                      //    name: "advarics.components.apps.App",

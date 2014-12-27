@@ -30,6 +30,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -285,6 +286,7 @@
     <Content Include="Content\kendo\Uniform\slider-v.gif" />
     <Content Include="Content\kendo\Uniform\sprite.png" />
     <Content Include="Content\kendo\Uniform\sprite_2x.png" />
+    <Content Include="Content\openui5.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Resource Include="Config\i18n\messageBundle.properties">
@@ -312,17 +314,21 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <None Include="LICENSE.md" />
+    <Content Include="index-md.html" />
+    <Content Include="index.html" />
     <Content Include="Scripts\advarics\components\apps\App.js" />
     <Content Include="Scripts\advarics\components\controllers\Base.js" />
     <Content Include="Scripts\advarics\components\controllers\Detail.controller.js" />
     <Content Include="Scripts\advarics\components\controllers\NotFound.controller.js" />
     <Content Include="Scripts\advarics\components\routers\AppRouter.js" />
     <Content Include="Scripts\advarics\config\Globals.js" />
+    <Content Include="Scripts\advarics\config\setup.js" />
     <Content Include="Scripts\advarics\controls\advarics.editor.js" />
     <Content Include="Scripts\advarics\controls\advarics.grid.js" />
     <Content Include="Scripts\advarics\models\advarics.models.js" />
     <Content Include="Scripts\advarics\util\Formatter.js" />
     <Content Include="Scripts\advarics\util\Logger.js" />
+    <Content Include="Scripts\main-md.js" />
     <Content Include="Scripts\vendor\bootstrap.js" />
     <Content Include="Scripts\vendor\bootstrap.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -335,12 +341,16 @@
     <Content Include="Content\kendo\images\kendoui.woff" />
     <Content Include="Scripts\advarics\lib\advarix.js" />
     <Content Include="Scripts\advarics\components\apps\App.json" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Scripts\vendor\jquery-1.11.1.intellisense.js" />
     <Content Include="Scripts\vendor\jquery-1.11.1.js" />
     <Content Include="Scripts\vendor\jquery-1.11.1.min.js" />
     <Content Include="Scripts\vendor\knockout-3.2.0.debug.js" />
     <Content Include="Scripts\vendor\knockout-3.2.0.js" />
-    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\main-shell.js" />
     <Content Include="Scripts\vendor\npm.js" />
     <None Include="Properties\PublishProfiles\Local IIS.pubxml" />
     <Content Include="README.md" />
@@ -2002,6 +2012,7 @@
     <Content Include="Scripts\vendor\sap\resources\sap\ui\ux3\ThingViewerHeaderType.type" />
     <Content Include="Scripts\vendor\sap\resources\sap\ui\ux3\ToolPopup.control" />
     <Content Include="Scripts\vendor\sap\resources\sap\ui\ux3\VisibleItemCountMode.type" />
+    <None Include="Scripts\_references.js" />
     <Content Include="tools\jscover-server.bat" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -2016,7 +2027,7 @@
     <Content Include="Scripts\advarics\controls\advarics.controls.js" />
     <Content Include="Scripts\vendor\underscore.string.js" />
     <Content Include="Scripts\vendor\underscore.string.min.js" />
-    <Content Include="index.html" />
+    <Content Include="index-shell.html" />
     <Content Include="Scripts\vendor\sap\resources\jquery-sap-dbg.js" />
     <Content Include="Scripts\vendor\sap\resources\jquery-sap.js" />
     <Content Include="Scripts\vendor\sap\resources\jquery.sap.act-dbg.js" />
@@ -5950,7 +5961,6 @@
     <Content Include="Scripts\vendor\sap\resources\sap\ui\ux3\ToolPopupRenderer-dbg.js" />
     <Content Include="Scripts\vendor\sap\resources\sap\ui\ux3\ToolPopupRenderer.js" />
     <Content Include="Scripts\vendor\sap\resources\testsuite\testframe.html" />
-    <None Include="Scripts\_references.js" />
     <Content Include="test\lib\jasmine-2.1.3\boot.js" />
     <Content Include="test\lib\jasmine-2.1.3\console.js" />
     <Content Include="test\lib\jasmine-2.1.3\jasmine-html.js" />
@@ -5972,12 +5982,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\d.ts\underscore\underscore.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

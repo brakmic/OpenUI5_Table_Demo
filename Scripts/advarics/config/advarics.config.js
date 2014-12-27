@@ -59,7 +59,7 @@ define(['underscore',
                             }
                         },
                         //SAP Shell configuration
-                        getShellConfig: function () {
+                        getShellConfig: function (content) {
                             var _pi_date = ko.observable('pi_date_' + ax.Toolbelt.getRandom());
                             var _pi_browser = ko.observable('pi_browser_' + ax.Toolbelt.getRandom());
                             return {
@@ -73,7 +73,7 @@ define(['underscore',
                                 showFeederTool: ko.observable(true),
                                 worksetItems: ko.observableArray([]),
                                 paneBarItems: ko.observableArray([]),
-                                content: ko.observable(''),
+                                content: ko.observable(content),
                                 toolPopups: ko.observableArray([]),
                                 headerItems: ko.observableArray([]),
                                 pi_date: _pi_date,
