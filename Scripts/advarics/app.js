@@ -15,6 +15,20 @@ define([
              var App = function () { };
 
              _.extend(App.prototype, {
+                 /**
+                  * Set helper functions for console debugging
+                  * @function setHelpers
+                  * @name setHelpers
+                  * @memberOf advarics.app
+                  * @module advarics.app
+                  */
+                 setHelpers: function(){
+                     window.__get = function (elementId) {
+                         if (elementId) {
+                             return sap.ui.getCore().byId(elementId);
+                         }
+                     };
+                 },
                  //setup the SAP Shell and the subordinated controls (tables, menus etc.)
                  init: function () {
                     var shell, columns, shellConfig,
