@@ -80,7 +80,7 @@ Jasmine can either be run directly or via JSCover.  I'd recommend JSCover becaus
 
 *Jasmine tests*
 
-<img src="http://c57.imgup.net/jsvocer755a.png" />
+<img src="http://u40.imgup.net/pice65f.png" />
 
 *Code coverage report*
 
