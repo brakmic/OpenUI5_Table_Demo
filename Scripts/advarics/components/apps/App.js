@@ -149,9 +149,10 @@ sap.ui.core.UIComponent.extend('advarics.components.apps.App', {
         //create and set domain model to the component
         var sServiceUrl = mConfig.serviceConfig.serviceUrl;
         var jsonService = mConfig.serviceConfig.jsonServiceUrl;
-        advarics.util.Logger.write('App.createContent > OData-URL: ' + sServiceUrl);
+
         //setup 'Northwind' OData-Service
         var dataModel = new sap.ui.model.odata.ODataModel(sServiceUrl);
+        
         sap.ui.getCore().setModel(dataModel, 'northwind');
         // publish event once data is loaded
         dataModel.attachRequestCompleted(function () {
