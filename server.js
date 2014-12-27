@@ -71,6 +71,22 @@ server.route({
 
 server.route({
     method: 'GET',
+    path: '/index-md.html',
+    handler: function (request, reply) {
+        reply.file('index-md.html').header('Content-Type', 'text/html');
+    }
+});
+
+server.route({
+    method: 'GET',
+    path: '/index-shell.html',
+    handler: function (request, reply) {
+        reply.file('index-shell.html').header('Content-Type', 'text/html');
+    }
+});
+
+server.route({
+    method: 'GET',
     path: '/{param*}',
     handler: function(request, reply){
         reply.file('index.html').header('Content-Type','text/html');
