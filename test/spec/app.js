@@ -13,9 +13,16 @@ define(['app'], function (app) {
             document.body.appendChild(content);
             spyOn(app, 'init').and.callThrough();
             spyOn(app, 'altInit').and.callThrough();
+            spyOn(app, 'altInit2').and.callThrough();
             //Act
             app.init();
             app.altInit();
+            app.altInit2();
+        });
+
+        it('should call altInit2', function () {
+            expect(app.altInit2).toHaveBeenCalled();
+            expect(app.altInit2.calls.count(1));
         });
 
         //Assert

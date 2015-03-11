@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>AnalyticalTable</name>
+    <derived/>
+    <documentation>Table which handles analytical OData backends</documentation>
+    <developmentState since="1.21" state="experimental">The AnalyticalTable will be productized soon.</developmentState>
+    <baseType>sap.ui.table/Table</baseType>
+    <properties>
+        <property group="Appearance" defaultValue="false" type="sap.ui.core/boolean" name="sumOnTop">
+            <documentation>Specifies if the total values should be displayed in the group headers or on bottom of the row. Does not affact the total sum.</documentation>
+        </property>
+        <property group="Misc" defaultValue="0" type="sap.ui.core/int" name="numberOfExpandedLevels">
+            <documentation>Number of levels, which should be opened initially (on first load of data).</documentation>
+        </property>
+        <property group="Appearance" type="sap.ui.core/any" name="columnVisibilityMenuSorter">
+            <documentation>Functions which is used to sort the column visibility menu entries e.g.: function(ColumnA, ColumnB) { return 0 = equals, &lt;0 lower, &gt;0 greater }; Other values than functions will be ignored.</documentation>
+        </property>
+        <property group="Appearance" type="sap.ui.core/boolean" name="dirty">
+            <documentation>If dirty the content of the Table will be overlayed.</documentation>
+            <deprecation since="1.21.2">Please use setShowOverlay instead.</deprecation>
+        </property>
+    </properties>
+    <methods>
+        <method type="sap.ui.core/int" name="getTotalSize">
+            <documentation>Returns the total size of the data entries.</documentation>
+        </method>
+    </methods>
+</control>

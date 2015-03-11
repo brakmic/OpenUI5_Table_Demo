@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>Calendar</name>
+    <derived/>
+    <documentation>Basic Calendar.
+This calendar ist used for DatePickers</documentation>
+    <since>1.22.0</since>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Misc" defaultValue="false" type="sap.ui.core/boolean" name="intervalSelection">
+            <documentation>If set, interval selection is allowed</documentation>
+        </property>
+        <property group="Misc" defaultValue="true" type="sap.ui.core/boolean" name="singleSelection">
+            <documentation>If set, only a single date or interval, if intervalSelection is enabled, can be selected</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="select">
+            <documentation>Date selection changed</documentation>
+        </event>
+        <event allowPreventDefault="false" name="cancel">
+            <documentation>Date selection was cancelled</documentation>
+        </event>
+    </events>
+    <aggregations>
+        <aggregation cardinality="0..n" type="sap.ui.unified/DateRange" name="selectedDates">
+            <documentation>Date Ranges for selected dates of the DatePicker</documentation>
+        </aggregation>
+        <aggregation cardinality="0..n" since="1.24.0" type="sap.ui.unified/DateTypeRange" name="specialDates">
+            <documentation>Date Range with type to visualize special days in the Calendar.
+If one day is assigned to more than one Type, only the first one will be used.</documentation>
+        </aggregation>
+    </aggregations>
+    <methods>
+        <method type="sap.ui.unified/Calendar" name="focusDate">
+            <documentation>Sets the focused date of the calendar.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/object" name="date">
+                    <documentation>JavaScript date object for focused date.</documentation>
+                </parameter>
+            </parameters>
+        </method>
+    </methods>
+</control>

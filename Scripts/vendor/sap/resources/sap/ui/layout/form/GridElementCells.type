@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<simple-type xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>form/GridElementCells</name>
+    <derived/>
+    <documentation>A string that defines the number of used cells in a GridLayout. This can be a number from 1 to 16, &quot;auto&quot; or &quot;full&quot;.</documentation>
+    <pattern>auto|full|([1-9]|1[0-6])</pattern>
+</simple-type>

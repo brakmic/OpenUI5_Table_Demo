@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>Select</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>The select control provides a menu of predefined items that allows users to select an item.</documentation>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Misc" defaultValue="" type="sap.ui.core/string" name="name">
+            <documentation>The name to be used in the HTML code (e.g. for HTML forms that send data to the server via submit).</documentation>
+        </property>
+        <property group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="enabled">
+            <documentation>Determines whether the user can change the selected value.</documentation>
+        </property>
+        <property group="Dimension" defaultValue="auto" type="sap.ui.core/CSSSize" name="width">
+            <documentation>Defines the width of the select input. The default width of a select control depends on the width of the widest option/item in the list. This value can be provided in %, em, px… and all CSS units.
+Note: The width will be ignored if the &quot;autoAdjustWidth&quot; property is set to true.</documentation>
+        </property>
+        <property group="Dimension" defaultValue="100%" type="sap.ui.core/CSSSize" name="maxWidth">
+            <documentation>Defines the maximum width. This value can be provided in %, em, px… and all CSS units</documentation>
+        </property>
+        <property since="1.11" group="Data" defaultValue="" type="sap.ui.core/string" name="selectedKey">
+            <documentation>Key of the selected item. If the key has no corresponding aggregated item, no changes will apply. If duplicate keys exist, the first item matching the key is used.</documentation>
+        </property>
+        <property since="1.12" group="Misc" defaultValue="" type="sap.ui.core/string" name="selectedItemId">
+            <documentation>Id of the selected item. If the id has no corresponding aggregated item, no changes will apply.</documentation>
+        </property>
+        <property since="1.16" group="Appearance" defaultValue="" type="sap.ui.core/URI" name="icon">
+            <documentation>The URI to the icon that will be displayed only when using the “IconOnly” type.</documentation>
+        </property>
+        <property since="1.16" group="Appearance" defaultValue="Default" type="sap.m/SelectType" name="type">
+            <documentation>Type of a select. Possibles values &quot;Default&quot;, &quot;IconOnly&quot;.</documentation>
+        </property>
+        <property since="1.16" group="Appearance" defaultValue="false" type="sap.ui.core/boolean" name="autoAdjustWidth">
+            <documentation>If set to true, the width of the select input is determined by the selected item’s content.</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="change">
+            <documentation>Occurs when the user changes the selected item.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/Item" name="selectedItem">
+                    <documentation>The selected item.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+    </events>
+    <aggregations default="items">
+        <aggregation bindable="bindable" cardinality="0..n" type="sap.ui.core/Item" name="items">
+            <documentation>Items of the Item control.</documentation>
+        </aggregation>
+        <aggregation visibility="hidden" cardinality="0..1" type="sap.ui.core/Control" name="picker">
+            <documentation>Internal aggregation to hold the inner picker pop-up.</documentation>
+        </aggregation>
+    </aggregations>
+    <associations>
+        <association cardinality="0..1" type="sap.ui.core/Item" name="selectedItem">
+            <documentation>Sets or retrieves the selected item from the aggregation named items.</documentation>
+        </association>
+    </associations>
+</control>

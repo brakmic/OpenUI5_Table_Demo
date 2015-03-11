@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>StandardListItem</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>The StandardListItem is a list item providing image, titel and description.</documentation>
+    <baseType>sap.m/ListItemBase</baseType>
+    <properties>
+        <property group="Misc" type="sap.ui.core/string" name="title">
+            <documentation>List item text</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/string" name="description">
+            <documentation>Description gets only visible when the title property is not empty.</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/URI" name="icon">
+            <documentation>List item icon</documentation>
+        </property>
+        <property group="Appearance" defaultValue="true" type="sap.ui.core/boolean" name="iconInset">
+            <documentation>If false image will not be shown as embedded icon. Instead it will take the full height of the listitem.</documentation>
+        </property>
+        <property group="Misc" defaultValue="true" type="sap.ui.core/boolean" name="iconDensityAware">
+            <documentation>By default, this is set to true but then one or more requests are sent trying to get the density perfect version of image if this version of image doesn't exist on the server.
+
+If bandwidth is the key for the application, set this value to false.</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/URI" name="activeIcon">
+            <documentation>List item active icon</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/string" name="info">
+            <documentation>Info text shown on the right side of the description.</documentation>
+        </property>
+        <property group="Misc" defaultValue="None" type="sap.ui.core/ValueState" name="infoState">
+            <documentation>Info state defines the color of the info text. E.g. Error, Warning, Success...</documentation>
+        </property>
+        <property since="1.16.3" group="Appearance" defaultValue="true" type="sap.ui.core/boolean" name="adaptTitleSize">
+            <documentation>By default the title size adapts to the available space and gets bigger if the description is empty. If you have list items with and without description this results in titles with different sizes. In this cases it can be better to switch the size adaption off with setting this property to &quot;false&quot;.</documentation>
+        </property>
+    </properties>
+</control>

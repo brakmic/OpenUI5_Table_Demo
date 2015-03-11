@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>TreeTable</name>
+    <derived/>
+    <documentation>The TreeTable Control.</documentation>
+    <baseType>sap.ui.table/Table</baseType>
+    <properties>
+        <property defaultValue="false" type="sap.ui.core/boolean" name="expandFirstLevel">
+            <documentation>Flag to enable or disable expanding of first level.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="false" type="sap.ui.core/boolean" name="useGroupMode">
+            <documentation>If group mode is enable nodes with subitems are rendered as if they were group headers. This can be used to do the grouping for an OData service on the backend and visualize this in a table. This mode only makes sense if the tree has a depth of exacly 1 (group headers and entries)</documentation>
+        </property>
+        <property group="Data" type="sap.ui.core/string" name="groupHeaderProperty">
+            <documentation>The property name of the rows data which will be displayed as a group header if the group mode is enabled</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="toggleOpenState">
+            <documentation>fired when a node has been expanded or collapsed (only available in hierachical mode)</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/int" name="rowIndex">
+                    <documentation>index of the expanded/collapsed row</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/object" name="rowContext">
+                    <documentation>binding context of the selected row</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/boolean" name="expanded">
+                    <documentation>flag whether the node has been expanded or collapsed</documentation>
+                </parameter>
+            </parameters>
+        </event>
+    </events>
+    <methods>
+        <method type="sap.ui.table/TreeTable" name="expand">
+            <documentation>expands the row for the given row index</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/int" name="rowIndex">
+                    <documentation>index of the row to expand</documentation>
+                </parameter>
+            </parameters>
+        </method>
+        <method type="sap.ui.table/TreeTable" name="collapse">
+            <documentation>collapses the row for the given row index</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/int" name="rowIndex">
+                    <documentation>index of the row to collapse</documentation>
+                </parameter>
+            </parameters>
+        </method>
+        <method type="sap.ui.core/boolean" name="isExpanded">
+            <documentation>returns whether the row is expanded or collapsed</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/int" name="rowIndex">
+                    <documentation>index of the row to check</documentation>
+                </parameter>
+            </parameters>
+        </method>
+    </methods>
+</control>

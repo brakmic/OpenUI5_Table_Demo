@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>form/GridContainerData</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>Grid layout specific properties for FormContainers.
+The width and height properties of the elements are ignored since the witdh and heights are defined by the grid cells.</documentation>
+    <since>1.16.0</since>
+    <baseType>sap.ui.core/LayoutData</baseType>
+    <properties>
+        <property group="Misc" defaultValue="false" type="sap.ui.core/boolean" name="halfGrid">
+            <documentation>If set the container takes half the width of the form (8cells), if not it's the full width (16 cells).
+If the GridLayout is set to be singleColumn the full width of the Grid is only 8 cells. So containers are rendered only one per row.</documentation>
+        </property>
+    </properties>
+</control>

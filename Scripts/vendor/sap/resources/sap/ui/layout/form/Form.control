@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>form/Form</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>Form control.
+Holder for form control to be rendered in a specific form layout.
+A Form supports VariantLayoutData for it's content to allow a simple switching of Layouts.</documentation>
+    <since>1.16.0</since>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Dimension" type="sap.ui.core/CSSSize" name="width">
+            <documentation>Width of the form.</documentation>
+        </property>
+        <property since="1.20.0" group="Misc" type="sap.ui.core/boolean" name="editable">
+            <documentation>Applies a device and theme specific line-height to the form elements if the form has editable content.
+In this case all (not only the editable) rows of the form will get the line height.</documentation>
+        </property>
+    </properties>
+    <aggregations default="formContainers">
+        <aggregation cardinality="0..n" type="sap.ui.layout/form/FormContainer" name="formContainers">
+            <documentation>FormContainers with the content of the form.</documentation>
+        </aggregation>
+        <aggregation cardinality="0..1" type="sap.ui.core/Title" name="title">
+            <documentation>Title element of the Form. Can either be a Label object, or a simple string.</documentation>
+        </aggregation>
+        <aggregation cardinality="0..1" type="sap.ui.layout/form/FormLayout" name="layout">
+            <documentation>Layout of the form.</documentation>
+        </aggregation>
+    </aggregations>
+</control>

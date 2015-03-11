@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>Panel</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>The Panel control is a container for controls with a solid background and a header text.</documentation>
+    <since>1.16</since>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Data" type="sap.ui.core/string" name="headerText">
+            <documentation>Sets the header text.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="100%" type="sap.ui.core/CSSSize" name="width">
+            <documentation>The Panel width.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="auto" type="sap.ui.core/CSSSize" name="height">
+            <documentation>The Panel height.</documentation>
+        </property>
+        <property since="1.22" group="Appearance" defaultValue="false" type="sap.ui.core/boolean" name="expandable">
+            <documentation>Specifies whether the control is expandable. Per default the control is rendered as expanded.</documentation>
+        </property>
+        <property since="1.22" group="Appearance" defaultValue="false" type="sap.ui.core/boolean" name="expanded">
+            <documentation>If expandable, this property indicates is the state is expanded or not. If expanded, then infoToolbar (if available) and content is rendered; if expanded is false, then only the headerText/headerToolbar is rendered.</documentation>
+        </property>
+        <property since="1.26" group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="expandAnimation">
+            <documentation>Indicates whether the transition between the expanded and the hidden state of the control is animated. By default the animation is enabled.</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" since="1.22" name="expand">
+            <documentation>Indicates that the panel will expand or collapse</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/boolean" name="expand">
+                    <documentation>If the panel will expand, this is true. If the panel will collapse, this is false.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+    </events>
+    <aggregations default="content">
+        <aggregation cardinality="0..n" type="sap.ui.core/Control" name="content">
+            <documentation>Content for the Panel</documentation>
+        </aggregation>
+        <aggregation cardinality="0..1" since="1.16" type="sap.m/Toolbar" name="headerToolbar">
+            <documentation>Header can be used as a Toolbar to add extra controls for user interactions.
+Note: This aggregation overwrites &quot;headerText&quot; property.</documentation>
+        </aggregation>
+        <aggregation cardinality="0..1" since="1.16" type="sap.m/Toolbar" name="infoToolbar">
+            <documentation>InfoBar is placed below the header and can be used to show extra information to the user.</documentation>
+        </aggregation>
+    </aggregations>
+</control>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>SegmentedButton</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>A SegmentedButton Control is a horizontal control made of multiple buttons which can display a title or an image. It automatically resizes the buttons to fit proportionally within the control. When no width is set, the control uses the available width.</documentation>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Misc" type="sap.ui.core/CSSSize" name="width">
+            <documentation>Set the width of the SegmentedButton control. If not set, it uses the minimum required width to make all buttons inside of the same size (based on the biggest button).</documentation>
+        </property>
+        <property group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="enabled">
+            <documentation>If disabled all buttons look grey, you cannot focus on them, you can not even click on them.</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="select">
+            <documentation>Event is fired when the user selects a button, which returns the id and button object</documentation>
+            <parameters>
+                <parameter type="sap.m/Button" name="button">
+                    <documentation>Reference to the button that has just been selected</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/string" name="id">
+                    <documentation>Id of the button which has just been selected</documentation>
+                </parameter>
+            </parameters>
+        </event>
+    </events>
+    <aggregations default="buttons">
+        <aggregation cardinality="0..n" type="sap.m/Button" name="buttons">
+            <documentation>The buttons of the SegmentedButton control. The items set in this aggregation are used as an interface for the buttons displayed by the control. Only the properties &quot;id&quot;, &quot;icon&quot;, &quot;text&quot;, and &quot;enabled&quot; of the Button control are evaluated. Setting other properties of the button will have no effect. Alternatively, you can use the &quot;createButton&quot; method to add buttons.</documentation>
+        </aggregation>
+    </aggregations>
+    <associations>
+        <association cardinality="0..1" type="sap.m/Button" name="selectedButton">
+            <documentation>A reference to the currently selected button control. By default or if the association is set to a falsy value (null, undefined, &quot;&quot;, false), the first button will be selected.
+If the association is set to an invalid value (e.g. an ID of a button that does not exist) the selection on the SegmentedButton will be removed.</documentation>
+        </association>
+    </associations>
+    <methods>
+        <method type="sap.m/Button" name="createButton">
+            <documentation>Convenient method to add a button with a text as title or an uri for an icon. 
+Only one is allowed.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/string" name="text">
+                    <documentation>defines the title text of the newly created button</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/URI" name="uRI">
+                    <documentation>Icon to be displayed as graphical element within the button.</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/boolean" name="enabled">
+                    <documentation>Boolean property to enable the control (default is true). Buttons that are disabled have other colors than enabled ones, depending on custom settings</documentation>
+                </parameter>
+            </parameters>
+        </method>
+    </methods>
+</control>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>ProgressIndicator</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>Shows the progress of a process in a graphical way. The indicator can be displayed with or without numerical values.
+The filling can be displayed in color only, or additionally with the percentage rate. The indicator status can be interactive.</documentation>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="enabled">
+            <documentation>Switches enabled state of the control. Disabled fields have different colors, and can not be focused.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="NEUTRAL" type="sap.ui.core/BarColor" name="barColor">
+            <documentation>The color of the bar. Enumeration sap.ui.core.BarColor provides CRITICAL (yellow), NEGATIVE (red), POSITIVE (green), NEUTRAL (blue) (default value).</documentation>
+        </property>
+        <property group="Appearance" defaultValue="0%" type="sap.ui.core/string" name="displayValue">
+            <documentation>The text value to be displayed in the bar.</documentation>
+        </property>
+        <property group="Data" defaultValue="0" type="sap.ui.core/int" name="percentValue">
+            <documentation>The numerical value for the displayed length of the progress bar.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="true" type="sap.ui.core/boolean" name="showValue">
+            <documentation>Specifies whether the current value shall be rendered inside the bar.</documentation>
+        </property>
+        <property group="Dimension" defaultValue="100%" type="sap.ui.core/CSSSize" name="width">
+            <documentation>The width of the control.</documentation>
+        </property>
+    </properties>
+</control>

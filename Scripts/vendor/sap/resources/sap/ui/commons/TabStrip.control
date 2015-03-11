@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>TabStrip</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>A container for tab controls which contain the content and generally other controls. The user switches between the tabs then to display the content.</documentation>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Dimension" type="sap.ui.core/CSSSize" name="height">
+            <documentation>Height includes tab bar and content area.</documentation>
+        </property>
+        <property group="Dimension" type="sap.ui.core/CSSSize" name="width">
+            <documentation>Width includes tab bar and content area.</documentation>
+        </property>
+        <property group="Misc" defaultValue="0" type="sap.ui.core/int" name="selectedIndex">
+            <documentation>Index of the currently selected tab.</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="select">
+            <documentation>Event is fired when the user selects a tab.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/int" name="index">
+                    <documentation>Index of the selected tab.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+        <event allowPreventDefault="false" name="close">
+            <documentation>Event is fired when the user closes a tab.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/int" name="index">
+                    <documentation>Index of the closed tab.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+    </events>
+    <aggregations default="tabs">
+        <aggregation cardinality="0..n" type="sap.ui.commons/Tab" name="tabs">
+            <documentation>Aggregating tabs contained in the tab strip.</documentation>
+        </aggregation>
+    </aggregations>
+    <methods>
+        <method type="sap.ui.core/void" name="createTab">
+            <documentation>Convenient method to add a tab with a text as title and a root control as content.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/string" name="text">
+                    <documentation>Defines the title text of the newly created tab.</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/Control" name="content">
+                    <documentation>Defines the root control of the content area.</documentation>
+                </parameter>
+            </parameters>
+        </method>
+        <method type="sap.ui.core/void" name="closeTab">
+            <documentation>Close a tab. If the tab is selected, the next one will be selected. (If it's the last the previous one will be selected).
+
+This method should be called if the close event is fired. It can not be called automatically because the consumer might need to run some logic before the tab is closed.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/int" name="index">
+                    <documentation>Index of the tab that should be closed.</documentation>
+                </parameter>
+            </parameters>
+        </method>
+    </methods>
+</control>

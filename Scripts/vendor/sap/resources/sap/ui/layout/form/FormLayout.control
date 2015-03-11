@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>form/FormLayout</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>Base layout for Forms.
+Other Layouts must inherit from this one.</documentation>
+    <since>1.16.0</since>
+    <baseType>sap.ui.core/Control</baseType>
+</control>

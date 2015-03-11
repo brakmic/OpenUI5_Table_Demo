@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>Control</name>
+    <derived/>
+    <author>Martin Schaus, Daniel Brinkmann</author>
+    <documentation>Base Class for Controls.</documentation>
+    <abstract/>
+    <baseType>sap.ui.core/Element</baseType>
+    <properties>
+        <property defaultValue="false" type="sap.ui.core/boolean" name="busy">
+            <documentation>Whether the control is currently in busy state.</documentation>
+        </property>
+        <property defaultValue="1000" type="sap.ui.core/int" name="busyIndicatorDelay">
+            <documentation>The delay in milliseconds, after which the busy indicator will show up for this control.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="true" type="sap.ui.core/boolean" name="visible">
+            <documentation>Whether the control should be visible on the screen. If set to false, a placeholder is rendered instead of the real control</documentation>
+        </property>
+    </properties>
+</control>

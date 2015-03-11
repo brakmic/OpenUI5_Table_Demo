@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>ListItemBase</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>ListItemBase contains the core features of all specific list items.</documentation>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Misc" defaultValue="Inactive" type="sap.m/ListType" name="type">
+            <documentation>Type of the list item, defines the behaviour</documentation>
+        </property>
+        <property group="Appearance" defaultValue="true" type="sap.ui.core/boolean" name="visible">
+            <documentation>Invisible list items are not rendered</documentation>
+        </property>
+        <property group="Misc" defaultValue="false" type="sap.ui.core/boolean" name="unread">
+            <documentation>If the unread indicator is set on the list, this boolean defines if it will be shown on this list item. Default is false.</documentation>
+        </property>
+        <property defaultValue="false" type="sap.ui.core/boolean" name="selected">
+            <documentation>This property defines the select state of the list item when using Single/Multi-Selection.
+
+Note: Binding the &quot;selected&quot; property in single selection mode, may cause unwanted results, if you have more than one selected item in your binding</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/int" name="counter">
+            <documentation>Property sets a counter bubble with the integer given.</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="tap">
+            <documentation>tap event</documentation>
+            <deprecation since="1.20.0">This event is deprecated, use the press event instead.</deprecation>
+        </event>
+        <event allowPreventDefault="false" name="detailTap">
+            <documentation>detail tap event</documentation>
+            <deprecation since="7.20.0">This event is deprecated, use the detailPress event instead.</deprecation>
+        </event>
+        <event allowPreventDefault="false" name="press">
+            <documentation>Event is fired when the user clicks on the control.</documentation>
+        </event>
+        <event allowPreventDefault="false" name="detailPress">
+            <documentation>Event is fired when the user clicks on the detail button of the control.</documentation>
+        </event>
+    </events>
+    <methods>
+        <method type="sap.ui.core/boolean" name="isSelected">
+            <documentation>returns the state of the item selection as a boolean</documentation>
+            <deprecation since="1.10.2">API Change makes this method unnecessary</deprecation>
+        </method>
+    </methods>
+</control>

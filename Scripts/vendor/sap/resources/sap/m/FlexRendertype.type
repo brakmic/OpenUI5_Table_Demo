@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<simple-type xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>FlexRendertype</name>
+    <derived/>
+    <documentation>Determines the type of HTML elements used for rendering controls.</documentation>
+    <enumeration>
+        <value name="Div">
+            <documentation>DIV elements are used for rendering</documentation>
+        </value>
+        <value name="List">
+            <documentation>Unordered lists are used for rendering.</documentation>
+        </value>
+    </enumeration>
+</simple-type>

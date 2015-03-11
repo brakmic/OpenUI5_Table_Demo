@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>MenuItem</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>Smallest unit in the menu hierarchy. An item can be a direct part of a menu bar, of a menu, or of a sub menu.</documentation>
+    <baseType>sap.ui.unified/MenuItemBase</baseType>
+    <properties>
+        <property group="Appearance" defaultValue="" type="sap.ui.core/string" name="text">
+            <documentation>Item text</documentation>
+        </property>
+        <property group="Appearance" defaultValue="" type="sap.ui.core/URI" name="icon">
+            <documentation>Icon to be displayed</documentation>
+        </property>
+    </properties>
+</control>

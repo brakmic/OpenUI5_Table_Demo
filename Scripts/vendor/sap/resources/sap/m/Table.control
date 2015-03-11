@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>Table</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>The Table control provides a set of sophisticated and convenience functions for responsive table design.
+For mobile devices, the recommended limit of table rows is 100(based on 4 columns) to assure proper performance. To improve initial rendering on large tables, use the &quot;growing&quot; feature. Please refer to the SAPUI5 Developer Guide for more information</documentation>
+    <since>1.16</since>
+    <baseType>sap.m/ListBase</baseType>
+    <properties>
+        <property group="Appearance" defaultValue="Translucent" type="sap.m/BackgroundDesign" name="backgroundDesign">
+            <documentation>This property is used to set the background color of the table. Depending on the theme you can change the state of the background from &quot;Solid&quot; over &quot;Translucent&quot; to &quot;Transparent&quot;.</documentation>
+        </property>
+        <property since="1.22" group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="fixedLayout">
+            <documentation>Defines the algorithm to be used to layout the table cells, rows, and columns.
+
+If you set this property to false, then table is rendered with &quot;auto&quot; layout algorithm. This means, the width of the table and its cells depends on the content thereof. The column width is set by the widest unbreakable content in the cells. This can make the rendering slow, since the browser needs to read through all the content in the table, before determining the final layout.
+Note: Since table does not have own scroll container, setting fixedLayout to false can force the table to overflow and this can cause visual problems. So, we highly suggest to use this property when table has a few columns in wide screens or horizontal scroll container(e.g Dialog, Popover) to handle overflow.
+Please note that with &quot;auto&quot; layout mode Column width property is taken into account as minimum width.
+
+By default, table is rendered with &quot;fixed&quot; layout algorithm. This means the horizontal layout only depends on the table's width and the width of the columns, not the contents of the cells. Cells in subsequent rows do not affect column widths. This allows a browser to layout the table faster than the auto table layout since the browser can begin to display the table once the first row has been analyzed.</documentation>
+        </property>
+        <property since="1.22.1" group="Appearance" defaultValue="false" type="sap.ui.core/boolean" name="showOverlay">
+            <documentation>Setting this property to true will show an overlay on top of the Table content and users cannot click anymore on the Table content.</documentation>
+        </property>
+    </properties>
+    <aggregations>
+        <aggregation cardinality="0..n" type="sap.m/Column" name="columns">
+            <documentation>Columns of the Table</documentation>
+        </aggregation>
+    </aggregations>
+</control>

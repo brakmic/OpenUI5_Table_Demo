@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>UploadCollection</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>This control allows users to upload single or multiple files from their device (desktop PC, tablet or phone) and attach them into the application.</documentation>
+    <since>1.26</since>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Data" type="sap.ui.core/string[]" name="fileType">
+            <documentation>Defines the allowed file types for the upload.
+The chosen files will be checked against an array of file types.
+If at least one file does not fit the file type requirements, the upload is prevented.  Example: [&quot;jpg&quot;, &quot;png&quot;, &quot;bmp&quot;].</documentation>
+        </property>
+        <property group="Data" type="sap.ui.core/int" name="maximumFilenameLength">
+            <documentation>Specifies the maximum length of a file name.
+If the maximum file name length is exceeded, the corresponding event 'filenameLengthExceed' is triggered.</documentation>
+        </property>
+        <property group="Data" type="sap.ui.core/int" name="maximumFileSize">
+            <documentation>Specifies a file size limit in bytes that prevents the upload if at least one file exceeds the limit.
+This property is not supported by Internet Explorer 8 and 9.</documentation>
+        </property>
+        <property group="Data" type="sap.ui.core/string[]" name="mimeType">
+            <documentation>Defines the allowed MIME types of files to be uploaded.
+The chosen files will be checked against an array of MIME types.
+If at least one file does not fit the MIME type requirements, the upload is prevented.
+This property is not supported by Internet Explorer 8 and 9. Example: mimeType [&quot;image/png&quot;, &quot;image/jpeg&quot;].</documentation>
+        </property>
+        <property group="Behavior" defaultValue="false" type="sap.ui.core/boolean" name="multiple">
+            <documentation>Allows multiple files to be chosen and uploaded from the same folder.
+This property is not supported by Internet Explorer 8 and 9 
+In Release 1.26 this property is not supported in all browsers so if set to 'true' it will be ignored</documentation>
+        </property>
+        <property group="Behavior" type="sap.ui.core/string" name="noDataText">
+            <documentation>Allows you to set your own text for the 'No data' label.</documentation>
+        </property>
+        <property group="Behavior" defaultValue="false" type="sap.ui.core/boolean" name="sameFilenameAllowed">
+            <documentation>Allows the user to assign the same name when editing the file name.  “Same” refers to the existence in the list of a file with the same name.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="None" type="sap.m/ListSeparators" name="showSeparators">
+            <documentation>Defines whether separators are shown between list items.</documentation>
+        </property>
+        <property group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="uploadEnabled">
+            <documentation>Enables the upload of a file.</documentation>
+        </property>
+        <property group="Data" defaultValue="../../../upload" type="sap.ui.core/string" name="uploadUrl">
+            <documentation>Specifies the URL where the uploaded files have to be stored.</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="change">
+            <documentation>The event is triggered when files are selected.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/string" name="documentId">
+                    <documentation>An unique Id of the attached document.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+        <event allowPreventDefault="false" name="fileDeleted">
+            <documentation>The event is triggered when a fileDeleted event occurs, typically by choosing the Delete pushbutton.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/string" name="documentId">
+                    <documentation>An unique Id of the attached document.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+        <event allowPreventDefault="false" name="filenameLengthExceed">
+            <documentation>The event is triggered when the name of a chosen file is longer than the value specified with the maximumFilenameLength property (only if provided by the application).</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/string" name="documentId">
+                    <documentation>An unique Id of the attached document.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+        <event allowPreventDefault="false" name="fileRenamed">
+            <documentation>The event is triggered when the file name is changed.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/string" name="documentId">
+                    <documentation>An unique Id of the attached document.</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/string" name="fileName">
+                    <documentation>The new file name</documentation>
+                </parameter>
+            </parameters>
+        </event>
+        <event allowPreventDefault="false" name="fileSizeExceed">
+            <documentation>The event is triggered when the file size of an uploaded file is  exceeded (only if the maxFileSize property was provided by the application).
+This event is not supported by Internet Explorer 8 and 9.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/string" name="documentId">
+                    <documentation>An unique Id of the attached document.</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/string" name="fileSize">
+                    <documentation>The size in MB of a file to be uploaded.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+        <event allowPreventDefault="false" name="typeMissmatch">
+            <documentation>The event is triggered when the file type or the MIME type don't match the permitted types (only if the fileType property or the mimeType property are provided by the application).</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/string" name="documentId">
+                    <documentation>An unique Id of the attached document.</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/string" name="fileType">
+                    <documentation>File type.</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/string" name="mimeType">
+                    <documentation>MIME type.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+        <event allowPreventDefault="false" name="uploadComplete">
+            <documentation>The event is triggered as soon as the upload request is completed.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/string" name="readyStateXHR">
+                    <documentation>Ready state XHR.</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/string" name="response">
+                    <documentation>Response.</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/string" name="status">
+                    <documentation>Status.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+        <event allowPreventDefault="false" since="1.26.2" name="uploadTerminated">
+            <documentation>The event is triggered as soon as the upload request was terminated by the user.</documentation>
+        </event>
+    </events>
+    <aggregations default="items">
+        <aggregation cardinality="0..n" type="sap.m/UploadCollectionItem" name="items">
+            <documentation>Uploaded items.</documentation>
+        </aggregation>
+        <aggregation cardinality="0..n" type="sap.m/UploadCollectionParameter" name="headerParameters">
+            <documentation>Specifies the header parameters for the FileUploader that are submitted only with XHR requests.
+Header parameters are not supported by Internet Explorer 8 and 9.</documentation>
+        </aggregation>
+        <aggregation cardinality="0..n" type="sap.m/UploadCollectionParameter" name="parameters">
+            <documentation>Specifies the parameters for the FileUploader that are rendered as a hidden input field.</documentation>
+        </aggregation>
+    </aggregations>
+</control>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>MenuTextFieldItem</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>Menu item which contains an text field. This menu item is e.g. helpful for filters.
+The aggregation 'submenu' (inherited from parent class) is not supported for this type of menu item.</documentation>
+    <baseType>sap.ui.unified/MenuItemBase</baseType>
+    <properties>
+        <property group="Appearance" type="sap.ui.core/string" name="label">
+            <documentation>The label of the contained text field.</documentation>
+        </property>
+        <property group="Appearance" type="sap.ui.core/URI" name="icon">
+            <documentation>Icon to be displayed.</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/string" name="value">
+            <documentation>Value of the contained text field.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="None" type="sap.ui.core/ValueState" name="valueState">
+            <documentation>Visualizes warnings or errors.</documentation>
+        </property>
+    </properties>
+</control>

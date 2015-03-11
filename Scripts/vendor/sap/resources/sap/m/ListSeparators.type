@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<simple-type xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>ListSeparators</name>
+    <derived/>
+    <documentation>Defines which separator style will be applied for the items.</documentation>
+    <enumeration>
+        <value name="All">
+            <documentation>Separators around the items.</documentation>
+        </value>
+        <value name="Inner">
+            <documentation>Separators between the items when there is no footer. Note: This enumeration depends on the theme. Please check design documentation for more details.</documentation>
+        </value>
+        <value name="None">
+            <documentation>No item separators.</documentation>
+        </value>
+    </enumeration>
+</simple-type>

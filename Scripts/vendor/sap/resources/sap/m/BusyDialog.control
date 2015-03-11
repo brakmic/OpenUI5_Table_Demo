@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>BusyDialog</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>Busy Dialog is used to indicate that the system is busy with some task and the user has to wait. During this time the UI is blocked.</documentation>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Appearance" type="sap.ui.core/string" name="text">
+            <documentation>Optional text shown inside the popup.</documentation>
+        </property>
+        <property group="Appearance" type="sap.ui.core/string" name="title">
+            <documentation>Sets a title to the busy dialog. Default is no title.</documentation>
+        </property>
+        <property group="Appearance" type="sap.ui.core/URI" name="customIcon">
+            <documentation>Icon that is displayed in the dialog header. This icon is invisible in iOS platform and it's density aware that you can use the density convention (@2, @1.5, etc.) to provide higher resolution image for higher density screen.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="1000" type="sap.ui.core/int" name="customIconRotationSpeed">
+            <documentation>Defines the rotation speed of the given image. If a gif is used, the speed has to be set to 0. The unit is in ms.</documentation>
+        </property>
+        <property defaultValue="true" type="sap.ui.core/boolean" name="customIconDensityAware">
+            <documentation>If this is set to false, the src image will be loaded directly without attempting to fetch the density perfect image for high density device.
+
+By default, this is set to true but then one or more requests are sent trying to get the density perfect version of image if this version of image doesn't exist on the server.
+
+If bandwidth is the key for the application, set this value to false.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="30px" type="sap.ui.core/CSSSize" name="customIconWidth">
+            <documentation>Width of the provided icon. By default 44px are used.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="44px" type="sap.ui.core/CSSSize" name="customIconHeight">
+            <documentation>Height of the provided icon. By default 44px are used.</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/string" name="cancelButtonText">
+            <documentation>The text of the cancel button. The default text is &quot;Cancel&quot; (translated to the respective language).</documentation>
+        </property>
+        <property group="Appearance" defaultValue="false" type="sap.ui.core/boolean" name="showCancelButton">
+            <documentation>A cancel button will be rendered inside the busy dialog if this property is set to true.</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="close">
+            <documentation>This event will be fired when the busy dialog is closed.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/boolean" name="cancelPressed">
+                    <documentation>this parameter is for an app to differ for a &quot;close&quot; event if it was fired because user pressed cancel button or because the operation was terminated.
+This parameter is set to true if the close event is fired by user interaction.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+    </events>
+    <aggregations>
+        <aggregation visibility="hidden" cardinality="0..1" type="sap.ui.core/Control" name="_busyLabel">
+            <documentation>The hidden aggregation for internal maintained label.</documentation>
+        </aggregation>
+        <aggregation visibility="hidden" cardinality="0..1" type="sap.ui.core/Control" name="_busyIndicator">
+            <documentation>The hidden aggregation for internal maintained busyIndicator.</documentation>
+        </aggregation>
+        <aggregation visibility="hidden" cardinality="0..1" type="sap.ui.core/Control" name="_toolbar">
+            <documentation>The hidden aggregation for internal maintained toolbar which contains the cancel button.</documentation>
+        </aggregation>
+        <aggregation visibility="hidden" cardinality="0..1" type="sap.ui.core/Control" name="_cancelButton">
+            <documentation>The hidden aggregation for internal maintained button.</documentation>
+        </aggregation>
+    </aggregations>
+    <methods>
+        <method type="sap.m/BusyDialog" name="open">
+            <documentation>Opens the busy popup.</documentation>
+        </method>
+        <method type="sap.m/BusyDialog" name="close">
+            <documentation>Close the busy popup.</documentation>
+        </method>
+    </methods>
+</control>

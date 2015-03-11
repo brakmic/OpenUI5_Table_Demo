@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>UploadCollectionItem</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>Items provide information about the uploaded files.</documentation>
+    <since>1.26</since>
+    <baseType>sap.ui.core/Element</baseType>
+    <properties>
+        <property since="1.12.2" group="Data" type="sap.ui.core/string" name="contributor">
+            <documentation>Specifies the name of the user who uploaded the file.</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/string" name="documentId">
+            <documentation>Specifies a unique identifier of the file (created by the application).</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/string" name="fileName">
+            <documentation>Specifies the name of the uploaded file.</documentation>
+        </property>
+        <property group="Misc" type="float" name="fileSize">
+            <documentation>Specifies the size of the uploaded file (in megabytes).</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/string" name="mimeType">
+            <documentation>Specifies the MIME type of the file.</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/string" name="thumbnailUrl">
+            <documentation>Specifies the URL where the thumbnail of the file is located.</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/string" name="uploadedDate">
+            <documentation>Specifies the date on which the file was uploaded.
+The application has to define the date format.</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/string" name="url">
+            <documentation>Specifies the URL where the file is located.</documentation>
+        </property>
+        <property group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="enableEdit">
+            <documentation>Enables/Disables the Edit pushbutton.
+If the value is true, the Edit pushbutton is enabled and the edit function can be used.
+If the value is false, the edit function is not available.</documentation>
+        </property>
+        <property group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="enableDelete">
+            <documentation>Enables/Disables the Edit pushbutton.
+If the value is true, the Edit pushbutton is enabled and the edit function can be used.
+If the value is false, the edit function is not available.</documentation>
+        </property>
+        <property group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="visibleEdit">
+            <documentation>Show/Hide the Edit pushbutton.
+If the value is true, the Edit pushbutton is visible.
+If the value is false, the Edit pushbutton is not visible.</documentation>
+        </property>
+        <property group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="visibleDelete">
+            <documentation>Show/Hide the Delete pushbutton.
+If the value is true, the Delete pushbutton is visible.
+If the value is false, the Delete pushbutton is not visible.</documentation>
+        </property>
+    </properties>
+</control>

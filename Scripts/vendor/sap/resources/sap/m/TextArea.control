@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>TextArea</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>Enable users to input multi-line text.</documentation>
+    <since>1.9.0</since>
+    <baseType>sap.m/InputBase</baseType>
+    <properties>
+        <property group="Appearance" defaultValue="2" type="sap.ui.core/int" name="rows">
+            <documentation>Specifies the height of the text area (in lines).</documentation>
+        </property>
+        <property group="Appearance" defaultValue="20" type="sap.ui.core/int" name="cols">
+            <documentation>Specifies the width of the textarea (in average character width).</documentation>
+        </property>
+        <property group="Appearance" type="sap.ui.core/CSSSize" name="height">
+            <documentation>Defines the height of the textarea with CSS. This property can overwrite the rows property.</documentation>
+        </property>
+        <property group="Behavior" defaultValue="0" type="sap.ui.core/int" name="maxLength">
+            <documentation>Maximum number of characters that user can input. If your value property's length bigger than maxLength then value is not truncated and user can see whole value property but cannot write anymore.</documentation>
+        </property>
+        <property group="Behavior" type="sap.ui.core/Wrapping" name="wrapping">
+            <documentation>The wrap attribute specifies how the text in a text area is to be wrapped when submitted in a form. Possible values are: Soft, Hard, Off.</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="liveChange">
+            <documentation>This event is fired when the value of the input is changed - e.g. at each keypress</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/string" name="value">
+                    <documentation>The new value of the textarea.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+    </events>
+</control>

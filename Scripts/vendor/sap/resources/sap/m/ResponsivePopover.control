@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>ResponsivePopover</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>This control acts responsively to the type of device. It acts as a sap.m.Popover on desktop and tablet while acts as a sap.m.Dialog with stretch set to true on phone.</documentation>
+    <since>1.15.1</since>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Misc" defaultValue="Right" type="sap.m/PlacementType" name="placement">
+            <documentation>This property only takes effect when runs on desktop or tablet. Please see the documentation {@linkcode sap.m.Popover#placement here}.</documentation>
+        </property>
+        <property group="Misc" defaultValue="true" type="sap.ui.core/boolean" name="showHeader">
+            <documentation>This property is supported by both variants. Please see the documentation on {@linkcode sap.m.Popover#showHeader sap.m.Popover} and {@linkcode sap.m.Dialog#showHeader sap.m.Dialog}</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/string" name="title">
+            <documentation>This property is supported by both variants. Please see the documentation on {@linkcode sap.m.Popover#title sap.m.Popover} and {@linkcode sap.m.Dialog#title sap.m.Dialog}</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/URI" name="icon">
+            <documentation>This property only takes effect when runs on phone. Please see the documentation {@linkcode sap.m.Dialog#icon here}.</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/boolean" name="modal">
+            <documentation>This property only takes effect when runs on desktop or tablet. Please see the documentation {@linkcode sap.m.Popover#modal here}.</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/int" name="offsetX">
+            <documentation>This property only takes effect when runs on desktop or tablet. Please see the documentation {@linkcode sap.m.Popover#offsetX here}.</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/int" name="offsetY">
+            <documentation>This property only takes effect when runs on desktop or tablet. Please see the documentation {@linkcode sap.m.Popover#offsetY here}.</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/CSSSize" name="contentWidth">
+            <documentation>This property is supported by both variants. Please see the documentation on {@linkcode sap.m.Popover#contentWidth sap.m.Popover} and {@linkcode sap.m.Dialog#contentWidth sap.m.Dialog}</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/CSSSize" name="contentHeight">
+            <documentation>This property is supported by both variants. Please see the documentation on {@linkcode sap.m.Popover#contentHeight sap.m.Popover} and {@linkcode sap.m.Dialog#contentHeight sap.m.Dialog}</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/boolean" name="horizontalScrolling">
+            <documentation>This property is supported by both variants. Please see the documentation on {@linkcode sap.m.Popover#horizontalScrolling sap.m.Popover} and {@linkcode sap.m.Dialog#horizontalScrolling sap.m.Dialog}</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/boolean" name="verticalScrolling">
+            <documentation>This property is supported by both variants. Please see the documentation on {@linkcode sap.m.Popover#verticalScrolling sap.m.Popover} and {@linkcode sap.m.Dialog#verticalScrolling sap.m.Dialog}</documentation>
+        </property>
+        <property group="Misc" defaultValue="true" type="sap.ui.core/boolean" name="showCloseButton">
+            <documentation>Whether a close button should be inserted to the dialog's header dynamically to close the dialog. This property only takes effect when runs on the phone.</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="beforeOpen">
+            <documentation>Event is fired before popover or dialog is open.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/Control" name="openBy">
+                    <documentation>This parameter contains the control which is passed as the parameter when calling openBy method. When runs on the phone, this parameter is undefined.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+        <event allowPreventDefault="false" name="afterOpen">
+            <documentation>Event is fired after popover or dialog is open.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/Control" name="openBy">
+                    <documentation>This parameter contains the control which is passed as the parameter when calling openBy method. When runs on the phone, this parameter is undefined.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+        <event allowPreventDefault="false" name="beforeClose">
+            <documentation>Event is fired before popover or dialog is closed.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/Control" name="openBy">
+                    <documentation>This parameter contains the control which is passed as the parameter when calling openBy method. When runs on the phone, this parameter is undefined.</documentation>
+                </parameter>
+                <parameter type="sap.m/Button" name="origin">
+                    <documentation>This parameter contains the control which triggers the close of the ResponsivePopover. This parameter is undefined when runs on desktop or tablet.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+        <event allowPreventDefault="false" name="afterClose">
+            <documentation>Event is fired after popover or dialog is closed.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/Control" name="openBy">
+                    <documentation>This parameter contains the control which is passed as the parameter when calling openBy method. When runs on the phone, this parameter is undefined.</documentation>
+                </parameter>
+                <parameter type="sap.m/Button" name="origin">
+                    <documentation>This parameter contains the control which triggers the close of the ResponsivePopover. This parameter is undefined when runs on desktop or tablet.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+    </events>
+    <aggregations>
+        <aggregation cardinality="0..n" type="sap.ui.core/Control" name="content">
+            <documentation>Content is supported by both variants. Please see the documentation on {@linkcode sap.m.Popover#content sap.m.Popover} and {@linkcode sap.m.Dialog#content sap.m.Dialog}</documentation>
+        </aggregation>
+        <aggregation cardinality="0..1" type="sap.m/IBar" name="customHeader">
+            <documentation>CustomHeader is supported by both variants. Please see the documentation on {@linkcode sap.m.Popover#customHeader sap.m.Popover} and {@linkcode sap.m.Dialog#customHeader sap.m.Dialog}</documentation>
+        </aggregation>
+        <aggregation cardinality="0..1" type="sap.m/IBar" name="subHeader">
+            <documentation>SubHeader is supported by both variants. Please see the documentation on {@linkcode sap.m.Popover#subHeader sap.m.Popover} and {@linkcode sap.m.Dialog#subHeader sap.m.Dialog}</documentation>
+        </aggregation>
+        <aggregation cardinality="0..1" type="sap.m/Button" name="beginButton">
+            <documentation>BeginButton is supported by both variants. It is always show in the left part (right part in RTL mode) of the footer which is located at the bottom of the ResponsivePopover. If buttons need to be displayed in header, please use customHeader instead.</documentation>
+        </aggregation>
+        <aggregation cardinality="0..1" type="sap.m/Button" name="endButton">
+            <documentation>EndButton is supported by both variants. It is always show in the right part (left part in RTL mode) of the footer which is located at the bottom of the ResponsivePopover. If buttons need to be displayed in header, please use customHeader instead.</documentation>
+        </aggregation>
+        <aggregation visibility="hidden" cardinality="0..1" type="sap.ui.core/Control" name="_popup">
+            <documentation>The internal popup instance which is either a dialog on phone or a popover on the rest of platforms</documentation>
+        </aggregation>
+    </aggregations>
+    <associations>
+        <association cardinality="0..1" type="sap.ui.core/Control" name="initialFocus">
+            <documentation>InitialFocus is supported by both variants. Please see the documentation on {@linkcode sap.m.Popover#initialFocus sap.m.Popover} and {@linkcode sap.m.Dialog#initialFocus sap.m.Dialog}</documentation>
+        </association>
+    </associations>
+    <methods>
+        <method type="sap.ui.core/Control" name="isOpen">
+            <documentation>Checks whether the ResponsivePopover is currently open.</documentation>
+        </method>
+        <method type="sap.ui.core/Control" name="openBy">
+            <documentation>Opens the ResponsivePopover. The ResponsivePopover is positioned relatively to the control parameter when runs on tablet or desktop and is full screen when runs on phone. Therefore the control parameter only has its usage when runs on tablet or desktop and is ignored when runs on phone.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/object" name="control">
+                    <documentation>When this control runs on tablet or desktop, the ResponsivePopover is positioned relatively to this control.</documentation>
+                </parameter>
+            </parameters>
+        </method>
+        <method type="sap.ui.core/Control" name="close">
+            <documentation>Closes the ResponsivePopover.</documentation>
+        </method>
+    </methods>
+</control>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>MenuItemBase</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>Provides the standard properties for menu items.</documentation>
+    <baseType>sap.ui.core/Element</baseType>
+    <properties>
+        <property group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="enabled">
+            <documentation>Disabled items have different colors, depending on customer settings.</documentation>
+        </property>
+        <property group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="visible">
+            <documentation>Invisible controls are not rendered.</documentation>
+        </property>
+        <property group="Behavior" defaultValue="false" type="sap.ui.core/boolean" name="startsSection">
+            <documentation>If set to true, a divider is displayed before the item</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="select">
+            <documentation>Event is fired when an item is selected. The event is also available for items having a sub menu.
+A mouse click or space bar click on a sub menu item fires the event.</documentation>
+            <parameters>
+                <parameter type="sap.ui.unified/MenuItemBase" name="item">
+                    <documentation>Represents the current item</documentation>
+                </parameter>
+            </parameters>
+        </event>
+    </events>
+    <aggregations default="submenu">
+        <aggregation cardinality="0..1" type="sap.ui.unified/Menu" name="submenu">
+            <documentation>Aggregation of a menu item's sub menu.</documentation>
+        </aggregation>
+    </aggregations>
+</control>

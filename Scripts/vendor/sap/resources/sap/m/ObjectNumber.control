@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>ObjectNumber</name>
+    <derived/>
+    <documentation>ObjectNumber displays number and number unit properties for an object. The number can be displayed using semantic colors to provide addition meaning about the object to the user.</documentation>
+    <since>1.12</since>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Misc" type="sap.ui.core/string" name="number">
+            <documentation>Number field of the object number</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/string" name="numberUnit">
+            <documentation>Number units qualifier</documentation>
+            <deprecation since="1.16.1">Replaced by unit property due to the number before unit is redundant.</deprecation>
+        </property>
+        <property group="Appearance" defaultValue="true" type="sap.ui.core/boolean" name="emphasized">
+            <documentation>Indicates if the object number should appear emphasized</documentation>
+        </property>
+        <property group="Misc" defaultValue="None" type="sap.ui.core/ValueState" name="state">
+            <documentation>The object number's value state. Setting this state will cause the number to be rendered in state-specific colors (only blue-crystal theme).</documentation>
+        </property>
+        <property since="1.16.1" group="Misc" type="sap.ui.core/string" name="unit">
+            <documentation>Number units qualifier. If numberUnit and unit are both set, the unit value is used.</documentation>
+        </property>
+    </properties>
+</control>

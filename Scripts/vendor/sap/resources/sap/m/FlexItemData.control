@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>FlexItemData</name>
+    <derived/>
+    <documentation>Holds layout data for a FlexBox</documentation>
+    <baseType>sap.ui.core/LayoutData</baseType>
+    <properties>
+        <property group="Misc" defaultValue="Auto" type="sap.m/FlexAlignSelf" name="alignSelf">
+            <documentation>Determines cross-axis alignment of individual element (not currently supported in Internet Explorer)</documentation>
+        </property>
+        <property group="Misc" defaultValue="0" type="sap.ui.core/int" name="order">
+            <documentation>Determines the display order of flex items independent of their source code order.</documentation>
+        </property>
+        <property group="Misc" defaultValue="0" type="float" name="growFactor">
+            <documentation>Determines the flexibility of the flex item when allocatable space is remaining.</documentation>
+        </property>
+        <property since="1.24" group="Misc" defaultValue="1" type="float" name="shrinkFactor">
+            <documentation>The shrink factor determines how much the flex item will shrink relative to the rest of the flex items in the flex container when negative free space is distributed.
+
+http://www.w3.org/TR/css3-flexbox/#flex-shrink-factor
+
+This property is not supported in Internet Explorer 9, Android Native Browser/Webview &lt;4.4, and Safari &lt;7.</documentation>
+        </property>
+        <property group="Misc" defaultValue="" type="sap.ui.core/string" name="styleClass">
+            <documentation>The style class will be applied to the flex item and can be used for CSS selectors</documentation>
+            <deprecation since="1.11.2">Generic addStyleClass method is available on the control</deprecation>
+        </property>
+    </properties>
+</control>

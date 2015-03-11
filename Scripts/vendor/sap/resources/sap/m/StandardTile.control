@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>StandardTile</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>The StandardTile</documentation>
+    <since>1.12</since>
+    <baseType>sap.m/Tile</baseType>
+    <properties>
+        <property group="Misc" type="sap.ui.core/string" name="title">
+            <documentation>Tile title</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/string" name="info">
+            <documentation>Tile description</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/URI" name="icon">
+            <documentation>Tile icon</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/URI" name="activeIcon">
+            <documentation>Tile active icon</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/string" name="number">
+            <documentation>Number field</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/string" name="numberUnit">
+            <documentation>Number units qualifier</documentation>
+        </property>
+        <property group="Misc" defaultValue="None" type="sap.ui.core/ValueState" name="infoState">
+            <documentation>Info state defines the color of the info text. E.g. Error, Warning, Success...</documentation>
+        </property>
+        <property group="Misc" defaultValue="None" type="sap.m/StandardTileType" name="type">
+            <documentation>Tile type.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="true" type="sap.ui.core/boolean" name="iconDensityAware">
+            <documentation>By default, this is set to true but then one or more requests are sent trying to get the density perfect version of image if this version of image doesn't exist on the server.
+
+If bandwidth is the key for the application, set this value to false.</documentation>
+        </property>
+    </properties>
+</control>

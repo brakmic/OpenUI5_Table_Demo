@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>BusyIndicator</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>Control to indicate that the system is busy with some task and the user has to wait.</documentation>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Data" type="sap.ui.core/string" name="text">
+            <documentation>Defines the text displayed next to the busy indicator (optional)</documentation>
+        </property>
+        <property group="Appearance" defaultValue="Inherit" type="sap.ui.core/TextDirection" name="textDirection">
+            <documentation>Options for the text direction are RTL and LTR. Alternatively, the control can inherit the text direction from its parent container.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="true" type="sap.ui.core/boolean" name="visible">
+            <documentation>Set to false to make the control invisible.</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/URI" name="customIcon">
+            <documentation>Icon URL if an icon is used as the busy indicator.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="1000" type="sap.ui.core/int" name="customIconRotationSpeed">
+            <documentation>Defines the rotation speed of the given image. If a .gif is used, the speed has to be set to 0. The unit is in ms.</documentation>
+        </property>
+        <property defaultValue="true" type="sap.ui.core/boolean" name="customIconDensityAware">
+            <documentation>If this is set to false, the src image will be loaded directly without attempting to fetch the density perfect image for high density device.
+
+By default, this is set to true but then one or more requests are sent trying to get the density perfect version of image if this version of image doesn't exist on the server.
+
+If bandwidth is the key for the application, set this value to false.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="44px" type="sap.ui.core/CSSSize" name="customIconWidth">
+            <documentation>Width of the provided icon. By default 44px are used.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="44px" type="sap.ui.core/CSSSize" name="customIconHeight">
+            <documentation>Height of the provided icon. By default 44px are used.</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/CSSSize" name="size">
+            <documentation>Defines the size of the busy indicator.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="auto" type="sap.ui.core/string" name="design">
+            <documentation>The design defines how the BusyIndicator should look like. There are 3 possibilities:
+auto: automatically sets the design according to the context
+dark: dark theme, useful within a light context
+light: light theme, useful within a dark context</documentation>
+        </property>
+    </properties>
+    <aggregations>
+        <aggregation visibility="hidden" cardinality="0..1" type="sap.ui.core/Control" name="_iconImage">
+            <documentation>The hidden aggregation for internal maintained icon image.</documentation>
+        </aggregation>
+        <aggregation visibility="hidden" cardinality="0..1" type="sap.ui.core/Control" name="_busyLabel">
+            <documentation>The hidden aggregation for internal maintained busy label.</documentation>
+        </aggregation>
+    </aggregations>
+</control>

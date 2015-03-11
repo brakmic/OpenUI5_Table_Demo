@@ -108,6 +108,7 @@ sap.ui.core.UIComponent.extend('advarics.components.apps.App', {
         this._router.register('advarics.components.routers.AppRouter');
         this.oRouteHandler = new sap.m.routing.RouteMatchedHandler(this._router);
         this._router.initialize();
+        
     },
     /**
      * This function removes resources used by the main application module

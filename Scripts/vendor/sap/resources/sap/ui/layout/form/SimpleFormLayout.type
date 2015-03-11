@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<simple-type xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>form/SimpleFormLayout</name>
+    <derived/>
+    <documentation>Available FormLayouts used for the SimpleForm.</documentation>
+    <since>1.16.0</since>
+    <enumeration>
+        <value name="ResponsiveLayout">
+            <documentation>Uses the ResponsiveLayout for the SimpleForm</documentation>
+        </value>
+        <value name="GridLayout">
+            <documentation>Uses the GridLayout for the SimpleForm</documentation>
+        </value>
+        <value since="1.16.0" name="ResponsiveGridLayout">
+            <documentation>Uses the ResponsiveGridLayout for the SimpleForm</documentation>
+        </value>
+    </enumeration>
+</simple-type>

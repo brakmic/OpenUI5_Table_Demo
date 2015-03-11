@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>DataTable</name>
+    <derived/>
+    <documentation>The DataTable control provides a set of sophisticated and comfort functions for table design. For example, you can make settings for the number of visible rows and a number for the displayed rows in the case the user expands the table. The first visible row can be explicitly set. For the selection of columns and rows, a Multi, a Single, a None, and an All mode are available. Setting the Editable property to true lets the user make changes on the table cell entries.</documentation>
+    <deprecation since="1.5.1">The DataTable has been replaced via the Table/TreeTable control.</deprecation>
+    <baseType>sap.ui.table/TreeTable</baseType>
+    <properties>
+        <property type="sap.ui.core/int" name="expandedVisibleRowCount">
+            <documentation>Count of visible rows when expanded</documentation>
+        </property>
+        <property defaultValue="false" type="sap.ui.core/boolean" name="expanded">
+            <documentation>Flag whether the Table is expanded or not</documentation>
+        </property>
+        <property defaultValue="false" type="sap.ui.core/boolean" name="hierarchical">
+            <documentation>Flag, whether the table displays its content hierarchical or not (**experimental**!!)</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="rowSelect">
+            <documentation>fired when the row selection of the table has been changed</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/int" name="rowIndex">
+                    <documentation>row index which row has been selected or deselected</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/object" name="rowContext">
+                    <documentation>binding context of the row index which row has been selected or deselected</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/int[]" name="rowIndices">
+                    <documentation>array of row indices which selection has been changed (either selected or deselected)</documentation>
+                </parameter>
+            </parameters>
+        </event>
+    </events>
+</control>

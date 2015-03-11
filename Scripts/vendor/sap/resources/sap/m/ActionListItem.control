@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>ActionListItem</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>ActionListItem should be used to fire actions when tapped.</documentation>
+    <baseType>sap.m/ListItemBase</baseType>
+    <properties>
+        <property group="Misc" type="sap.ui.core/string" name="text">
+            <documentation>Text of the action list item.</documentation>
+        </property>
+    </properties>
+</control>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>FacetFilter</name>
+    <derived/>
+    <documentation>FacetFilter is used to provide filtering functionality with multiple parameters.</documentation>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Appearance" defaultValue="false" type="sap.ui.core/boolean" name="showPersonalization">
+            <documentation>If true and the FacetFilter type is Simple, then the add facet icon will be displayed and each facet button will also have a facet remove icon displayed beside it allowing the user to deactivate the facet.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="Simple" type="sap.m/FacetFilterType" name="type">
+            <documentation>This property defines the default appearance of the FacetFilter on the device.</documentation>
+        </property>
+        <property group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="liveSearch">
+            <documentation>Enable/disable live search on all search fields except for the facet list search.</documentation>
+        </property>
+        <property group="Behavior" defaultValue="false" type="sap.ui.core/boolean" name="showSummaryBar">
+            <documentation>Shows the summary bar instead of the facet filter buttons bar when set to true.</documentation>
+        </property>
+        <property group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="showReset">
+            <documentation>Show or hide the filter reset button.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="false" type="sap.ui.core/boolean" name="showPopoverOKButton">
+            <documentation>If true an &quot;OK&quot; button is shown for every FacetFilterList popover. This button allows the user to close the popover from within the popover instead of having to click outside the popover.</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="reset">
+            <documentation>Fired when the reset button is pressed to inform that all facet filter lists need to be reset.</documentation>
+        </event>
+    </events>
+    <aggregations default="lists">
+        <aggregation cardinality="0..n" type="sap.m/FacetFilterList" name="lists">
+            <documentation>Collection of FacetFilterList controls.</documentation>
+        </aggregation>
+        <aggregation visibility="hidden" cardinality="0..n" type="sap.m/Button" name="buttons">
+            <documentation>Hidden aggregation of buttons that open each facet filter list popover. These buttons are displayed only when the FacetFilter is of type Simple.</documentation>
+        </aggregation>
+        <aggregation visibility="hidden" cardinality="0..n" type="sap.ui.core/Icon" name="removeFacetIcons">
+            <documentation>Hidden aggregation of icons for setting facet lists inactive, thereby removing the facet button from the display. The icon is displayed only if personalization is enabled.</documentation>
+        </aggregation>
+        <aggregation visibility="hidden" cardinality="0..1" type="sap.m/Popover" name="popover">
+            <documentation>Hidden aggregation for the facet list popover.</documentation>
+        </aggregation>
+        <aggregation visibility="hidden" cardinality="0..1" type="sap.m/Button" name="addFacetButton">
+            <documentation>Hidden aggregation for the add facet button. This button allows the user to open the facet dialog and add or configure facets. This is displayed only if personalization is enabled and if the FacetFilter is of type Simple.</documentation>
+        </aggregation>
+        <aggregation visibility="hidden" cardinality="0..1" type="sap.m/Dialog" name="dialog">
+            <documentation>Hidden aggregation for the dialog that displays the facet and filter items pages.</documentation>
+        </aggregation>
+        <aggregation visibility="hidden" cardinality="0..1" type="sap.m/Toolbar" name="summaryBar">
+            <documentation>Hidden aggregation for the summary bar.</documentation>
+        </aggregation>
+        <aggregation visibility="hidden" cardinality="0..1" type="sap.m/Button" name="resetButton">
+            <documentation>Hidden aggregation for the reset button displayed for Simple type.</documentation>
+        </aggregation>
+        <aggregation visibility="hidden" cardinality="0..1" type="sap.ui.core/Icon" name="arrowLeft">
+            <documentation>Hidden aggregation for the arrow that scrolls the facets left when the FacetFilter is set to type Simple.</documentation>
+        </aggregation>
+        <aggregation visibility="hidden" cardinality="0..1" type="sap.ui.core/Icon" name="arrowRight">
+            <documentation>Hidden aggregation for the arrow that scrolls the facets right when the FacetFilter is set to type Simple.</documentation>
+        </aggregation>
+    </aggregations>
+    <methods>
+        <method type="sap.ui.core/void" name="openFilterDialog">
+            <documentation>Opens the facet filter dialog.</documentation>
+        </method>
+    </methods>
+</control>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>SelectList</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>This control displays a list of items to allow the user to select an item.</documentation>
+    <since>1.26.0</since>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="enabled">
+            <documentation>Determines whether the user can change the selection.</documentation>
+        </property>
+        <property group="Dimension" defaultValue="auto" type="sap.ui.core/CSSSize" name="width">
+            <documentation>Defines the width of the control. This value can be provided in all CSS units.</documentation>
+        </property>
+        <property group="Dimension" defaultValue="100%" type="sap.ui.core/CSSSize" name="maxWidth">
+            <documentation>Defines the maximum width of the control. This value can be provided in all CSS units.</documentation>
+        </property>
+        <property group="Data" defaultValue="" type="sap.ui.core/string" name="selectedKey">
+            <documentation>Key of the selected item. If the key has no corresponding aggregated item, no changes will apply. If duplicate keys exist, the first item matching the key is used.</documentation>
+        </property>
+        <property group="Misc" defaultValue="" type="sap.ui.core/string" name="selectedItemId">
+            <documentation>Id of the selected item. If the id has no corresponding aggregated item, no changes will apply.</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="selectionChange">
+            <documentation>Occurs when the user changes the selected item.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/Item" name="selectedItem">
+                    <documentation>The selected item.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+    </events>
+    <aggregations default="items">
+        <aggregation bindable="bindable" cardinality="0..n" type="sap.ui.core/Item" name="items">
+            <documentation>Aggregation of items to be displayed.</documentation>
+        </aggregation>
+    </aggregations>
+    <associations>
+        <association cardinality="0..1" type="sap.ui.core/Item" name="selectedItem">
+            <documentation>Sets or retrieves the selected item from the aggregation named items.</documentation>
+        </association>
+    </associations>
+    <methods>
+        <method type="sap.ui.core/Item" name="getItemByKey">
+            <documentation>Retrieves the item with the given key from the aggregation named items.
+If duplicate keys exist, the first item matching the key is returned.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/string" name="key">
+                    <documentation>An item key that identifies the item to retrieve.</documentation>
+                </parameter>
+            </parameters>
+        </method>
+        <method type="sap.ui.core/Item" name="getFirstItem">
+            <documentation>Retrieves the first item from the aggregation named items.</documentation>
+        </method>
+        <method type="sap.ui.core/Item" name="getLastItem">
+            <documentation>Retrieves the last item from the aggregation named items.</documentation>
+        </method>
+        <method type="sap.ui.core/Item" name="getItemAt">
+            <documentation>Retrieves the item from the aggregation named items at the given 0-based index.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/int" name="index">
+                    <documentation>Index of the item to return.</documentation>
+                </parameter>
+            </parameters>
+        </method>
+        <method type="sap.ui.core/Item[]" name="getEnabledItems">
+            <documentation>Retrieves the enabled items from the aggregation named items.</documentation>
+        </method>
+        <method type="sap.m/SelectList" name="clearSelection">
+            <documentation>Clear the selection.</documentation>
+        </method>
+    </methods>
+</control>

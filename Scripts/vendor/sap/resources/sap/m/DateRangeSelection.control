@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>DateRangeSelection</name>
+    <derived/>
+    <documentation>This is a date range selection control. It internal uses the sap.ui.unified.Calendar. So the sap.ui.unified library should be loaded from applications using this control.</documentation>
+    <baseType>sap.m/DatePicker</baseType>
+    <properties>
+        <property group="Misc" defaultValue="-" type="sap.ui.core/string" name="delimiter">
+            <documentation>Delimiter of starting and ending date. Default value is &quot;-&quot;.
+If no delimiter is given the one defined for the used locale is used.</documentation>
+        </property>
+        <property group="Data" type="sap.ui.core/object" name="secondDateValue">
+            <documentation>Ending date of the range.</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/object" name="from">
+            <documentation>Starting date of the range.</documentation>
+            <deprecation since="1.22">Former property for starting date - since next release will be not supported. Use dateValue instead.</deprecation>
+        </property>
+        <property group="Misc" type="sap.ui.core/object" name="to">
+            <documentation>Ending date of the range.</documentation>
+            <deprecation since="1.22">Former property for ending date - since next release will be not supported. Use secondDateValue instead.</deprecation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="change">
+            <documentation>Event thrown in case of change of date range.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/object" name="from">
+                    <documentation>Current starting date after change.</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/object" name="to">
+                    <documentation>Current ending date after change.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+    </events>
+</control>

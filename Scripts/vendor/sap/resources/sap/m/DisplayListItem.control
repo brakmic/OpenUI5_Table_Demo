@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>DisplayListItem</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>The display list item consists of a label and a value.</documentation>
+    <baseType>sap.m/ListItemBase</baseType>
+    <properties>
+        <property group="Misc" type="sap.ui.core/string" name="label">
+            <documentation>List item label</documentation>
+        </property>
+        <property group="Data" type="sap.ui.core/string" name="value">
+            <documentation>List item value</documentation>
+        </property>
+    </properties>
+</control>

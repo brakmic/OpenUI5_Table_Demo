@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>Menu</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>A container for menu items. When the space in the browser is not large enough to display all defined items, a scroll bar is provided.</documentation>
+    <deprecation since="1.21.0">Please use the control sap.ui.unified.Menu of the library sap.ui.unified instead.</deprecation>
+    <baseType>sap.ui.unified/Menu</baseType>
+</control>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>RadioButtonGroup</name>
+    <derived/>
+    <documentation>a group of RadioButtons to hande as one UI element.</documentation>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Dimension" type="sap.ui.core/CSSSize" name="width">
+            <documentation>Width of the RadioButtonGroup.</documentation>
+        </property>
+        <property group="Appearance" defaultValue="1" type="sap.ui.core/int" name="columns">
+            <documentation>Number of RadioButtons displayed in one Line.</documentation>
+        </property>
+        <property group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="editable">
+            <documentation>Specifies whether the user can choose a radio button.</documentation>
+        </property>
+        <property group="Data" defaultValue="None" type="sap.ui.core/ValueState" name="valueState">
+            <documentation>The value state to be displayed.</documentation>
+        </property>
+        <property group="Data" defaultValue="0" type="sap.ui.core/int" name="selectedIndex">
+            <documentation>Index of the selected/checked RadioButton.</documentation>
+        </property>
+        <property since="1.10.3" group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="enabled">
+            <documentation>If set the RadioButtonGroup is enabled, if not it is disabled. If it is disabled all RadioButtons will be shown as disabled. The enabled property of the item will not be uses in this case. If the RadioButtonGroup is enabled the enabled property of the item will define if a RadioButton is enabled or not.</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="select">
+            <documentation>Event is fired when selection is changed by user interaction.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/int" name="selectedIndex">
+                    <documentation>Index of the selected RadioButton.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+    </events>
+    <aggregations default="items">
+        <aggregation bindable="bindable" cardinality="0..n" type="sap.ui.core/Item" name="items">
+            <documentation>RadioButtons of this RadioButtonGroup</documentation>
+        </aggregation>
+    </aggregations>
+    <associations>
+        <association cardinality="0..n" type="sap.ui.core/Control" name="ariaDescribedBy">
+            <documentation>Association to controls / ids which describe this control (see WAI-ARIA attribute aria-describedby).</documentation>
+        </association>
+        <association cardinality="0..n" type="sap.ui.core/Control" name="ariaLabelledBy">
+            <documentation>Association to controls / ids which label this control (see WAI-ARIA attribute aria-labelledby).</documentation>
+        </association>
+    </associations>
+    <methods>
+        <method type="sap.ui.core/void" name="setSelectedItem">
+            <documentation>Sets the item as seleced and removs the selection from the old one.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/Item" name="item">
+                    <documentation>Selected item.</documentation>
+                </parameter>
+            </parameters>
+        </method>
+        <method type="sap.ui.core/Item" name="getSelectedItem">
+            <documentation>Returns selected item. When no item is selected, &quot;null&quot; is returned.</documentation>
+        </method>
+    </methods>
+</control>

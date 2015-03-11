@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>InputBase</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>Base control for Input fields.</documentation>
+    <since>1.12.0</since>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property bindable="bindable" group="Data" type="sap.ui.core/string" name="value">
+            <documentation>Defines the value of the input.</documentation>
+        </property>
+        <property group="Dimension" type="sap.ui.core/CSSSize" name="width">
+            <documentation>Defines the width of the input.</documentation>
+        </property>
+        <property group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="enabled">
+            <documentation>Determines whether the user can change the input value (default is true).</documentation>
+        </property>
+        <property group="Appearance" defaultValue="None" type="sap.ui.core/ValueState" name="valueState">
+            <documentation>Visualizes warnings or errors related to the text field. Possible values: Warning, Error, Success.</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/string" name="name">
+            <documentation>The &quot;name&quot; property to be used in the HTML code (e.g. for HTML forms that send data to the server via 'submit').</documentation>
+        </property>
+        <property group="Misc" type="sap.ui.core/string" name="placeholder">
+            <documentation>Text shown when no value available.</documentation>
+        </property>
+        <property since="1.12.0" group="Behavior" defaultValue="true" type="sap.ui.core/boolean" name="editable">
+            <documentation>Controls if a user can change the value.</documentation>
+        </property>
+        <property since="1.26.0" group="Misc" type="sap.ui.core/string" name="valueStateText">
+            <documentation>The text which is shown in the value state message popup. If not specfied a default text is shown. This property is already available for sap.m.Input since 1.16.0.</documentation>
+        </property>
+        <property since="1.26.0" group="Misc" defaultValue="true" type="sap.ui.core/boolean" name="showValueStateMessage">
+            <documentation>Whether the value state message should be shown. This property is already available for sap.m.Input since 1.16.0.</documentation>
+        </property>
+        <property since="1.26.0" group="Appearance" defaultValue="Initial" type="sap.ui.core/TextAlign" name="textAlign">
+            <documentation>Sets the horizontal alignment of the text.</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="change">
+            <documentation>This event gets fired when the input operation has finished and the value has changed.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/string" name="value">
+                    <documentation>The new value of the input.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+    </events>
+</control>

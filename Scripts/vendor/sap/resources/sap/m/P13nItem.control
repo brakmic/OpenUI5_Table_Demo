@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>P13nItem</name>
+    <derived/>
+    <documentation>tbd (should enable panels of personalization to have a constistent view of the 'columns' of the table)</documentation>
+    <since>1.26.0</since>
+    <baseType>sap.ui.core/Element</baseType>
+    <properties>
+        <property since="1.26.0" group="Data" type="sap.ui.core/string" name="columnKey">
+            <documentation>Can be used as input for subsequent actions.</documentation>
+        </property>
+        <property since="1.26.0" group="Misc" defaultValue="" type="sap.ui.core/string" name="text">
+            <documentation>The text to be displayed for the item.</documentation>
+        </property>
+        <property since="1.26.0" group="Misc" type="sap.ui.core/boolean" name="visible">
+            <documentation>tbd</documentation>
+        </property>
+        <property since="1.26.0" group="Misc" defaultValue="text" type="sap.ui.core/string" name="type">
+            <documentation>data type of the column (text, numeric or date is supported)</documentation>
+        </property>
+        <property since="1.26.0" group="Misc" type="sap.ui.core/string" name="precision">
+            <documentation>if type==numeric the precision will be used to format the entered value (maxIntegerDigits  of the used Formatter)</documentation>
+        </property>
+        <property since="1.26.0" group="Misc" type="sap.ui.core/string" name="scale">
+            <documentation>if type==numeric the scale will be used to format the entered value (maxFractionDigits of the used Formatter)</documentation>
+        </property>
+        <property since="1.26.0" group="Misc" type="sap.ui.core/string" name="maxLength">
+            <documentation>specifies the number of characters which can be entered in the value fields of the condition panel</documentation>
+        </property>
+        <property since="1.26.0" group="Misc" type="sap.ui.core/string" name="width">
+            <documentation>tbd</documentation>
+        </property>
+        <property since="1.26.0" group="Misc" defaultValue="false" type="sap.ui.core/boolean" name="isDefault">
+            <documentation>the column with isDefault==true will be used as the selected column item on the conditionPanel</documentation>
+        </property>
+    </properties>
+</control>

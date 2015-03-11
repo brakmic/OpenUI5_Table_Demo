@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>ComboBoxBase</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>An abstract class for ComboBoxes.</documentation>
+    <since>1.22.0</since>
+    <abstract/>
+    <baseType>sap.m/InputBase</baseType>
+    <properties>
+        <property group="Dimension" defaultValue="100%" type="sap.ui.core/CSSSize" name="maxWidth">
+            <documentation>Defines the maximum width of the text field. This value can be provided in %, em, px… and all CSS units.</documentation>
+        </property>
+    </properties>
+    <aggregations default="items">
+        <aggregation bindable="bindable" cardinality="0..n" type="sap.ui.core/Item" name="items">
+            <documentation>Aggregation of items to be displayed.</documentation>
+        </aggregation>
+        <aggregation visibility="hidden" cardinality="0..1" type="sap.ui.core/Control" name="picker">
+            <documentation>Internal aggregation to hold the inner picker pop-up.</documentation>
+        </aggregation>
+    </aggregations>
+    <methods>
+        <method type="sap.ui.core/Item" name="getItemAt">
+            <documentation>Retrieves the item from the aggregation named &lt;code&gt;items&lt;/code&gt; at the given 0-based index.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/int" name="index">
+                    <documentation>Index of the item to return.</documentation>
+                </parameter>
+            </parameters>
+        </method>
+        <method type="sap.ui.core/Item" name="getFirstItem">
+            <documentation>Retrieves the first item from the aggregation named &lt;code&gt;items&lt;/code&gt;.</documentation>
+        </method>
+        <method type="sap.ui.core/Item" name="getLastItem">
+            <documentation>Retrieves the last item from the aggregation named &lt;code&gt;items&lt;/code&gt;.</documentation>
+        </method>
+        <method type="sap.ui.core/Item[]" name="getEnabledItems">
+            <documentation>Retrieves the enabled items from the given array of items or from
+this control's aggregation named &lt;code&gt;items&lt;/code&gt;.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/Item[]" name="items">
+                    <documentation>Items to filter.</documentation>
+                </parameter>
+            </parameters>
+        </method>
+        <method type="sap.ui.core/Item" name="getItemByKey">
+            <documentation>Retrieves the item with the given key from the aggregation named &lt;code&gt;items&lt;/code&gt;.
+If duplicate keys exist, the first item matching the key is returned.</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/string" name="key">
+                    <documentation>An item key that specifies the item to retrieve.</documentation>
+                </parameter>
+            </parameters>
+        </method>
+        <method type="sap.ui.core/boolean" name="isOpen">
+            <documentation>Whether the control's picker pop-up is open. It returns true when the control's picker pop-up is currently open,
+this includes opening and closing animations.</documentation>
+        </method>
+        <method type="sap.m/ComboBoxBase" name="close">
+            <documentation>Closes the control's picker pop-up.</documentation>
+        </method>
+    </methods>
+</control>

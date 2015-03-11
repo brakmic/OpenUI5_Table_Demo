@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>P13nColumnsPanel</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>The ColumnsPanel can be used for personalization of the table to define column specific settings</documentation>
+    <since>1.26.0</since>
+    <baseType>sap.m/P13nPanel</baseType>
+    <properties>
+        <property since="1.26.7" group="Behavior" defaultValue="-1" type="sap.ui.core/int" name="visibleItemsThreshold">
+            <documentation>This property is used to specify a threshold of visible items</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" since="1.26.0" name="addColumnsItem">
+            <documentation>event raised when a columnsItem shall be added</documentation>
+            <parameters>
+                <parameter type="sap.m/P13nColumnsItem" name="newItem">
+                    <documentation>columnsItem that needs to be added in the model</documentation>
+                </parameter>
+            </parameters>
+        </event>
+        <event allowPreventDefault="false" since="1.26.7" name="changeColumnsItems">
+            <documentation>event raised when columnsItems shall be changed or new one needs to be created in model</documentation>
+            <parameters>
+                <parameter type="sap.m/P13nColumnsItem[]" name="newItems">
+                    <documentation>contains columnsItems that needs to be created in the model</documentation>
+                </parameter>
+                <parameter type="sap.m/P13nColumnsItem[]" name="existingItems">
+                    <documentation>contains columnsItems that needs to be changed in the model</documentation>
+                </parameter>
+            </parameters>
+        </event>
+        <event allowPreventDefault="false" since="1.26.7" name="setData">
+            <documentation>event raised when setData on model should be called; this event serves the purpose of minimizing such calls since these can be very
+performance expensive</documentation>
+        </event>
+    </events>
+    <aggregations>
+        <aggregation bindable="bindable" cardinality="0..n" since="1.26.0" type="sap.m/P13nColumnsItem" name="columnsItems">
+            <documentation>list of columns that has been changed</documentation>
+        </aggregation>
+    </aggregations>
+</control>

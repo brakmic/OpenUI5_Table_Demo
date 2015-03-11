@@ -53,6 +53,7 @@ define([
                             paymentTypes: controls.getColumn('Payment Types', 'PaymentTypes'),
                             receiptDate: controls.getColumn('Receipt Date', 'ReceiptDate')
                         };
+                        
                         //add columns to the table
                         _.each(columns, function (column) {
                             table.addColumn(column);

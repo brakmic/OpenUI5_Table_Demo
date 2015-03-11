@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>IconTabBar</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>A tab bar with large icons</documentation>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Misc" defaultValue="true" type="sap.ui.core/boolean" name="showSelection">
+            <documentation>Defines whether the current selection should be visualized</documentation>
+            <deprecation since="1.15.0">Regarding to changes of this control this property is not needed anymore.</deprecation>
+        </property>
+        <property since="1.15.0" group="Misc" defaultValue="true" type="sap.ui.core/boolean" name="expandable">
+            <documentation>Defines if the tabs can be collapsed and expanded</documentation>
+        </property>
+        <property since="1.15.0" group="Misc" defaultValue="true" type="sap.ui.core/boolean" name="expanded">
+            <documentation>Indicates if the actual tab is expanded or not</documentation>
+        </property>
+        <property since="1.15.0" group="Data" type="sap.ui.core/string" name="selectedKey">
+            <documentation>Key of the selected item.
+
+If the key has no corresponding aggregated item, no changes will apply.
+If duplicate keys exists the first item matching the key is used.</documentation>
+        </property>
+        <property since="1.22" group="Appearance" defaultValue="false" type="sap.ui.core/boolean" name="upperCase">
+            <documentation>Determines whether the text of the icon tab filter (not the count) is uppercased.</documentation>
+        </property>
+        <property since="1.26" group="Appearance" defaultValue="false" type="sap.ui.core/boolean" name="stretchContentHeight">
+            <documentation>Determines whether the IconTabBar height is stretched to the maximum possible height of its parent container. As a
+prerequisite, the height of the parent container must be defined as a fixed value.</documentation>
+        </property>
+        <property since="1.26" group="Appearance" defaultValue="true" type="sap.ui.core/boolean" name="applyContentPadding">
+            <documentation>Determines whether the IconTabBar content will fit to the full area (if set to false paddings are removed).</documentation>
+        </property>
+        <property since="1.26" group="Appearance" defaultValue="Solid" type="sap.m/BackgroundDesign" name="backgroundDesign">
+            <documentation>This property is used to set the background color of the IconTabBar. Depending on the theme you can change the state of the background
+from &quot;Solid&quot; over &quot;Translucent&quot; to &quot;Transparent&quot;.</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="select">
+            <documentation>This event will be fired when an item is selected.</documentation>
+            <parameters>
+                <parameter since="1.15.0" type="sap.m/IconTabFilter" name="item">
+                    <documentation>The selected item.</documentation>
+                </parameter>
+                <parameter since="1.15.0" type="sap.ui.core/string" name="key">
+                    <documentation>The key of the selected item.</documentation>
+                </parameter>
+                <parameter type="sap.m/IconTabFilter" name="selectedItem">
+                    <documentation>This parameter is deprecated since 1.15.0! Please use parameter &quot;item&quot; instead.</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/string" name="selectedKey">
+                    <documentation>This parameter is deprecated since 1.15.0! Please use parameter &quot;key&quot; instead.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+        <event allowPreventDefault="false" since="1.15.0" name="expand">
+            <documentation>Indicates that the tab will expand or collapse</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/boolean" name="expand">
+                    <documentation>If the tab will expand, this is true.</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/boolean" name="collapse">
+                    <documentation>If the tab will collapse, this is true.</documentation>
+                </parameter>
+            </parameters>
+        </event>
+    </events>
+    <aggregations>
+        <aggregation cardinality="0..n" type="sap.m/IconTab" name="items">
+            <documentation>The items displayed in the IconTabBar</documentation>
+        </aggregation>
+        <aggregation cardinality="0..n" type="sap.ui.core/Control" name="content">
+            <documentation>The contents displayed below the IconTabBar.
+If there are multiple contents, they are rendered after each other. The developer has to manage to display the right one or use the content aggregation inside the IconTabFilter (which will be displayed instead if it is set).</documentation>
+        </aggregation>
+        <aggregation visibility="hidden" cardinality="0..1" type="sap.m/IconTabHeader" name="_header">
+            <documentation>An internal aggregation for managing the icon tab elements.</documentation>
+        </aggregation>
+    </aggregations>
+</control>

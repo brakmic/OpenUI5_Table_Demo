@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>DatePicker</name>
+    <derived/>
+    <documentation>This is an date input control with a calendar DatePicker.
+It internal uses the sap.ui.unified.Calendar. So the sap.ui.unified library should be loaded from applications using this control. (Otherwise it will be loaded by opening the DatePicker.)</documentation>
+    <since>1.22.0</since>
+    <baseType>sap.m/InputBase</baseType>
+    <properties>
+        <property group="Appearance" type="sap.ui.core/string" name="displayFormat">
+            <documentation>Displays date value in this given format in text field. Default value is taken from locale settings.
+If you use data-binding on value property with type sap.ui.model.type.Date then you can ignore this property or latter wins.</documentation>
+        </property>
+        <property group="Data" type="sap.ui.core/string" name="valueFormat">
+            <documentation>Given value property should match with valueFormat to parse date. Default value is taken from locale settings.
+You can set and get value in this format.
+If you use data-binding on value property with type sap.ui.model.type.Date you can ignore this property or latter wins.</documentation>
+        </property>
+        <property group="Data" type="sap.ui.core/object" name="dateValue">
+            <documentation>This property as JavaScript Date Object can be used to assign a new value which is independent from valueFormat.
+If this property is used, the value property should not be changed from the caller.</documentation>
+        </property>
+    </properties>
+</control>
